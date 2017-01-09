@@ -55,15 +55,19 @@ The problem can be decomposed into six smaller problems.
 </ol>
 
 ### APIs
-For displaying the video a Youtube API will be used.
-
+Youtube API will be used for displaying the video.
+Perhaps Dimple API will be used for fast easy design of graph.
+Sigma.js library can be used for creating a more interactive linegraph
+AnyChart API fast and for creating dashboard.
+HighCharts API for creating charts.
 
 ### Technical Problems
 A problem that can emerge is that the slider may not proparly work for the Youtube component.
 
+
 ## MVP
 The minimum viable product is considered reached if all visualizations are correct and start synchronically.
 This means that the EEG data will run parallel with the video, and that the behavioral data obtained during the experiment
-will be displayed on the right moment in time.
+will be displayed on the right moment in time of the video.
 
 
