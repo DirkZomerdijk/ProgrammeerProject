@@ -37,7 +37,7 @@ All of this is displayed synchronous. This way the user has a consolidated view 
 
 ### Visual Sketch
 ![](doc/dashboard.jpeg)
-<img src="doc/dashboard.jpeg" alt="Dashboard" style="width: 200px;"/>
+<img src="doc/dashboard.jpeg" alt="Dashboard" style="width: 150px height: 100px;"/>
 
 ### Datasets Used
 The datasets used for this project are EEG and te behavioral data that comes with it.
