@@ -36,7 +36,7 @@ All of this is displayed synchronous. This way the user has a consolidated view 
 * Make a dropdown menu to switch between subjects/ movies.
 
 ### Visual Sketch
-![](doc/dashboard_sketch.jpeg)
+![](doc/dashboard_sketch.jpg)
 
 ### Datasets Used
 The datasets used for this project are EEG and te behavioral data that comes with it.
