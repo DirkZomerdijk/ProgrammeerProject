@@ -47,11 +47,11 @@ The datasets used for this project are EEG and te behavioral data that comes wit
 The problem can be decomposed into six smaller problems.
 <ol>
 <li>The visualization of the EEG data.</li>
-2. Displaying the stimulus video. 
-3. Displaying the behavioral data.
-4. Displaying a frequencytable (or piechart) with a average of all subjects to analyse the choice.
-5. Synchronize all four visualisations dynamically. 
-6. Displaying a slider which controls all visualisations timelines.
+<li>Displaying the stimulus video.</li> 
+<li>Displaying the behavioral data.</li>
+<li>Displaying a frequencytable (or piechart) with a average of all subjects to analyse the choice.</li>
+<li>Synchronize all four visualisations dynamically.</li> 
+<li>Displaying a slider which controls all visualisations timelines.</li>
 </ol>
 
 ### APIs
