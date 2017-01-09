@@ -1,0 +1,30 @@
+.button {
+  width: 48px;
+  height: 48px;
+  cursor: pointer;
+  &:hover {
+    fill: white; 
+  }
+}
+
+.defs {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+
+iframe {
+  float: left;
+  width: 300px;
+  height: 200px;
+}
+
+.buttons {
+  padding: 1rem;
+  background: #f06d06;
+  float: left;
+}
+
+body {
+  padding: 1rem;
+}
