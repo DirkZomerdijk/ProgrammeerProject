@@ -25,7 +25,7 @@ The displayed visualizations will be:
 - The behavioral data
 - The average of the behavioral data over all subjects. 
 
-All of this is displayed synchronous. This way the user has a consolidated view of the data obtained during the experiment.
+All of this is displayed synchronous. This way the user has a consolidated view of the data obtained during the experiment and a way to analyse it.
 
 ## The Proposal Process
 
@@ -44,13 +44,15 @@ The datasets used for this project are EEG and te behavioral data that comes wit
 
 
 ### Decomposing the problem
-The problem can be decomposed into six smaller problems. 
-1. The visualization of the EEG data. 
+The problem can be decomposed into six smaller problems.
+<ol>
+<li>The visualization of the EEG data.</li>
 2. Displaying the stimulus video. 
 3. Displaying the behavioral data.
 4. Displaying a frequencytable (or piechart) with a average of all subjects to analyse the choice.
 5. Synchronize all four visualisations dynamically. 
 6. Displaying a slider which controls all visualisations timelines.
+</ol>
 
 ### APIs
 For displaying the video a Youtube API will be used.
