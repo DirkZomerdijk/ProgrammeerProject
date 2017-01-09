@@ -1,13 +1,18 @@
 # Proposing EEG Dashboard
-- Dirk Zomerdijk
-- 10530274
-- Beta-Gamma, Neurobiologie
+- Name:			Dirk Zomerdijk
+- Studentnumber: 	10530274
+- Education: 		Bcs. Beta-Gamma, Neurobiologie
 
 ## Paragraph Summary
 - Introduction
--
--
--
+- The Proposal Process
+	* Goals
+	* Visual Sketch
+	* Datasets Used
+	* Decomposing The Problem
+	* APIs
+	* Technical Problems
+- MVP
 
 
 ## Introduction
