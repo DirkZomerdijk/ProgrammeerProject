@@ -6,12 +6,12 @@
 ## Paragraph Summary
 - Introduction
 - The Proposal Process
-	*Goals
-	* Visual Sketch
-	* Datasets Used
-	* Decomposing The Problem
-	* APIs
-	* Technical Problems
+*Goals
+* Visual Sketch
+* Datasets Used
+* Decomposing The Problem
+* APIs
+* Technical Problems
 - MVP
 
 
