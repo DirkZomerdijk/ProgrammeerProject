@@ -6,7 +6,7 @@
 ## Paragraph Summary
 - Introduction
 - The Proposal Process
-	*Goals	
+	* Goals	
 	* Visual Sketch
 	* Datasets Used
 	* Decomposing The Problem
