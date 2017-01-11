@@ -1,12 +1,14 @@
-d3.csv("testdata.csv", function(data){
+d3.csv("misdrijfData.csv", function(data){
 
 	var dataByName = d3.nest()
-  		.key(function(d) { return d.Video; })
+  		.key(function(d) { return d.misdrijf; })
   		.entries(data);
+
+  		console.log(dataByName)
 
   	var complete = {};	
   	dataByName.forEach(function(d, i){
-  		complete["video"+i] = d.values
+  		complete[d.misdrijf] = d.values
   	})	
 
   	console.log(complete)

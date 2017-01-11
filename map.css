@@ -1,0 +1,11 @@
+svg { 
+	height: 750px; 
+	width: 650px;
+}
+path { 
+	fill: #d3d3d3; 
+	transition: .6s fill; 
+}
+path:hover { 
+	fill: orange; 
+}
