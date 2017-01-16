@@ -8,12 +8,26 @@ d3map html file
   <head>
     <meta charset="utf-8">
     <title>D3 World Map</title>
-    <link rel="stylesheet" type="text/css" href="map.css"/>	
+    <link rel="stylesheet" type="text/css" href="map.css"/>
+    <script src="http://d3js.org/queue.v1.min.js"></script>	
+    <script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.5.3/d3.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/topojson/1.6.9/topojson.min.js"></script>
   </head>
   <body>
-	<script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.5.3/d3.min.js"></script>
-	<script src="//cdnjs.cloudflare.com/ajax/libs/topojson/1.6.9/topojson.min.js"></script>
-	<script type="text/javascript" src="map.js"></script>
-
+    <div class="dropdown">
+      <button onclick="crimeFunction()" class="dropbtn">Misdrijf</button>
+        <div id="crimeDrop" class="dropdown-content">
+        </div>
+    </div>
+    <div class="dropdown">
+      <button onclick="yearFunction()" class="dropbtn">Jaar</button>
+        <div id="yearDrop" class="dropdown-content">
+          <a href="#" onclick="alert('hello')">2010</a>
+          <a href="#" onclick="alert('hello')">2011</a>
+          <a href="#" onclick="alert('hello')">2012</a>
+          <a href="#" onclick="alert('hello')">2013</a>
+        </div>
+    </div>
+  	<script type="text/javascript" src="map.js"></script>
   </body>
 </html>

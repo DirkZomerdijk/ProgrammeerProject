@@ -1,17 +1,19 @@
 d3.csv("misdrijfData.csv", function(data){
 
-	var dataByName = d3.nest()
-  		.key(function(d) { return d.misdrijf; })
+  // console.log(data)
+
+	var dataByRegion = d3.nest()
+  		.key(function(d) { return d.Regio; })
   		.entries(data);
 
-  		console.log(dataByName)
+  console.log(dataByRegion)
 
-  	var complete = {};	
-  	dataByName.forEach(function(d, i){
-  		complete[d.misdrijf] = d.values
-  	})	
+	var complete = {};	
+	dataByRegion.forEach(function(d){
+		complete[d.misdrijf] = d.values
+	})	
 
-  	console.log(complete)
+  	// console.log(complete)
 
   	
 })
