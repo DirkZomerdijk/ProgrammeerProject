@@ -48,9 +48,7 @@ var arc = d3.svg.arc()
 var container = d3.select('body').append('div')
 	.attr('id','container');
 
-var mainTitle = d3.select('#container').append('div').append('h1')
-	.attr('id', 'main')
-	.text(crime +", "+province+", 201"+year)
+
 
 
 d3.xml('nederland.svg', 'image/svg+xml', function(error, xml) {
@@ -81,6 +79,18 @@ d3.xml('nederland.svg', 'image/svg+xml', function(error, xml) {
 			document.getElementById('crimeDrop').innerHTML += "<a href='#' class='crime' id=" + crimes[i].replace(/\s+/g, '') + ">" + String(crimes[i]) + "</a>"
 		} 
 
+		var mainTitle = d3.select('#container').append('div').append('h1')
+			.attr('id', 'maintitle')
+			.text(crime+", 201"+year)
+
+		var pieTitle = d3.select('#container').append('div').append('h3')
+			.attr('id', 'pietitle')
+			.text('Provincie jaar:')
+
+		var plotTitle = d3.select('#container').append('div').append('h3')
+			.attr('id', 'plottitle')
+			.text(crime+' in '+province+' van \'10 to \'13')
+		
 		makePlot(plotData(data, crime))
 		fillMap(data, crime, year)
 		makePie(dataPie(data, crime, year))
@@ -97,7 +107,8 @@ d3.xml('nederland.svg', 'image/svg+xml', function(error, xml) {
 				makePlot(plotData(data, crime))
 				fillMap(data, crime, year)
 
-				d3.select('#main').text(crime +", "+province+", 201"+year)
+				d3.select('#maintitle').text(crime+", 201"+year)
+				d3.select('#plottitle').text(crime+' in '+province+' van \'10 to \'13')
 				d3.select('path.'+fuseString(crime))
 					.style('opacity', 0.5)
 					.style('stroke', 'grey')	
@@ -113,7 +124,8 @@ d3.xml('nederland.svg', 'image/svg+xml', function(error, xml) {
 			else{
 				makePie(provincePie(data, province, year))				
 			}; 
-			d3.select('#main').text(crime +", "+province+", 201"+year)
+			d3.select('#maintitle').text(crime+", 201"+year)
+			d3.select('#plottitle').text(crime+' in '+province+' van \'10 to \'13')
 		})
 
 		d3.selectAll('[title]')
@@ -123,6 +135,7 @@ d3.xml('nederland.svg', 'image/svg+xml', function(error, xml) {
 					.style('opacity', 0.5)
 					.style('stroke', 'grey')
 					.style('stroke-width', 5)
+				d3.select('#pietitle').text(province+' 201'+year+' : '+data[province][crime][year])
 			})
 			.on('mouseout', function(){
 				province = document.getElementById(this.id).getAttribute('title')
@@ -134,7 +147,8 @@ d3.xml('nederland.svg', 'image/svg+xml', function(error, xml) {
 				province = document.getElementById(this.id).getAttribute('title')
 				makePie(provincePie(data, province, year))
 				makePlot(plotProvince(data, province, crime))
-				d3.select('#main').text(crime +", "+province+", 201"+year)
+				d3.select('#maintitle').text(crime+", 201"+year)
+				d3.select('#plottitle').text(crime+' in '+province+' van \'10 to \'13')
 				d3.select('path.'+fuseString(crime))
 					.style('opacity', 0.5)
 					.style('stroke', 'grey')	
@@ -149,7 +163,8 @@ d3.xml('nederland.svg', 'image/svg+xml', function(error, xml) {
 				makePlot(plotData(data, crime))
 				fillMap(data, crime, year)
 				makePie(dataPie(data, crime, year))
-				d3.select('#main').text(crime +", "+province+", 201"+year)
+				d3.select('#maintitle').text(crime+", 201"+year)
+				d3.select('#plottitle').text(crime+' in '+province+' van \'10 to \'13')
 			})
 	})
 })

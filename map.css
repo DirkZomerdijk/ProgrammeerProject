@@ -1,8 +1,12 @@
+body {
+    overflow: hidden;
+}
 svg#map{ 
 	float: left;
 	/*position: absolute;*/
 	height: 750px; 
 	width: 650px;
+    z-index: -1;
 }
 
 #map path { 
@@ -15,12 +19,13 @@ svg#map{
 }
 
 svg#pie{
-	position: absolute;
-    right: 200px;
-    top: 100px;
+	position: relative;
+    right: 20px;
+    bottom: 350px;
 	width: 250px;
 	height: 250px;
 	border: 3px;
+    z-index: -1;
 }
 
 #pie path:hover {
@@ -46,6 +51,7 @@ svg#pie{
 .dropdown {
     position: relative;
     display: inline-block;
+    z-index: +5;
 }
 
 /* Dropdown Content (Hidden by Default) */
@@ -90,7 +96,28 @@ svg#pie{
     overflow-y:scroll; 
 }
 svg#plot {
+    position: relative;
+    top: 330px;
+    right: 150px;
+    z-index: -1;
+}
+#pietitle {
+    text-align: center;
+    position: relative;
+    bottom: 330px;
+    right: 260px;
+    z-index: 1;
+}
+#maintitle {
+    text-align: left;
+    position: relative;
+    bottom: 340px;
+    right: 400px;
+    z-index: 1;    
+}
+#plottitle {
+    text-align: left;
     position: absolute;
-    bottom: 30px;
-    right: 50px;
+    bottom: 250px;  
+    left: 600px;
 }
