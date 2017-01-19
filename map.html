@@ -7,13 +7,19 @@ d3map html file
 <html>
   <head>
     <meta charset="utf-8">
-    <title>D3 World Map</title>
+    <title>Misdrijven in Nederland</title>
     <link rel="stylesheet" type="text/css" href="map.css"/>
     <script src="http://d3js.org/queue.v1.min.js"></script>	
     <script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.5.3/d3.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/topojson/1.6.9/topojson.min.js"></script>
   </head>
   <body>
+    <div class="dropdown">
+      <button id="home" class="dropbtn">Home</button>
+        <div id="Home" class="dropdown-content">
+          <a href="#" class="homebtn" >Home</a>
+        </div>
+    </div>    
     <div class="dropdown">
       <button onclick="crimeFunction()" class="dropbtn">Misdrijf</button>
         <div id="crimeDrop" class="dropdown-content">
@@ -22,10 +28,10 @@ d3map html file
     <div class="dropdown">
       <button onclick="yearFunction()" class="dropbtn">Jaar</button>
         <div id="yearDrop" class="dropdown-content">
-          <a href="#" onclick="alert('hello')">2010</a>
-          <a href="#" onclick="alert('hello')">2011</a>
-          <a href="#" onclick="alert('hello')">2012</a>
-          <a href="#" onclick="alert('hello')">2013</a>
+          <a href="#" class="year" id="0">2010</a>
+          <a href="#" class="year" id="1">2011</a>
+          <a href="#" class="year" id="2">2012</a>
+          <a href="#" class="year" id="3">2013</a>
         </div>
     </div>
   	<script type="text/javascript" src="map.js"></script>

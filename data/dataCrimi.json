@@ -1,28 +1,22 @@
 {
     "Groningen": {
-        "Verlaten plaats ongeval": [
-            "2285", 
-            "2265", 
-            "1900", 
-            "1745"
-        ], 
         "Vermogensmisdrijven": [
             "20950", 
             "20500", 
             "20510", 
             "20890"
         ], 
-        "Misdrijf": [
-            "275", 
-            "150", 
-            "180", 
-            "170"
-        ], 
-        "Rijden tijdens ontzegging": [
-            "100", 
-            "65", 
+        "Verkeersmisdrijf (overig)": [
+            "40", 
+            "35", 
             "50", 
-            "45"
+            "35"
+        ], 
+        "Weigeren blaastest/bloedonderzoek": [
+            "15", 
+            "15", 
+            "10", 
+            "5"
         ], 
         "Oplichting": [
             "1000", 
@@ -43,34 +37,40 @@
             "15"
         ], 
         "Seksueel misdrijf": [
-            "60", 
-            "65", 
-            "50", 
-            "65"
+            "385", 
+            "360", 
+            "315", 
+            "345"
         ], 
         "Bedrog": [
-            "15", 
-            "15", 
-            "20", 
-            "10"
+            "1045", 
+            "830", 
+            "910", 
+            "690"
         ], 
-        "Voeren vals kenteken": [
-            "20", 
-            "10", 
-            "20", 
-            "20"
-        ], 
-        "Mishandeling": [
-            "2545", 
-            "2395", 
-            "2385", 
-            "2165"
+        "totaal": [
+            "37910", 
+            "36585", 
+            "35435", 
+            "33985"
         ], 
         "Bedreiging en stalking": [
             "1655", 
             "1515", 
             "1490", 
             "1425"
+        ], 
+        "Openlijk geweldtegen persoon": [
+            "200", 
+            "180", 
+            "235", 
+            "155"
+        ], 
+        "Joyriding": [
+            "10", 
+            "15", 
+            "15", 
+            "5"
         ], 
         "Ontucht met minderjarige": [
             "35", 
@@ -90,11 +90,11 @@
             "15", 
             "15"
         ], 
-        "Wapenmisdrijven": [
-            "170", 
-            "205", 
-            "175", 
-            "150"
+        "Openlijk geweldtegen goed": [
+            "80", 
+            "70", 
+            "75", 
+            "20"
         ], 
         "Vernieling aan openbaar gebouw": [
             "380", 
@@ -108,17 +108,17 @@
             "25", 
             "20"
         ], 
+        "Mishandeling": [
+            "2545", 
+            "2395", 
+            "2385", 
+            "2165"
+        ], 
         "Diefstal en inbraak met geweld": [
             "550", 
             "410", 
             "355", 
             "305"
-        ], 
-        "Rijden onder invloed": [
-            "1535", 
-            "1385", 
-            "1105", 
-            "730"
         ], 
         "Bankbreuk": [
             "0", 
@@ -132,47 +132,11 @@
             "335", 
             "245"
         ], 
-        "Aanranding": [
-            "65", 
-            "75", 
-            "45", 
-            "55"
-        ], 
-        "Softdrugs": [
-            "420", 
-            "380", 
-            "375", 
-            "375"
-        ], 
-        "Schennis der eerbaarheid": [
-            "90", 
-            "90", 
-            "90", 
-            "100"
-        ], 
-        "Rijden tijdens rijverbod": [
-            "0", 
-            "0", 
-            "0", 
-            "5"
-        ], 
-        "Flessentrekkerij": [
-            "25", 
-            "10", 
-            "15", 
-            "15"
-        ], 
-        "Overige wetten": [
+        "Misdrijven overige wetten": [
             "275", 
             "150", 
             "180", 
             "170"
-        ], 
-        "Vernieling": [
-            " beschadiging", 
-            "2705", 
-            "2735", 
-            "2825"
         ], 
         "Niet opvolgen van ambtelijk bevel": [
             "70", 
@@ -180,17 +144,59 @@
             "105", 
             "70"
         ], 
-        "Heling": [
-            "205", 
-            "200", 
-            "140", 
-            "180"
+        "Schennis der eerbaarheid": [
+            "90", 
+            "90", 
+            "90", 
+            "100"
+        ], 
+        "Flessentrekkerij": [
+            "25", 
+            "10", 
+            "15", 
+            "15"
+        ], 
+        "Misdrijven WvSr (overig)": [
+            "355", 
+            "340", 
+            "310", 
+            "370"
+        ], 
+        "Vernieling": [
+            "2705", 
+            "2735", 
+            "2825", 
+            "2490"
+        ], 
+        "Misdr.openb.orde/gezag": [
+            "6655", 
+            "6520", 
+            "6115", 
+            "5060"
+        ], 
+        "Wederspannigheid": [
+            "20", 
+            "35", 
+            "45", 
+            "20"
         ], 
         "Valsheid in zegels en merken": [
             "5", 
             "0", 
             "0", 
             "0"
+        ], 
+        "Rijden onder invloed": [
+            "1535", 
+            "1385", 
+            "1105", 
+            "730"
+        ], 
+        "Rijdentijdens ontzegging": [
+            "100", 
+            "65", 
+            "50", 
+            "45"
         ], 
         "Ontucht met misbruik van gezag": [
             "25", 
@@ -204,11 +210,11 @@
             "1320", 
             "1270"
         ], 
-        "Vernielingen": [
-            " misdr.openb.orde/gezag", 
-            "6655", 
-            "6520", 
-            "6115"
+        "Openbare orde misdrijf (overig)": [
+            "250", 
+            "250", 
+            "95", 
+            "55"
         ], 
         "Huisvredebreuk": [
             "160", 
@@ -217,16 +223,10 @@
             "130"
         ], 
         "Openbare orde misdrijf": [
-            "250", 
-            "250", 
-            "95", 
-            "55"
-        ], 
-        "Militair misdrijf": [
-            "0", 
-            "0", 
-            "0", 
-            "0"
+            "765", 
+            "770", 
+            "725", 
+            "465"
         ], 
         "Lokaalvredebreuk": [
             "30", 
@@ -258,17 +258,11 @@
             "290", 
             "160"
         ], 
-        "Misdrijven WvSr": [
-            "355", 
-            "340", 
-            "310", 
-            "370"
-        ], 
-        "Wederspannigheid": [
-            "20", 
-            "35", 
-            "45", 
-            "20"
+        "Softdrugs": [
+            "420", 
+            "380", 
+            "375", 
+            "375"
         ], 
         "Vernieling middel openb.vervoer": [
             "70", 
@@ -282,11 +276,17 @@
             "170", 
             "160"
         ], 
-        "Vermogensmisdrijf": [
-            "0", 
-            "0", 
-            "0", 
-            "0"
+        "Vuurwapenmisdrijven": [
+            "170", 
+            "205", 
+            "175", 
+            "150"
+        ], 
+        "Harddrugs": [
+            "235", 
+            "175", 
+            "175", 
+            "210"
         ], 
         "Muntmisdrijf": [
             "25", 
@@ -294,11 +294,17 @@
             "55", 
             "55"
         ], 
-        "Verkeersmisdrijf": [
-            "40", 
-            "35", 
-            "50", 
-            "35"
+        "Aanranding": [
+            "65", 
+            "75", 
+            "45", 
+            "55"
+        ], 
+        "Misdrijf (overig)": [
+            "275", 
+            "150", 
+            "180", 
+            "170"
         ], 
         "Verblijf ongewenste vreemdeling": [
             "0", 
@@ -313,10 +319,10 @@
             "10"
         ], 
         "Mensenhandel": [
-            " mensensmokkel", 
             "30", 
             "25", 
-            "45"
+            "45", 
+            "25"
         ], 
         "Pornografie": [
             "35", 
@@ -324,17 +330,29 @@
             "20", 
             "25"
         ], 
-        "Openlijk geweld tegen goed": [
-            "80", 
-            "70", 
-            "75", 
-            "20"
+        "Verlaten plaats ongeval": [
+            "2285", 
+            "2265", 
+            "1900", 
+            "1745"
         ], 
-        "Weigeren blaastest/bloedonderzoek": [
-            "15", 
-            "15", 
-            "10", 
-            "5"
+        "Militair misdrijf": [
+            "0", 
+            "0", 
+            "0", 
+            "0"
+        ], 
+        "Geweldsmisdrijf (overig)": [
+            "45", 
+            "45", 
+            "55", 
+            "35"
+        ], 
+        "Vermogensmisdrijf (overig)": [
+            "0", 
+            "0", 
+            "0", 
+            "0"
         ], 
         "Dierenmishandeling": [
             "0", 
@@ -343,16 +361,16 @@
             "0"
         ], 
         "Openbaar gezag misdrijf": [
-            "10", 
-            "15", 
-            "10", 
-            "5"
+            "125", 
+            "175", 
+            "185", 
+            "115"
         ], 
-        "Joyriding": [
-            "10", 
+        "Bedrog (overig)": [
             "15", 
             "15", 
-            "5"
+            "20", 
+            "10"
         ], 
         "Afpersing en afdreiging": [
             "30", 
@@ -360,11 +378,11 @@
             "35", 
             "45"
         ], 
-        "Openlijk geweld tegen persoon": [
-            "200", 
-            "180", 
-            "235", 
-            "155"
+        "Seksueel misdrijf (overig)": [
+            "60", 
+            "65", 
+            "50", 
+            "65"
         ], 
         "Openlijke geweldpleging": [
             "275", 
@@ -378,11 +396,17 @@
             "18715", 
             "19400"
         ], 
-        "Totaal": [
-            "37910", 
-            "36585", 
-            "35435", 
-            "33985"
+        "Heling": [
+            "205", 
+            "200", 
+            "140", 
+            "180"
+        ], 
+        "Drugsmisdrijven": [
+            "660", 
+            "555", 
+            "550", 
+            "585"
         ], 
         "Verkeersmisdrijven": [
             "4000", 
@@ -408,49 +432,51 @@
             "145", 
             "65"
         ], 
-        "Geweldsmisdrijf": [
-            "45", 
-            "45", 
-            "55", 
-            "35"
+        "Openbaar gezag misdrijf (overig)": [
+            "10", 
+            "15", 
+            "10", 
+            "5"
         ], 
-        "Harddrugs": [
-            "235", 
-            "175", 
-            "175", 
-            "210"
+        "Rijdentijdens rijverbod": [
+            "0", 
+            "0", 
+            "0", 
+            "5"
         ], 
-        "Drugsmisdrijven": [
-            "660", 
-            "555", 
-            "550", 
-            "585"
+        "Voeren vals kenteken": [
+            "20", 
+            "10", 
+            "20", 
+            "20"
+        ]
+    }, 
+    "Regio": {
+        "misdrijf": [
+            "2010", 
+            "2011", 
+            "2012", 
+            "2013"
         ]
     }, 
     "Gelderland": {
-        "Verlaten plaats ongeval": [
-            "9520", 
-            "9090", 
-            "8425", 
-            "8225"
-        ], 
         "Vermogensmisdrijven": [
             "75425", 
             "75235", 
             "73975", 
             "71135"
         ], 
-        "Misdrijf": [
-            "645", 
-            "525", 
-            "545", 
-            "470"
+        "Verkeersmisdrijf (overig)": [
+            "110", 
+            "95", 
+            "205", 
+            "130"
         ], 
-        "Rijden tijdens ontzegging": [
-            "160", 
-            "200", 
-            "105", 
-            "125"
+        "Weigeren blaastest/bloedonderzoek": [
+            "30", 
+            "30", 
+            "30", 
+            "25"
         ], 
         "Oplichting": [
             "2535", 
@@ -471,34 +497,40 @@
             "40"
         ], 
         "Seksueel misdrijf": [
-            "140", 
-            "165", 
-            "140", 
-            "135"
+            "1050", 
+            "1045", 
+            "995", 
+            "985"
         ], 
         "Bedrog": [
-            "30", 
-            "20", 
-            "25", 
-            "15"
+            "2605", 
+            "2235", 
+            "2470", 
+            "2070"
         ], 
-        "Voeren vals kenteken": [
-            "75", 
-            "85", 
-            "70", 
-            "90"
-        ], 
-        "Mishandeling": [
-            "6115", 
-            "6250", 
-            "5975", 
-            "5480"
+        "totaal": [
+            "126330", 
+            "123905", 
+            "118440", 
+            "111255"
         ], 
         "Bedreiging en stalking": [
             "3500", 
             "3445", 
             "3450", 
             "3260"
+        ], 
+        "Openlijk geweldtegen persoon": [
+            "745", 
+            "635", 
+            "550", 
+            "465"
+        ], 
+        "Joyriding": [
+            "50", 
+            "40", 
+            "35", 
+            "25"
         ], 
         "Ontucht met minderjarige": [
             "145", 
@@ -518,11 +550,11 @@
             "35", 
             "35"
         ], 
-        "Wapenmisdrijven": [
-            "535", 
-            "580", 
-            "530", 
-            "540"
+        "Openlijk geweldtegen goed": [
+            "165", 
+            "165", 
+            "140", 
+            "105"
         ], 
         "Vernieling aan openbaar gebouw": [
             "1740", 
@@ -536,17 +568,17 @@
             "40", 
             "50"
         ], 
+        "Mishandeling": [
+            "6115", 
+            "6250", 
+            "5975", 
+            "5480"
+        ], 
         "Diefstal en inbraak met geweld": [
             "1245", 
             "1100", 
             "1015", 
             "940"
-        ], 
-        "Rijden onder invloed": [
-            "5050", 
-            "4605", 
-            "3515", 
-            "3150"
         ], 
         "Bankbreuk": [
             "0", 
@@ -560,47 +592,11 @@
             "850", 
             "620"
         ], 
-        "Aanranding": [
-            "245", 
-            "230", 
-            "240", 
-            "230"
-        ], 
-        "Softdrugs": [
-            "740", 
-            "645", 
-            "545", 
-            "590"
-        ], 
-        "Schennis der eerbaarheid": [
-            "255", 
-            "245", 
-            "215", 
-            "180"
-        ], 
-        "Rijden tijdens rijverbod": [
-            "5", 
-            "5", 
-            "5", 
-            "5"
-        ], 
-        "Flessentrekkerij": [
-            "45", 
-            "45", 
-            "70", 
-            "55"
-        ], 
-        "Overige wetten": [
+        "Misdrijven overige wetten": [
             "680", 
             "560", 
             "570", 
             "495"
-        ], 
-        "Vernieling": [
-            " beschadiging", 
-            "7975", 
-            "7670", 
-            "7950"
         ], 
         "Niet opvolgen van ambtelijk bevel": [
             "300", 
@@ -608,17 +604,59 @@
             "235", 
             "170"
         ], 
-        "Heling": [
-            "595", 
-            "540", 
-            "600", 
-            "700"
+        "Schennis der eerbaarheid": [
+            "255", 
+            "245", 
+            "215", 
+            "180"
+        ], 
+        "Flessentrekkerij": [
+            "45", 
+            "45", 
+            "70", 
+            "55"
+        ], 
+        "Misdrijven WvSr (overig)": [
+            "1110", 
+            "1225", 
+            "1190", 
+            "1155"
+        ], 
+        "Vernieling": [
+            "7975", 
+            "7670", 
+            "7950", 
+            "6925"
+        ], 
+        "Misdr.openb.orde/gezag": [
+            "20910", 
+            "19510", 
+            "17650", 
+            "14795"
+        ], 
+        "Wederspannigheid": [
+            "80", 
+            "100", 
+            "80", 
+            "80"
         ], 
         "Valsheid in zegels en merken": [
             "5", 
             "10", 
             "15", 
             "20"
+        ], 
+        "Rijden onder invloed": [
+            "5050", 
+            "4605", 
+            "3515", 
+            "3150"
+        ], 
+        "Rijdentijdens ontzegging": [
+            "160", 
+            "200", 
+            "105", 
+            "125"
         ], 
         "Ontucht met misbruik van gezag": [
             "55", 
@@ -632,11 +670,11 @@
             "3115", 
             "2950"
         ], 
-        "Vernielingen": [
-            " misdr.openb.orde/gezag", 
-            "20910", 
-            "19510", 
-            "17650"
+        "Openbare orde misdrijf (overig)": [
+            "605", 
+            "620", 
+            "210", 
+            "120"
         ], 
         "Huisvredebreuk": [
             "275", 
@@ -645,16 +683,10 @@
             "240"
         ], 
         "Openbare orde misdrijf": [
-            "605", 
-            "620", 
-            "210", 
-            "120"
-        ], 
-        "Militair misdrijf": [
-            "30", 
-            "35", 
-            "25", 
-            "30"
+            "2000", 
+            "2045", 
+            "1870", 
+            "1265"
         ], 
         "Lokaalvredebreuk": [
             "80", 
@@ -686,17 +718,11 @@
             "670", 
             "560"
         ], 
-        "Misdrijven WvSr": [
-            "1110", 
-            "1225", 
-            "1190", 
-            "1155"
-        ], 
-        "Wederspannigheid": [
-            "80", 
-            "100", 
-            "80", 
-            "80"
+        "Softdrugs": [
+            "740", 
+            "645", 
+            "545", 
+            "590"
         ], 
         "Vernieling middel openb.vervoer": [
             "225", 
@@ -710,11 +736,17 @@
             "335", 
             "310"
         ], 
-        "Vermogensmisdrijf": [
-            "0", 
-            "0", 
-            "0", 
-            "0"
+        "Vuurwapenmisdrijven": [
+            "535", 
+            "580", 
+            "530", 
+            "540"
+        ], 
+        "Harddrugs": [
+            "720", 
+            "705", 
+            "635", 
+            "545"
         ], 
         "Muntmisdrijf": [
             "110", 
@@ -722,11 +754,17 @@
             "140", 
             "125"
         ], 
-        "Verkeersmisdrijf": [
-            "110", 
-            "95", 
-            "205", 
-            "130"
+        "Aanranding": [
+            "245", 
+            "230", 
+            "240", 
+            "230"
+        ], 
+        "Misdrijf (overig)": [
+            "645", 
+            "525", 
+            "545", 
+            "470"
         ], 
         "Verblijf ongewenste vreemdeling": [
             "0", 
@@ -741,10 +779,10 @@
             "30"
         ], 
         "Mensenhandel": [
-            " mensensmokkel", 
             "85", 
             "60", 
-            "65"
+            "65", 
+            "50"
         ], 
         "Pornografie": [
             "60", 
@@ -752,17 +790,29 @@
             "55", 
             "90"
         ], 
-        "Openlijk geweld tegen goed": [
-            "165", 
-            "165", 
-            "140", 
+        "Verlaten plaats ongeval": [
+            "9520", 
+            "9090", 
+            "8425", 
+            "8225"
+        ], 
+        "Militair misdrijf": [
+            "30", 
+            "35", 
+            "25", 
+            "30"
+        ], 
+        "Geweldsmisdrijf (overig)": [
+            "70", 
+            "100", 
+            "115", 
             "105"
         ], 
-        "Weigeren blaastest/bloedonderzoek": [
-            "30", 
-            "30", 
-            "30", 
-            "25"
+        "Vermogensmisdrijf (overig)": [
+            "0", 
+            "0", 
+            "0", 
+            "0"
         ], 
         "Dierenmishandeling": [
             "0", 
@@ -771,16 +821,16 @@
             "0"
         ], 
         "Openbaar gezag misdrijf": [
-            "25", 
-            "25", 
-            "25", 
-            "30"
+            "450", 
+            "430", 
+            "375", 
+            "330"
         ], 
-        "Joyriding": [
-            "50", 
-            "40", 
-            "35", 
-            "25"
+        "Bedrog (overig)": [
+            "30", 
+            "20", 
+            "25", 
+            "15"
         ], 
         "Afpersing en afdreiging": [
             "70", 
@@ -788,11 +838,11 @@
             "105", 
             "110"
         ], 
-        "Openlijk geweld tegen persoon": [
-            "745", 
-            "635", 
-            "550", 
-            "465"
+        "Seksueel misdrijf (overig)": [
+            "140", 
+            "165", 
+            "140", 
+            "135"
         ], 
         "Openlijke geweldpleging": [
             "915", 
@@ -806,11 +856,17 @@
             "68875", 
             "66645"
         ], 
-        "Totaal": [
-            "126330", 
-            "123905", 
-            "118440", 
-            "111255"
+        "Heling": [
+            "595", 
+            "540", 
+            "600", 
+            "700"
+        ], 
+        "Drugsmisdrijven": [
+            "1465", 
+            "1350", 
+            "1180", 
+            "1130"
         ], 
         "Verkeersmisdrijven": [
             "14995", 
@@ -836,49 +892,43 @@
             "625", 
             "270"
         ], 
-        "Geweldsmisdrijf": [
+        "Openbaar gezag misdrijf (overig)": [
+            "25", 
+            "25", 
+            "25", 
+            "30"
+        ], 
+        "Rijdentijdens rijverbod": [
+            "5", 
+            "5", 
+            "5", 
+            "5"
+        ], 
+        "Voeren vals kenteken": [
+            "75", 
+            "85", 
             "70", 
-            "100", 
-            "115", 
-            "105"
-        ], 
-        "Harddrugs": [
-            "720", 
-            "705", 
-            "635", 
-            "545"
-        ], 
-        "Drugsmisdrijven": [
-            "1465", 
-            "1350", 
-            "1180", 
-            "1130"
+            "90"
         ]
     }, 
     "Flevoland": {
-        "Verlaten plaats ongeval": [
-            "2220", 
-            "1905", 
-            "1780", 
-            "1775"
-        ], 
         "Vermogensmisdrijven": [
             "13775", 
             "14475", 
             "14865", 
             "15920"
         ], 
-        "Misdrijf": [
-            "90", 
-            "100", 
-            "85", 
-            "60"
-        ], 
-        "Rijden tijdens ontzegging": [
-            "55", 
-            "50", 
+        "Verkeersmisdrijf (overig)": [
+            "5", 
+            "15", 
             "30", 
-            "40"
+            "25"
+        ], 
+        "Weigeren blaastest/bloedonderzoek": [
+            "0", 
+            "0", 
+            "0", 
+            "0"
         ], 
         "Oplichting": [
             "490", 
@@ -899,34 +949,40 @@
             "15"
         ], 
         "Seksueel misdrijf": [
-            "10", 
-            "10", 
-            "5", 
-            "15"
+            "140", 
+            "145", 
+            "130", 
+            "170"
         ], 
         "Bedrog": [
-            "0", 
-            "0", 
-            "0", 
-            "5"
+            "490", 
+            "365", 
+            "440", 
+            "450"
         ], 
-        "Voeren vals kenteken": [
-            "5", 
-            "10", 
-            "5", 
-            "10"
-        ], 
-        "Mishandeling": [
-            "1315", 
-            "1325", 
-            "1430", 
-            "1420"
+        "totaal": [
+            "25330", 
+            "25690", 
+            "25270", 
+            "25570"
         ], 
         "Bedreiging en stalking": [
             "770", 
             "775", 
             "890", 
             "890"
+        ], 
+        "Openlijk geweldtegen persoon": [
+            "140", 
+            "150", 
+            "120", 
+            "105"
+        ], 
+        "Joyriding": [
+            "10", 
+            "10", 
+            "5", 
+            "5"
         ], 
         "Ontucht met minderjarige": [
             "10", 
@@ -946,11 +1002,11 @@
             "10", 
             "10"
         ], 
-        "Wapenmisdrijven": [
-            "110", 
-            "130", 
-            "125", 
-            "145"
+        "Openlijk geweldtegen goed": [
+            "55", 
+            "45", 
+            "30", 
+            "15"
         ], 
         "Vernieling aan openbaar gebouw": [
             "1135", 
@@ -964,17 +1020,17 @@
             "15", 
             "10"
         ], 
+        "Mishandeling": [
+            "1315", 
+            "1325", 
+            "1430", 
+            "1420"
+        ], 
         "Diefstal en inbraak met geweld": [
             "410", 
             "470", 
             "415", 
             "440"
-        ], 
-        "Rijden onder invloed": [
-            "1030", 
-            "990", 
-            "940", 
-            "720"
         ], 
         "Bankbreuk": [
             "0", 
@@ -988,47 +1044,11 @@
             "375", 
             "315"
         ], 
-        "Aanranding": [
-            "40", 
-            "40", 
-            "30", 
-            "40"
-        ], 
-        "Softdrugs": [
-            "195", 
-            "265", 
-            "240", 
-            "275"
-        ], 
-        "Schennis der eerbaarheid": [
-            "20", 
-            "35", 
-            "20", 
-            "25"
-        ], 
-        "Rijden tijdens rijverbod": [
-            "0", 
-            "5", 
-            "0", 
-            "0"
-        ], 
-        "Flessentrekkerij": [
-            "5", 
-            "0", 
-            "5", 
-            "0"
-        ], 
-        "Overige wetten": [
+        "Misdrijven overige wetten": [
             "90", 
             "100", 
             "85", 
             "60"
-        ], 
-        "Vernieling": [
-            " beschadiging", 
-            "1545", 
-            "2125", 
-            "1910"
         ], 
         "Niet opvolgen van ambtelijk bevel": [
             "50", 
@@ -1036,17 +1056,59 @@
             "25", 
             "30"
         ], 
-        "Heling": [
-            "95", 
-            "110", 
-            "100", 
-            "110"
+        "Schennis der eerbaarheid": [
+            "20", 
+            "35", 
+            "20", 
+            "25"
+        ], 
+        "Flessentrekkerij": [
+            "5", 
+            "0", 
+            "5", 
+            "0"
+        ], 
+        "Misdrijven WvSr (overig)": [
+            "195", 
+            "185", 
+            "225", 
+            "240"
+        ], 
+        "Vernieling": [
+            "1545", 
+            "2125", 
+            "1910", 
+            "1495"
+        ], 
+        "Misdr.openb.orde/gezag": [
+            "4910", 
+            "4855", 
+            "3930", 
+            "3400"
+        ], 
+        "Wederspannigheid": [
+            "25", 
+            "10", 
+            "20", 
+            "25"
         ], 
         "Valsheid in zegels en merken": [
             "0", 
             "0", 
             "0", 
             "0"
+        ], 
+        "Rijden onder invloed": [
+            "1030", 
+            "990", 
+            "940", 
+            "720"
+        ], 
+        "Rijdentijdens ontzegging": [
+            "55", 
+            "50", 
+            "30", 
+            "40"
         ], 
         "Ontucht met misbruik van gezag": [
             "20", 
@@ -1060,11 +1122,11 @@
             "830", 
             "825"
         ], 
-        "Vernielingen": [
-            " misdr.openb.orde/gezag", 
-            "4910", 
-            "4855", 
-            "3930"
+        "Openbare orde misdrijf (overig)": [
+            "245", 
+            "305", 
+            "120", 
+            "75"
         ], 
         "Huisvredebreuk": [
             "40", 
@@ -1073,16 +1135,10 @@
             "50"
         ], 
         "Openbare orde misdrijf": [
-            "245", 
-            "305", 
-            "120", 
-            "75"
-        ], 
-        "Militair misdrijf": [
-            "0", 
-            "0", 
-            "0", 
-            "0"
+            "540", 
+            "615", 
+            "470", 
+            "345"
         ], 
         "Lokaalvredebreuk": [
             "25", 
@@ -1114,17 +1170,11 @@
             "160", 
             "165"
         ], 
-        "Misdrijven WvSr": [
+        "Softdrugs": [
             "195", 
-            "185", 
-            "225", 
-            "240"
-        ], 
-        "Wederspannigheid": [
-            "25", 
-            "10", 
-            "20", 
-            "25"
+            "265", 
+            "240", 
+            "275"
         ], 
         "Vernieling middel openb.vervoer": [
             "65", 
@@ -1138,11 +1188,17 @@
             "65", 
             "65"
         ], 
-        "Vermogensmisdrijf": [
-            "0", 
-            "0", 
-            "0", 
-            "0"
+        "Vuurwapenmisdrijven": [
+            "110", 
+            "130", 
+            "125", 
+            "145"
+        ], 
+        "Harddrugs": [
+            "375", 
+            "315", 
+            "395", 
+            "325"
         ], 
         "Muntmisdrijf": [
             "35", 
@@ -1150,11 +1206,17 @@
             "30", 
             "35"
         ], 
-        "Verkeersmisdrijf": [
-            "5", 
-            "15", 
+        "Aanranding": [
+            "40", 
+            "40", 
             "30", 
-            "25"
+            "40"
+        ], 
+        "Misdrijf (overig)": [
+            "90", 
+            "100", 
+            "85", 
+            "60"
         ], 
         "Verblijf ongewenste vreemdeling": [
             "0", 
@@ -1169,10 +1231,10 @@
             "5"
         ], 
         "Mensenhandel": [
-            " mensensmokkel", 
             "5", 
             "10", 
-            "5"
+            "5", 
+            "10"
         ], 
         "Pornografie": [
             "15", 
@@ -1180,13 +1242,25 @@
             "20", 
             "20"
         ], 
-        "Openlijk geweld tegen goed": [
-            "55", 
-            "45", 
-            "30", 
-            "15"
+        "Verlaten plaats ongeval": [
+            "2220", 
+            "1905", 
+            "1780", 
+            "1775"
         ], 
-        "Weigeren blaastest/bloedonderzoek": [
+        "Militair misdrijf": [
+            "0", 
+            "0", 
+            "0", 
+            "0"
+        ], 
+        "Geweldsmisdrijf (overig)": [
+            "5", 
+            "20", 
+            "25", 
+            "35"
+        ], 
+        "Vermogensmisdrijf (overig)": [
             "0", 
             "0", 
             "0", 
@@ -1199,15 +1273,15 @@
             "0"
         ], 
         "Openbaar gezag misdrijf": [
-            "5", 
-            "10", 
-            "0", 
-            "5"
+            "85", 
+            "60", 
+            "60", 
+            "75"
         ], 
-        "Joyriding": [
-            "10", 
-            "10", 
-            "5", 
+        "Bedrog (overig)": [
+            "0", 
+            "0", 
+            "0", 
             "5"
         ], 
         "Afpersing en afdreiging": [
@@ -1216,11 +1290,11 @@
             "15", 
             "40"
         ], 
-        "Openlijk geweld tegen persoon": [
-            "140", 
-            "150", 
-            "120", 
-            "105"
+        "Seksueel misdrijf (overig)": [
+            "10", 
+            "10", 
+            "5", 
+            "15"
         ], 
         "Openlijke geweldpleging": [
             "195", 
@@ -1234,11 +1308,17 @@
             "13510", 
             "14550"
         ], 
-        "Totaal": [
-            "25330", 
-            "25690", 
-            "25270", 
-            "25570"
+        "Heling": [
+            "95", 
+            "110", 
+            "100", 
+            "110"
+        ], 
+        "Drugsmisdrijven": [
+            "570", 
+            "580", 
+            "635", 
+            "600"
         ], 
         "Verkeersmisdrijven": [
             "3330", 
@@ -1264,49 +1344,43 @@
             "145", 
             "85"
         ], 
-        "Geweldsmisdrijf": [
+        "Openbaar gezag misdrijf (overig)": [
             "5", 
-            "20", 
-            "25", 
-            "35"
+            "10", 
+            "0", 
+            "5"
         ], 
-        "Harddrugs": [
-            "375", 
-            "315", 
-            "395", 
-            "325"
+        "Rijdentijdens rijverbod": [
+            "0", 
+            "5", 
+            "0", 
+            "0"
         ], 
-        "Drugsmisdrijven": [
-            "570", 
-            "580", 
-            "635", 
-            "600"
+        "Voeren vals kenteken": [
+            "5", 
+            "10", 
+            "5", 
+            "10"
         ]
     }, 
     "Noord-Holland": {
-        "Verlaten plaats ongeval": [
-            "15010", 
-            "15045", 
-            "13040", 
-            "13110"
-        ], 
         "Vermogensmisdrijven": [
             "145550", 
             "146940", 
             "144785", 
             "146610"
         ], 
-        "Misdrijf": [
-            "690", 
-            "525", 
-            "660", 
-            "585"
+        "Verkeersmisdrijf (overig)": [
+            "190", 
+            "140", 
+            "260", 
+            "200"
         ], 
-        "Rijden tijdens ontzegging": [
-            "485", 
-            "415", 
-            "265", 
-            "295"
+        "Weigeren blaastest/bloedonderzoek": [
+            "40", 
+            "65", 
+            "50", 
+            "55"
         ], 
         "Oplichting": [
             "4545", 
@@ -1327,34 +1401,40 @@
             "110"
         ], 
         "Seksueel misdrijf": [
-            "140", 
-            "145", 
-            "140", 
-            "105"
+            "1135", 
+            "1230", 
+            "1215", 
+            "1135"
         ], 
         "Bedrog": [
-            "45", 
-            "45", 
-            "40", 
-            "20"
+            "4665", 
+            "4445", 
+            "5030", 
+            "3975"
         ], 
-        "Voeren vals kenteken": [
-            "110", 
-            "115", 
-            "100", 
-            "80"
-        ], 
-        "Mishandeling": [
-            "11205", 
-            "11205", 
-            "10700", 
-            "9890"
+        "totaal": [
+            "231675", 
+            "232220", 
+            "221310", 
+            "217290"
         ], 
         "Bedreiging en stalking": [
             "7350", 
             "7235", 
             "6915", 
             "6775"
+        ], 
+        "Openlijk geweldtegen persoon": [
+            "1290", 
+            "1075", 
+            "930", 
+            "800"
+        ], 
+        "Joyriding": [
+            "50", 
+            "65", 
+            "50", 
+            "65"
         ], 
         "Ontucht met minderjarige": [
             "90", 
@@ -1374,11 +1454,11 @@
             "105", 
             "105"
         ], 
-        "Wapenmisdrijven": [
-            "1480", 
-            "1860", 
-            "1855", 
-            "1545"
+        "Openlijk geweldtegen goed": [
+            "385", 
+            "315", 
+            "230", 
+            "180"
         ], 
         "Vernieling aan openbaar gebouw": [
             "2050", 
@@ -1392,17 +1472,17 @@
             "85", 
             "75"
         ], 
+        "Mishandeling": [
+            "11205", 
+            "11205", 
+            "10700", 
+            "9890"
+        ], 
         "Diefstal en inbraak met geweld": [
             "4220", 
             "4185", 
             "4055", 
             "4040"
-        ], 
-        "Rijden onder invloed": [
-            "8920", 
-            "9055", 
-            "7625", 
-            "6285"
         ], 
         "Bankbreuk": [
             "20", 
@@ -1416,47 +1496,11 @@
             "3280", 
             "2245"
         ], 
-        "Aanranding": [
-            "360", 
-            "390", 
-            "310", 
-            "325"
-        ], 
-        "Softdrugs": [
-            "990", 
-            "1265", 
-            "1235", 
-            "1165"
-        ], 
-        "Schennis der eerbaarheid": [
-            "215", 
-            "205", 
-            "275", 
-            "235"
-        ], 
-        "Rijden tijdens rijverbod": [
-            "20", 
-            "30", 
-            "30", 
-            "25"
-        ], 
-        "Flessentrekkerij": [
-            "80", 
-            "100", 
-            "100", 
-            "90"
-        ], 
-        "Overige wetten": [
+        "Misdrijven overige wetten": [
             "700", 
             "530", 
             "670", 
             "595"
-        ], 
-        "Vernieling": [
-            " beschadiging", 
-            "10965", 
-            "11070", 
-            "10760"
         ], 
         "Niet opvolgen van ambtelijk bevel": [
             "1045", 
@@ -1464,17 +1508,59 @@
             "910", 
             "900"
         ], 
-        "Heling": [
-            "1170", 
-            "1420", 
-            "1395", 
-            "1230"
+        "Schennis der eerbaarheid": [
+            "215", 
+            "205", 
+            "275", 
+            "235"
+        ], 
+        "Flessentrekkerij": [
+            "80", 
+            "100", 
+            "100", 
+            "90"
+        ], 
+        "Misdrijven WvSr (overig)": [
+            "2030", 
+            "2130", 
+            "2005", 
+            "1865"
+        ], 
+        "Vernieling": [
+            "10965", 
+            "11070", 
+            "10760", 
+            "9620"
+        ], 
+        "Misdr.openb.orde/gezag": [
+            "32695", 
+            "31360", 
+            "26925", 
+            "24330"
+        ], 
+        "Wederspannigheid": [
+            "250", 
+            "225", 
+            "255", 
+            "205"
         ], 
         "Valsheid in zegels en merken": [
             "45", 
             "55", 
             "60", 
             "35"
+        ], 
+        "Rijden onder invloed": [
+            "8920", 
+            "9055", 
+            "7625", 
+            "6285"
+        ], 
+        "Rijdentijdens ontzegging": [
+            "485", 
+            "415", 
+            "265", 
+            "295"
         ], 
         "Ontucht met misbruik van gezag": [
             "60", 
@@ -1488,11 +1574,11 @@
             "6280", 
             "6135"
         ], 
-        "Vernielingen": [
-            " misdr.openb.orde/gezag", 
-            "32695", 
-            "31360", 
-            "26925"
+        "Openbare orde misdrijf (overig)": [
+            "2350", 
+            "2310", 
+            "510", 
+            "350"
         ], 
         "Huisvredebreuk": [
             "525", 
@@ -1501,16 +1587,10 @@
             "480"
         ], 
         "Openbare orde misdrijf": [
-            "2350", 
-            "2310", 
-            "510", 
-            "350"
-        ], 
-        "Militair misdrijf": [
-            "10", 
-            "5", 
-            "10", 
-            "5"
+            "5000", 
+            "4755", 
+            "3030", 
+            "2370"
         ], 
         "Lokaalvredebreuk": [
             "135", 
@@ -1542,17 +1622,11 @@
             "885", 
             "750"
         ], 
-        "Misdrijven WvSr": [
-            "2030", 
-            "2130", 
-            "2005", 
-            "1865"
-        ], 
-        "Wederspannigheid": [
-            "250", 
-            "225", 
-            "255", 
-            "205"
+        "Softdrugs": [
+            "990", 
+            "1265", 
+            "1235", 
+            "1165"
         ], 
         "Vernieling middel openb.vervoer": [
             "460", 
@@ -1566,11 +1640,17 @@
             "635", 
             "640"
         ], 
-        "Vermogensmisdrijf": [
-            "0", 
-            "0", 
-            "0", 
-            "0"
+        "Vuurwapenmisdrijven": [
+            "1480", 
+            "1860", 
+            "1855", 
+            "1545"
+        ], 
+        "Harddrugs": [
+            "2500", 
+            "2350", 
+            "2455", 
+            "2260"
         ], 
         "Muntmisdrijf": [
             "230", 
@@ -1578,11 +1658,17 @@
             "210", 
             "235"
         ], 
-        "Verkeersmisdrijf": [
-            "190", 
-            "140", 
-            "260", 
-            "200"
+        "Aanranding": [
+            "360", 
+            "390", 
+            "310", 
+            "325"
+        ], 
+        "Misdrijf (overig)": [
+            "690", 
+            "525", 
+            "660", 
+            "585"
         ], 
         "Verblijf ongewenste vreemdeling": [
             "10", 
@@ -1597,10 +1683,10 @@
             "80"
         ], 
         "Mensenhandel": [
-            " mensensmokkel", 
             "125", 
             "130", 
-            "135"
+            "135", 
+            "100"
         ], 
         "Pornografie": [
             "90", 
@@ -1608,17 +1694,29 @@
             "105", 
             "100"
         ], 
-        "Openlijk geweld tegen goed": [
-            "385", 
-            "315", 
-            "230", 
-            "180"
+        "Verlaten plaats ongeval": [
+            "15010", 
+            "15045", 
+            "13040", 
+            "13110"
         ], 
-        "Weigeren blaastest/bloedonderzoek": [
-            "40", 
-            "65", 
-            "50", 
-            "55"
+        "Militair misdrijf": [
+            "10", 
+            "5", 
+            "10", 
+            "5"
+        ], 
+        "Geweldsmisdrijf (overig)": [
+            "175", 
+            "205", 
+            "190", 
+            "160"
+        ], 
+        "Vermogensmisdrijf (overig)": [
+            "0", 
+            "0", 
+            "0", 
+            "0"
         ], 
         "Dierenmishandeling": [
             "0", 
@@ -1627,16 +1725,16 @@
             "0"
         ], 
         "Openbaar gezag misdrijf": [
-            "55", 
-            "50", 
-            "25", 
-            "40"
+            "1435", 
+            "1425", 
+            "1290", 
+            "1230"
         ], 
-        "Joyriding": [
-            "50", 
-            "65", 
-            "50", 
-            "65"
+        "Bedrog (overig)": [
+            "45", 
+            "45", 
+            "40", 
+            "20"
         ], 
         "Afpersing en afdreiging": [
             "200", 
@@ -1644,11 +1742,11 @@
             "220", 
             "265"
         ], 
-        "Openlijk geweld tegen persoon": [
-            "1290", 
-            "1075", 
-            "930", 
-            "800"
+        "Seksueel misdrijf (overig)": [
+            "140", 
+            "145", 
+            "140", 
+            "105"
         ], 
         "Openlijke geweldpleging": [
             "1675", 
@@ -1662,11 +1760,17 @@
             "130650", 
             "134735"
         ], 
-        "Totaal": [
-            "231675", 
-            "232220", 
-            "221310", 
-            "217290"
+        "Heling": [
+            "1170", 
+            "1420", 
+            "1395", 
+            "1230"
+        ], 
+        "Drugsmisdrijven": [
+            "3485", 
+            "3615", 
+            "3690", 
+            "3425"
         ], 
         "Verkeersmisdrijven": [
             "24825", 
@@ -1692,49 +1796,43 @@
             "690", 
             "405"
         ], 
-        "Geweldsmisdrijf": [
-            "175", 
-            "205", 
-            "190", 
-            "160"
+        "Openbaar gezag misdrijf (overig)": [
+            "55", 
+            "50", 
+            "25", 
+            "40"
         ], 
-        "Harddrugs": [
-            "2500", 
-            "2350", 
-            "2455", 
-            "2260"
+        "Rijdentijdens rijverbod": [
+            "20", 
+            "30", 
+            "30", 
+            "25"
         ], 
-        "Drugsmisdrijven": [
-            "3485", 
-            "3615", 
-            "3690", 
-            "3425"
+        "Voeren vals kenteken": [
+            "110", 
+            "115", 
+            "100", 
+            "80"
         ]
     }, 
     "Friesland": {
-        "Verlaten plaats ongeval": [
-            "2655", 
-            "2595", 
-            "2250", 
-            "2160"
-        ], 
         "Vermogensmisdrijven": [
             "15415", 
             "15430", 
             "15185", 
             "15445"
         ], 
-        "Misdrijf": [
-            "235", 
-            "165", 
-            "150", 
-            "150"
+        "Verkeersmisdrijf (overig)": [
+            "25", 
+            "15", 
+            "60", 
+            "55"
         ], 
-        "Rijden tijdens ontzegging": [
-            "85", 
-            "75", 
-            "45", 
-            "20"
+        "Weigeren blaastest/bloedonderzoek": [
+            "5", 
+            "5", 
+            "5", 
+            "5"
         ], 
         "Oplichting": [
             "935", 
@@ -1755,34 +1853,40 @@
             "10"
         ], 
         "Seksueel misdrijf": [
-            "65", 
-            "45", 
-            "30", 
-            "50"
+            "360", 
+            "325", 
+            "285", 
+            "320"
         ], 
         "Bedrog": [
-            "5", 
-            "0", 
-            "5", 
-            "5"
+            "975", 
+            "660", 
+            "810", 
+            "620"
         ], 
-        "Voeren vals kenteken": [
-            "10", 
-            "25", 
-            "20", 
-            "20"
-        ], 
-        "Mishandeling": [
-            "1930", 
-            "1875", 
-            "1890", 
-            "1760"
+        "totaal": [
+            "31415", 
+            "31500", 
+            "29500", 
+            "28325"
         ], 
         "Bedreiging en stalking": [
             "1085", 
             "1220", 
             "1105", 
             "1115"
+        ], 
+        "Openlijk geweldtegen persoon": [
+            "135", 
+            "135", 
+            "105", 
+            "95"
+        ], 
+        "Joyriding": [
+            "15", 
+            "10", 
+            "10", 
+            "5"
         ], 
         "Ontucht met minderjarige": [
             "45", 
@@ -1802,11 +1906,11 @@
             "5", 
             "5"
         ], 
-        "Wapenmisdrijven": [
-            "135", 
-            "180", 
-            "130", 
-            "140"
+        "Openlijk geweldtegen goed": [
+            "75", 
+            "80", 
+            "60", 
+            "50"
         ], 
         "Vernieling aan openbaar gebouw": [
             "365", 
@@ -1820,17 +1924,17 @@
             "10", 
             "10"
         ], 
+        "Mishandeling": [
+            "1930", 
+            "1875", 
+            "1890", 
+            "1760"
+        ], 
         "Diefstal en inbraak met geweld": [
             "195", 
             "205", 
             "180", 
             "210"
-        ], 
-        "Rijden onder invloed": [
-            "1785", 
-            "1710", 
-            "1380", 
-            "1040"
         ], 
         "Bankbreuk": [
             "0", 
@@ -1844,47 +1948,11 @@
             "195", 
             "210"
         ], 
-        "Aanranding": [
-            "75", 
-            "55", 
-            "60", 
-            "70"
-        ], 
-        "Softdrugs": [
-            "290", 
-            "300", 
-            "195", 
-            "260"
-        ], 
-        "Schennis der eerbaarheid": [
-            "75", 
-            "95", 
-            "45", 
-            "50"
-        ], 
-        "Rijden tijdens rijverbod": [
-            "5", 
-            "0", 
-            "5", 
-            "0"
-        ], 
-        "Flessentrekkerij": [
-            "35", 
-            "15", 
-            "20", 
-            "20"
-        ], 
-        "Overige wetten": [
+        "Misdrijven overige wetten": [
             "235", 
             "165", 
             "150", 
             "150"
-        ], 
-        "Vernieling": [
-            " beschadiging", 
-            "3110", 
-            "3185", 
-            "3100"
         ], 
         "Niet opvolgen van ambtelijk bevel": [
             "85", 
@@ -1892,17 +1960,59 @@
             "135", 
             "55"
         ], 
-        "Heling": [
-            "120", 
-            "115", 
-            "100", 
-            "90"
+        "Schennis der eerbaarheid": [
+            "75", 
+            "95", 
+            "45", 
+            "50"
+        ], 
+        "Flessentrekkerij": [
+            "35", 
+            "15", 
+            "20", 
+            "20"
+        ], 
+        "Misdrijven WvSr (overig)": [
+            "375", 
+            "360", 
+            "405", 
+            "370"
+        ], 
+        "Vernieling": [
+            "3110", 
+            "3185", 
+            "3100", 
+            "2540"
+        ], 
+        "Misdr.openb.orde/gezag": [
+            "6570", 
+            "6740", 
+            "6000", 
+            "5080"
+        ], 
+        "Wederspannigheid": [
+            "35", 
+            "20", 
+            "30", 
+            "20"
         ], 
         "Valsheid in zegels en merken": [
             "0", 
             "5", 
             "0", 
             "5"
+        ], 
+        "Rijden onder invloed": [
+            "1785", 
+            "1710", 
+            "1380", 
+            "1040"
+        ], 
+        "Rijdentijdens ontzegging": [
+            "85", 
+            "75", 
+            "45", 
+            "20"
         ], 
         "Ontucht met misbruik van gezag": [
             "20", 
@@ -1916,11 +2026,11 @@
             "995", 
             "1000"
         ], 
-        "Vernielingen": [
-            " misdr.openb.orde/gezag", 
-            "6570", 
-            "6740", 
-            "6000"
+        "Openbare orde misdrijf (overig)": [
+            "160", 
+            "220", 
+            "125", 
+            "140"
         ], 
         "Huisvredebreuk": [
             "95", 
@@ -1929,16 +2039,10 @@
             "90"
         ], 
         "Openbare orde misdrijf": [
-            "160", 
-            "220", 
-            "125", 
-            "140"
-        ], 
-        "Militair misdrijf": [
-            "0", 
-            "0", 
-            "0", 
-            "0"
+            "545", 
+            "605", 
+            "565", 
+            "470"
         ], 
         "Lokaalvredebreuk": [
             "40", 
@@ -1970,17 +2074,11 @@
             "200", 
             "175"
         ], 
-        "Misdrijven WvSr": [
-            "375", 
-            "360", 
-            "405", 
-            "370"
-        ], 
-        "Wederspannigheid": [
-            "35", 
-            "20", 
-            "30", 
-            "20"
+        "Softdrugs": [
+            "290", 
+            "300", 
+            "195", 
+            "260"
         ], 
         "Vernieling middel openb.vervoer": [
             "60", 
@@ -1994,11 +2092,17 @@
             "115", 
             "115"
         ], 
-        "Vermogensmisdrijf": [
-            "0", 
-            "0", 
-            "0", 
-            "0"
+        "Vuurwapenmisdrijven": [
+            "135", 
+            "180", 
+            "130", 
+            "140"
+        ], 
+        "Harddrugs": [
+            "260", 
+            "245", 
+            "185", 
+            "215"
         ], 
         "Muntmisdrijf": [
             "10", 
@@ -2006,11 +2110,17 @@
             "20", 
             "50"
         ], 
-        "Verkeersmisdrijf": [
-            "25", 
-            "15", 
+        "Aanranding": [
+            "75", 
+            "55", 
             "60", 
-            "55"
+            "70"
+        ], 
+        "Misdrijf (overig)": [
+            "235", 
+            "165", 
+            "150", 
+            "150"
         ], 
         "Verblijf ongewenste vreemdeling": [
             "0", 
@@ -2025,8 +2135,8 @@
             "15"
         ], 
         "Mensenhandel": [
-            " mensensmokkel", 
             "10", 
+            "15", 
             "15", 
             "15"
         ], 
@@ -2036,17 +2146,29 @@
             "25", 
             "30"
         ], 
-        "Openlijk geweld tegen goed": [
-            "75", 
-            "80", 
-            "60", 
-            "50"
+        "Verlaten plaats ongeval": [
+            "2655", 
+            "2595", 
+            "2250", 
+            "2160"
         ], 
-        "Weigeren blaastest/bloedonderzoek": [
-            "5", 
-            "5", 
-            "5", 
-            "5"
+        "Militair misdrijf": [
+            "0", 
+            "0", 
+            "0", 
+            "0"
+        ], 
+        "Geweldsmisdrijf (overig)": [
+            "40", 
+            "50", 
+            "45", 
+            "40"
+        ], 
+        "Vermogensmisdrijf (overig)": [
+            "0", 
+            "0", 
+            "0", 
+            "0"
         ], 
         "Dierenmishandeling": [
             "0", 
@@ -2055,15 +2177,15 @@
             "0"
         ], 
         "Openbaar gezag misdrijf": [
-            "10", 
-            "15", 
-            "5", 
-            "5"
+            "145", 
+            "190", 
+            "190", 
+            "95"
         ], 
-        "Joyriding": [
-            "15", 
-            "10", 
-            "10", 
+        "Bedrog (overig)": [
+            "5", 
+            "0", 
+            "5", 
             "5"
         ], 
         "Afpersing en afdreiging": [
@@ -2072,11 +2194,11 @@
             "25", 
             "30"
         ], 
-        "Openlijk geweld tegen persoon": [
-            "135", 
-            "135", 
-            "105", 
-            "95"
+        "Seksueel misdrijf (overig)": [
+            "65", 
+            "45", 
+            "30", 
+            "50"
         ], 
         "Openlijke geweldpleging": [
             "210", 
@@ -2090,11 +2212,17 @@
             "13870", 
             "14280"
         ], 
-        "Totaal": [
-            "31415", 
-            "31500", 
-            "29500", 
-            "28325"
+        "Heling": [
+            "120", 
+            "115", 
+            "100", 
+            "90"
+        ], 
+        "Drugsmisdrijven": [
+            "550", 
+            "550", 
+            "380", 
+            "470"
         ], 
         "Verkeersmisdrijven": [
             "4590", 
@@ -2120,49 +2248,43 @@
             "135", 
             "60"
         ], 
-        "Geweldsmisdrijf": [
-            "40", 
-            "50", 
-            "45", 
-            "40"
+        "Openbaar gezag misdrijf (overig)": [
+            "10", 
+            "15", 
+            "5", 
+            "5"
         ], 
-        "Harddrugs": [
-            "260", 
-            "245", 
-            "185", 
-            "215"
+        "Rijdentijdens rijverbod": [
+            "5", 
+            "0", 
+            "5", 
+            "0"
         ], 
-        "Drugsmisdrijven": [
-            "550", 
-            "550", 
-            "380", 
-            "470"
+        "Voeren vals kenteken": [
+            "10", 
+            "25", 
+            "20", 
+            "20"
         ]
     }, 
     "Zuid-Holland": {
-        "Verlaten plaats ongeval": [
-            "26485", 
-            "26800", 
-            "23305", 
-            "22825"
-        ], 
         "Vermogensmisdrijven": [
             "157490", 
             "161270", 
             "154830", 
             "147160"
         ], 
-        "Misdrijf": [
-            "700", 
-            "620", 
-            "1025", 
-            "1105"
+        "Verkeersmisdrijf (overig)": [
+            "390", 
+            "405", 
+            "575", 
+            "420"
         ], 
-        "Rijden tijdens ontzegging": [
-            "980", 
-            "865", 
-            "565", 
-            "635"
+        "Weigeren blaastest/bloedonderzoek": [
+            "170", 
+            "180", 
+            "130", 
+            "145"
         ], 
         "Oplichting": [
             "5095", 
@@ -2183,34 +2305,40 @@
             "135"
         ], 
         "Seksueel misdrijf": [
-            "315", 
-            "370", 
-            "315", 
-            "265"
+            "2250", 
+            "2220", 
+            "2190", 
+            "2085"
         ], 
         "Bedrog": [
-            "65", 
-            "55", 
-            "45", 
-            "50"
+            "5235", 
+            "4785", 
+            "5365", 
+            "4510"
         ], 
-        "Voeren vals kenteken": [
-            "150", 
-            "125", 
-            "160", 
-            "130"
-        ], 
-        "Mishandeling": [
-            "14425", 
-            "14030", 
-            "13225", 
-            "12460"
+        "totaal": [
+            "275740", 
+            "283740", 
+            "265150", 
+            "250365"
         ], 
         "Bedreiging en stalking": [
             "8855", 
             "8990", 
             "9165", 
             "8820"
+        ], 
+        "Openlijk geweldtegen persoon": [
+            "1920", 
+            "1670", 
+            "1410", 
+            "1195"
+        ], 
+        "Joyriding": [
+            "75", 
+            "55", 
+            "85", 
+            "75"
         ], 
         "Ontucht met minderjarige": [
             "265", 
@@ -2230,11 +2358,11 @@
             "165", 
             "235"
         ], 
-        "Wapenmisdrijven": [
-            "1525", 
-            "1850", 
-            "1770", 
-            "1735"
+        "Openlijk geweldtegen goed": [
+            "675", 
+            "555", 
+            "490", 
+            "395"
         ], 
         "Vernieling aan openbaar gebouw": [
             "1840", 
@@ -2248,17 +2376,17 @@
             "110", 
             "150"
         ], 
+        "Mishandeling": [
+            "14425", 
+            "14030", 
+            "13225", 
+            "12460"
+        ], 
         "Diefstal en inbraak met geweld": [
             "4655", 
             "4495", 
             "4335", 
             "3455"
-        ], 
-        "Rijden onder invloed": [
-            "15825", 
-            "16030", 
-            "13730", 
-            "12680"
         ], 
         "Bankbreuk": [
             "10", 
@@ -2272,47 +2400,11 @@
             "2985", 
             "2375"
         ], 
-        "Aanranding": [
-            "605", 
-            "535", 
-            "500", 
-            "485"
-        ], 
-        "Softdrugs": [
-            "1650", 
-            "1900", 
-            "1815", 
-            "2280"
-        ], 
-        "Schennis der eerbaarheid": [
-            "430", 
-            "440", 
-            "460", 
-            "460"
-        ], 
-        "Rijden tijdens rijverbod": [
-            "60", 
-            "70", 
-            "80", 
-            "60"
-        ], 
-        "Flessentrekkerij": [
-            "80", 
-            "95", 
-            "75", 
-            "105"
-        ], 
-        "Overige wetten": [
+        "Misdrijven overige wetten": [
             "700", 
             "620", 
             "1025", 
             "1105"
-        ], 
-        "Vernieling": [
-            " beschadiging", 
-            "13705", 
-            "16270", 
-            "15790"
         ], 
         "Niet opvolgen van ambtelijk bevel": [
             "1020", 
@@ -2320,17 +2412,59 @@
             "625", 
             "500"
         ], 
-        "Heling": [
-            "1420", 
-            "1635", 
-            "1720", 
-            "1740"
+        "Schennis der eerbaarheid": [
+            "430", 
+            "440", 
+            "460", 
+            "460"
+        ], 
+        "Flessentrekkerij": [
+            "80", 
+            "95", 
+            "75", 
+            "105"
+        ], 
+        "Misdrijven WvSr (overig)": [
+            "2800", 
+            "2960", 
+            "2955", 
+            "2945"
+        ], 
+        "Vernieling": [
+            "13705", 
+            "16270", 
+            "15790", 
+            "13965"
+        ], 
+        "Misdr.openb.orde/gezag": [
+            "38920", 
+            "42095", 
+            "36420", 
+            "31930"
+        ], 
+        "Wederspannigheid": [
+            "415", 
+            "380", 
+            "370", 
+            "345"
         ], 
         "Valsheid in zegels en merken": [
             "50", 
             "65", 
             "90", 
             "85"
+        ], 
+        "Rijden onder invloed": [
+            "15825", 
+            "16030", 
+            "13730", 
+            "12680"
+        ], 
+        "Rijdentijdens ontzegging": [
+            "980", 
+            "865", 
+            "565", 
+            "635"
         ], 
         "Ontucht met misbruik van gezag": [
             "115", 
@@ -2344,11 +2478,11 @@
             "8305", 
             "7955"
         ], 
-        "Vernielingen": [
-            " misdr.openb.orde/gezag", 
-            "38920", 
-            "42095", 
-            "36420"
+        "Openbare orde misdrijf (overig)": [
+            "1630", 
+            "1465", 
+            "630", 
+            "435"
         ], 
         "Huisvredebreuk": [
             "500", 
@@ -2357,16 +2491,10 @@
             "630"
         ], 
         "Openbare orde misdrijf": [
-            "1630", 
-            "1465", 
-            "630", 
-            "435"
-        ], 
-        "Militair misdrijf": [
-            "0", 
-            "0", 
-            "0", 
-            "0"
+            "5130", 
+            "4650", 
+            "3795", 
+            "3180"
         ], 
         "Lokaalvredebreuk": [
             "110", 
@@ -2398,17 +2526,11 @@
             "1250", 
             "1070"
         ], 
-        "Misdrijven WvSr": [
-            "2800", 
-            "2960", 
-            "2955", 
-            "2945"
-        ], 
-        "Wederspannigheid": [
-            "415", 
-            "380", 
-            "370", 
-            "345"
+        "Softdrugs": [
+            "1650", 
+            "1900", 
+            "1815", 
+            "2280"
         ], 
         "Vernieling middel openb.vervoer": [
             "355", 
@@ -2422,11 +2544,17 @@
             "860", 
             "860"
         ], 
-        "Vermogensmisdrijf": [
-            "0", 
-            "0", 
-            "0", 
-            "0"
+        "Vuurwapenmisdrijven": [
+            "1525", 
+            "1850", 
+            "1770", 
+            "1735"
+        ], 
+        "Harddrugs": [
+            "1405", 
+            "1605", 
+            "1515", 
+            "1530"
         ], 
         "Muntmisdrijf": [
             "365", 
@@ -2434,11 +2562,17 @@
             "245", 
             "240"
         ], 
-        "Verkeersmisdrijf": [
-            "390", 
-            "405", 
-            "575", 
-            "420"
+        "Aanranding": [
+            "605", 
+            "535", 
+            "500", 
+            "485"
+        ], 
+        "Misdrijf (overig)": [
+            "700", 
+            "620", 
+            "1025", 
+            "1105"
         ], 
         "Verblijf ongewenste vreemdeling": [
             "5", 
@@ -2453,10 +2587,10 @@
             "70"
         ], 
         "Mensenhandel": [
-            " mensensmokkel", 
             "110", 
             "180", 
-            "175"
+            "175", 
+            "130"
         ], 
         "Pornografie": [
             "110", 
@@ -2464,17 +2598,29 @@
             "175", 
             "180"
         ], 
-        "Openlijk geweld tegen goed": [
-            "675", 
-            "555", 
-            "490", 
-            "395"
+        "Verlaten plaats ongeval": [
+            "26485", 
+            "26800", 
+            "23305", 
+            "22825"
         ], 
-        "Weigeren blaastest/bloedonderzoek": [
-            "170", 
-            "180", 
-            "130", 
-            "145"
+        "Militair misdrijf": [
+            "0", 
+            "0", 
+            "0", 
+            "0"
+        ], 
+        "Geweldsmisdrijf (overig)": [
+            "260", 
+            "275", 
+            "290", 
+            "250"
+        ], 
+        "Vermogensmisdrijf (overig)": [
+            "0", 
+            "0", 
+            "0", 
+            "0"
         ], 
         "Dierenmishandeling": [
             "0", 
@@ -2483,16 +2629,16 @@
             "0"
         ], 
         "Openbaar gezag misdrijf": [
-            "55", 
-            "70", 
-            "55", 
-            "55"
+            "1600", 
+            "1340", 
+            "1170", 
+            "1075"
         ], 
-        "Joyriding": [
-            "75", 
+        "Bedrog (overig)": [
+            "65", 
             "55", 
-            "85", 
-            "75"
+            "45", 
+            "50"
         ], 
         "Afpersing en afdreiging": [
             "335", 
@@ -2500,11 +2646,11 @@
             "315", 
             "350"
         ], 
-        "Openlijk geweld tegen persoon": [
-            "1920", 
-            "1670", 
-            "1410", 
-            "1195"
+        "Seksueel misdrijf (overig)": [
+            "315", 
+            "370", 
+            "315", 
+            "265"
         ], 
         "Openlijke geweldpleging": [
             "2595", 
@@ -2518,11 +2664,17 @@
             "139910", 
             "134455"
         ], 
-        "Totaal": [
-            "275740", 
-            "283740", 
-            "265150", 
-            "250365"
+        "Heling": [
+            "1420", 
+            "1635", 
+            "1720", 
+            "1740"
+        ], 
+        "Drugsmisdrijven": [
+            "3055", 
+            "3505", 
+            "3330", 
+            "3810"
         ], 
         "Verkeersmisdrijven": [
             "44135", 
@@ -2548,49 +2700,43 @@
             "555", 
             "365"
         ], 
-        "Geweldsmisdrijf": [
-            "260", 
-            "275", 
-            "290", 
-            "250"
+        "Openbaar gezag misdrijf (overig)": [
+            "55", 
+            "70", 
+            "55", 
+            "55"
         ], 
-        "Harddrugs": [
-            "1405", 
-            "1605", 
-            "1515", 
-            "1530"
+        "Rijdentijdens rijverbod": [
+            "60", 
+            "70", 
+            "80", 
+            "60"
         ], 
-        "Drugsmisdrijven": [
-            "3055", 
-            "3505", 
-            "3330", 
-            "3810"
+        "Voeren vals kenteken": [
+            "150", 
+            "125", 
+            "160", 
+            "130"
         ]
     }, 
     "Drenthe": {
-        "Verlaten plaats ongeval": [
-            "1945", 
-            "1690", 
-            "1455", 
-            "1325"
-        ], 
         "Vermogensmisdrijven": [
             "13975", 
             "14310", 
             "14060", 
             "13250"
         ], 
-        "Misdrijf": [
-            "135", 
-            "105", 
-            "105", 
-            "95"
-        ], 
-        "Rijden tijdens ontzegging": [
+        "Verkeersmisdrijf (overig)": [
+            "25", 
+            "35", 
             "40", 
+            "45"
+        ], 
+        "Weigeren blaastest/bloedonderzoek": [
+            "5", 
+            "5", 
             "10", 
-            "10", 
-            "10"
+            "5"
         ], 
         "Oplichting": [
             "720", 
@@ -2611,34 +2757,40 @@
             "10"
         ], 
         "Seksueel misdrijf": [
-            "70", 
-            "55", 
-            "45", 
-            "45"
+            "385", 
+            "330", 
+            "300", 
+            "250"
         ], 
         "Bedrog": [
-            "15", 
-            "10", 
-            "15", 
-            "10"
+            "760", 
+            "610", 
+            "810", 
+            "590"
         ], 
-        "Voeren vals kenteken": [
-            "15", 
-            "15", 
-            "15", 
-            "5"
-        ], 
-        "Mishandeling": [
-            "1685", 
-            "1610", 
-            "1610", 
-            "1455"
+        "totaal": [
+            "25775", 
+            "25730", 
+            "25020", 
+            "22810"
         ], 
         "Bedreiging en stalking": [
             "975", 
             "1025", 
             "1005", 
             "1010"
+        ], 
+        "Openlijk geweldtegen persoon": [
+            "110", 
+            "105", 
+            "100", 
+            "70"
+        ], 
+        "Joyriding": [
+            "10", 
+            "5", 
+            "5", 
+            "10"
         ], 
         "Ontucht met minderjarige": [
             "35", 
@@ -2658,11 +2810,11 @@
             "10", 
             "10"
         ], 
-        "Wapenmisdrijven": [
-            "190", 
-            "185", 
-            "170", 
-            "115"
+        "Openlijk geweldtegen goed": [
+            "35", 
+            "30", 
+            "30", 
+            "20"
         ], 
         "Vernieling aan openbaar gebouw": [
             "470", 
@@ -2676,17 +2828,17 @@
             "10", 
             "5"
         ], 
+        "Mishandeling": [
+            "1685", 
+            "1610", 
+            "1610", 
+            "1455"
+        ], 
         "Diefstal en inbraak met geweld": [
             "210", 
             "220", 
             "185", 
             "150"
-        ], 
-        "Rijden onder invloed": [
-            "870", 
-            "880", 
-            "610", 
-            "505"
         ], 
         "Bankbreuk": [
             "5", 
@@ -2700,47 +2852,11 @@
             "185", 
             "150"
         ], 
-        "Aanranding": [
-            "95", 
-            "80", 
-            "60", 
-            "50"
-        ], 
-        "Softdrugs": [
-            "190", 
-            "155", 
-            "160", 
-            "185"
-        ], 
-        "Schennis der eerbaarheid": [
-            "75", 
-            "80", 
-            "70", 
-            "45"
-        ], 
-        "Rijden tijdens rijverbod": [
-            "0", 
-            "0", 
-            "0", 
-            "0"
-        ], 
-        "Flessentrekkerij": [
-            "25", 
-            "15", 
-            "25", 
-            "5"
-        ], 
-        "Overige wetten": [
+        "Misdrijven overige wetten": [
             "140", 
             "105", 
             "105", 
             "95"
-        ], 
-        "Vernieling": [
-            " beschadiging", 
-            "2225", 
-            "2390", 
-            "2295"
         ], 
         "Niet opvolgen van ambtelijk bevel": [
             "40", 
@@ -2748,17 +2864,59 @@
             "45", 
             "35"
         ], 
-        "Heling": [
-            "95", 
-            "85", 
-            "85", 
-            "85"
+        "Schennis der eerbaarheid": [
+            "75", 
+            "80", 
+            "70", 
+            "45"
+        ], 
+        "Flessentrekkerij": [
+            "25", 
+            "15", 
+            "25", 
+            "5"
+        ], 
+        "Misdrijven WvSr (overig)": [
+            "255", 
+            "295", 
+            "275", 
+            "265"
+        ], 
+        "Vernieling": [
+            "2225", 
+            "2390", 
+            "2295", 
+            "1885"
+        ], 
+        "Misdr.openb.orde/gezag": [
+            "4795", 
+            "4755", 
+            "4930", 
+            "4015"
+        ], 
+        "Wederspannigheid": [
+            "10", 
+            "10", 
+            "10", 
+            "5"
         ], 
         "Valsheid in zegels en merken": [
             "0", 
             "0", 
             "0", 
             "0"
+        ], 
+        "Rijden onder invloed": [
+            "870", 
+            "880", 
+            "610", 
+            "505"
+        ], 
+        "Rijdentijdens ontzegging": [
+            "40", 
+            "10", 
+            "10", 
+            "10"
         ], 
         "Ontucht met misbruik van gezag": [
             "10", 
@@ -2772,11 +2930,11 @@
             "880", 
             "860"
         ], 
-        "Vernielingen": [
-            " misdr.openb.orde/gezag", 
-            "4795", 
-            "4755", 
-            "4930"
+        "Openbare orde misdrijf (overig)": [
+            "85", 
+            "95", 
+            "80", 
+            "45"
         ], 
         "Huisvredebreuk": [
             "35", 
@@ -2785,16 +2943,10 @@
             "50"
         ], 
         "Openbare orde misdrijf": [
-            "85", 
-            "95", 
-            "80", 
-            "45"
-        ], 
-        "Militair misdrijf": [
-            "5", 
-            "0", 
-            "0", 
-            "0"
+            "325", 
+            "325", 
+            "420", 
+            "300"
         ], 
         "Lokaalvredebreuk": [
             "25", 
@@ -2826,17 +2978,11 @@
             "250", 
             "235"
         ], 
-        "Misdrijven WvSr": [
-            "255", 
-            "295", 
-            "275", 
-            "265"
-        ], 
-        "Wederspannigheid": [
-            "10", 
-            "10", 
-            "10", 
-            "5"
+        "Softdrugs": [
+            "190", 
+            "155", 
+            "160", 
+            "185"
         ], 
         "Vernieling middel openb.vervoer": [
             "25", 
@@ -2850,11 +2996,17 @@
             "125", 
             "145"
         ], 
-        "Vermogensmisdrijf": [
-            "0", 
-            "0", 
-            "0", 
-            "0"
+        "Vuurwapenmisdrijven": [
+            "190", 
+            "185", 
+            "170", 
+            "115"
+        ], 
+        "Harddrugs": [
+            "85", 
+            "90", 
+            "75", 
+            "90"
         ], 
         "Muntmisdrijf": [
             "30", 
@@ -2862,11 +3014,17 @@
             "20", 
             "35"
         ], 
-        "Verkeersmisdrijf": [
-            "25", 
-            "35", 
-            "40", 
-            "45"
+        "Aanranding": [
+            "95", 
+            "80", 
+            "60", 
+            "50"
+        ], 
+        "Misdrijf (overig)": [
+            "135", 
+            "105", 
+            "105", 
+            "95"
         ], 
         "Verblijf ongewenste vreemdeling": [
             "0", 
@@ -2881,9 +3039,9 @@
             "15"
         ], 
         "Mensenhandel": [
-            " mensensmokkel", 
             "15", 
             "10", 
+            "5", 
             "5"
         ], 
         "Pornografie": [
@@ -2892,17 +3050,29 @@
             "25", 
             "30"
         ], 
-        "Openlijk geweld tegen goed": [
-            "35", 
-            "30", 
-            "30", 
-            "20"
+        "Verlaten plaats ongeval": [
+            "1945", 
+            "1690", 
+            "1455", 
+            "1325"
         ], 
-        "Weigeren blaastest/bloedonderzoek": [
+        "Militair misdrijf": [
             "5", 
-            "5", 
-            "10", 
-            "5"
+            "0", 
+            "0", 
+            "0"
+        ], 
+        "Geweldsmisdrijf (overig)": [
+            "45", 
+            "50", 
+            "35", 
+            "45"
+        ], 
+        "Vermogensmisdrijf (overig)": [
+            "0", 
+            "0", 
+            "0", 
+            "0"
         ], 
         "Dierenmishandeling": [
             "0", 
@@ -2911,15 +3081,15 @@
             "0"
         ], 
         "Openbaar gezag misdrijf": [
-            "5", 
-            "0", 
-            "10", 
-            "10"
+            "55", 
+            "100", 
+            "80", 
+            "55"
         ], 
-        "Joyriding": [
+        "Bedrog (overig)": [
+            "15", 
             "10", 
-            "5", 
-            "5", 
+            "15", 
             "10"
         ], 
         "Afpersing en afdreiging": [
@@ -2928,11 +3098,11 @@
             "25", 
             "30"
         ], 
-        "Openlijk geweld tegen persoon": [
-            "110", 
-            "105", 
-            "100", 
-            "70"
+        "Seksueel misdrijf (overig)": [
+            "70", 
+            "55", 
+            "45", 
+            "45"
         ], 
         "Openlijke geweldpleging": [
             "145", 
@@ -2946,11 +3116,17 @@
             "12755", 
             "12225"
         ], 
-        "Totaal": [
-            "25775", 
-            "25730", 
-            "25020", 
-            "22810"
+        "Heling": [
+            "95", 
+            "85", 
+            "85", 
+            "85"
+        ], 
+        "Drugsmisdrijven": [
+            "275", 
+            "245", 
+            "230", 
+            "275"
         ], 
         "Verkeersmisdrijven": [
             "2905", 
@@ -2976,49 +3152,43 @@
             "150", 
             "80"
         ], 
-        "Geweldsmisdrijf": [
-            "45", 
-            "50", 
-            "35", 
-            "45"
+        "Openbaar gezag misdrijf (overig)": [
+            "5", 
+            "0", 
+            "10", 
+            "10"
         ], 
-        "Harddrugs": [
-            "85", 
-            "90", 
-            "75", 
-            "90"
+        "Rijdentijdens rijverbod": [
+            "0", 
+            "0", 
+            "0", 
+            "0"
         ], 
-        "Drugsmisdrijven": [
-            "275", 
-            "245", 
-            "230", 
-            "275"
+        "Voeren vals kenteken": [
+            "15", 
+            "15", 
+            "15", 
+            "5"
         ]
     }, 
     "Overijssel": {
-        "Verlaten plaats ongeval": [
-            "5180", 
-            "5435", 
-            "4980", 
-            "4805"
-        ], 
         "Vermogensmisdrijven": [
             "35870", 
             "36245", 
             "36705", 
             "37335"
         ], 
-        "Misdrijf": [
-            "455", 
-            "360", 
-            "320", 
-            "230"
+        "Verkeersmisdrijf (overig)": [
+            "60", 
+            "70", 
+            "110", 
+            "65"
         ], 
-        "Rijden tijdens ontzegging": [
-            "105", 
-            "75", 
-            "35", 
-            "30"
+        "Weigeren blaastest/bloedonderzoek": [
+            "25", 
+            "25", 
+            "20", 
+            "10"
         ], 
         "Oplichting": [
             "1630", 
@@ -3039,34 +3209,40 @@
             "15"
         ], 
         "Seksueel misdrijf": [
-            "100", 
-            "105", 
-            "110", 
-            "65"
+            "620", 
+            "530", 
+            "470", 
+            "455"
         ], 
         "Bedrog": [
-            "20", 
-            "15", 
-            "15", 
-            "10"
+            "1700", 
+            "1590", 
+            "1790", 
+            "1430"
         ], 
-        "Voeren vals kenteken": [
-            "50", 
-            "80", 
-            "50", 
-            "30"
-        ], 
-        "Mishandeling": [
-            "3555", 
-            "3555", 
-            "3470", 
-            "3070"
+        "totaal": [
+            "63015", 
+            "63600", 
+            "62370", 
+            "60075"
         ], 
         "Bedreiging en stalking": [
             "2005", 
             "2090", 
             "2025", 
             "1885"
+        ], 
+        "Openlijk geweldtegen persoon": [
+            "310", 
+            "320", 
+            "255", 
+            "235"
+        ], 
+        "Joyriding": [
+            "25", 
+            "20", 
+            "20", 
+            "15"
         ], 
         "Ontucht met minderjarige": [
             "75", 
@@ -3086,11 +3262,11 @@
             "15", 
             "10"
         ], 
-        "Wapenmisdrijven": [
-            "355", 
-            "295", 
-            "320", 
-            "330"
+        "Openlijk geweldtegen goed": [
+            "80", 
+            "70", 
+            "75", 
+            "40"
         ], 
         "Vernieling aan openbaar gebouw": [
             "880", 
@@ -3104,17 +3280,17 @@
             "20", 
             "35"
         ], 
+        "Mishandeling": [
+            "3555", 
+            "3555", 
+            "3470", 
+            "3070"
+        ], 
         "Diefstal en inbraak met geweld": [
             "540", 
             "445", 
             "585", 
             "405"
-        ], 
-        "Rijden onder invloed": [
-            "2280", 
-            "2355", 
-            "1625", 
-            "1360"
         ], 
         "Bankbreuk": [
             "5", 
@@ -3128,47 +3304,11 @@
             "415", 
             "335"
         ], 
-        "Aanranding": [
-            "145", 
-            "110", 
-            "85", 
-            "105"
-        ], 
-        "Softdrugs": [
-            "495", 
-            "495", 
-            "480", 
-            "435"
-        ], 
-        "Schennis der eerbaarheid": [
-            "160", 
-            "135", 
-            "130", 
-            "110"
-        ], 
-        "Rijden tijdens rijverbod": [
-            "5", 
-            "5", 
-            "5", 
-            "0"
-        ], 
-        "Flessentrekkerij": [
-            "50", 
-            "70", 
-            "50", 
-            "45"
-        ], 
-        "Overige wetten": [
+        "Misdrijven overige wetten": [
             "460", 
             "360", 
             "320", 
             "230"
-        ], 
-        "Vernieling": [
-            " beschadiging", 
-            "4275", 
-            "4415", 
-            "4740"
         ], 
         "Niet opvolgen van ambtelijk bevel": [
             "195", 
@@ -3176,17 +3316,59 @@
             "165", 
             "80"
         ], 
-        "Heling": [
-            "230", 
-            "230", 
-            "225", 
-            "235"
+        "Schennis der eerbaarheid": [
+            "160", 
+            "135", 
+            "130", 
+            "110"
+        ], 
+        "Flessentrekkerij": [
+            "50", 
+            "70", 
+            "50", 
+            "45"
+        ], 
+        "Misdrijven WvSr (overig)": [
+            "580", 
+            "680", 
+            "775", 
+            "665"
+        ], 
+        "Vernieling": [
+            "4275", 
+            "4415", 
+            "4740", 
+            "4100"
+        ], 
+        "Misdr.openb.orde/gezag": [
+            "10660", 
+            "10700", 
+            "10395", 
+            "8780"
+        ], 
+        "Wederspannigheid": [
+            "45", 
+            "35", 
+            "65", 
+            "55"
         ], 
         "Valsheid in zegels en merken": [
             "0", 
             "5", 
             "5", 
             "5"
+        ], 
+        "Rijden onder invloed": [
+            "2280", 
+            "2355", 
+            "1625", 
+            "1360"
+        ], 
+        "Rijdentijdens ontzegging": [
+            "105", 
+            "75", 
+            "35", 
+            "30"
         ], 
         "Ontucht met misbruik van gezag": [
             "50", 
@@ -3200,11 +3382,11 @@
             "1845", 
             "1690"
         ], 
-        "Vernielingen": [
-            " misdr.openb.orde/gezag", 
-            "10660", 
-            "10700", 
-            "10395"
+        "Openbare orde misdrijf (overig)": [
+            "590", 
+            "505", 
+            "145", 
+            "65"
         ], 
         "Huisvredebreuk": [
             "145", 
@@ -3213,16 +3395,10 @@
             "170"
         ], 
         "Openbare orde misdrijf": [
-            "590", 
-            "505", 
-            "145", 
-            "65"
-        ], 
-        "Militair misdrijf": [
-            "5", 
-            "0", 
-            "0", 
-            "0"
+            "1275", 
+            "1315", 
+            "1110", 
+            "825"
         ], 
         "Lokaalvredebreuk": [
             "45", 
@@ -3254,17 +3430,11 @@
             "380", 
             "350"
         ], 
-        "Misdrijven WvSr": [
-            "580", 
-            "680", 
-            "775", 
-            "665"
-        ], 
-        "Wederspannigheid": [
-            "45", 
-            "35", 
-            "65", 
-            "55"
+        "Softdrugs": [
+            "495", 
+            "495", 
+            "480", 
+            "435"
         ], 
         "Vernieling middel openb.vervoer": [
             "50", 
@@ -3278,11 +3448,17 @@
             "180", 
             "195"
         ], 
-        "Vermogensmisdrijf": [
-            "0", 
-            "0", 
-            "0", 
-            "0"
+        "Vuurwapenmisdrijven": [
+            "355", 
+            "295", 
+            "320", 
+            "330"
+        ], 
+        "Harddrugs": [
+            "350", 
+            "265", 
+            "245", 
+            "265"
         ], 
         "Muntmisdrijf": [
             "55", 
@@ -3290,11 +3466,17 @@
             "45", 
             "60"
         ], 
-        "Verkeersmisdrijf": [
-            "60", 
-            "70", 
+        "Aanranding": [
+            "145", 
             "110", 
-            "65"
+            "85", 
+            "105"
+        ], 
+        "Misdrijf (overig)": [
+            "455", 
+            "360", 
+            "320", 
+            "230"
         ], 
         "Verblijf ongewenste vreemdeling": [
             "0", 
@@ -3309,10 +3491,10 @@
             "25"
         ], 
         "Mensenhandel": [
-            " mensensmokkel", 
             "30", 
             "25", 
-            "30"
+            "30", 
+            "25"
         ], 
         "Pornografie": [
             "20", 
@@ -3320,17 +3502,29 @@
             "20", 
             "25"
         ], 
-        "Openlijk geweld tegen goed": [
-            "80", 
-            "70", 
-            "75", 
-            "40"
+        "Verlaten plaats ongeval": [
+            "5180", 
+            "5435", 
+            "4980", 
+            "4805"
         ], 
-        "Weigeren blaastest/bloedonderzoek": [
-            "25", 
-            "25", 
-            "20", 
-            "10"
+        "Militair misdrijf": [
+            "5", 
+            "0", 
+            "0", 
+            "0"
+        ], 
+        "Geweldsmisdrijf (overig)": [
+            "55", 
+            "45", 
+            "50", 
+            "60"
+        ], 
+        "Vermogensmisdrijf (overig)": [
+            "0", 
+            "0", 
+            "0", 
+            "0"
         ], 
         "Dierenmishandeling": [
             "0", 
@@ -3339,16 +3533,16 @@
             "0"
         ], 
         "Openbaar gezag misdrijf": [
-            "15", 
-            "15", 
-            "20", 
-            "15"
+            "265", 
+            "225", 
+            "270", 
+            "185"
         ], 
-        "Joyriding": [
-            "25", 
+        "Bedrog (overig)": [
             "20", 
-            "20", 
-            "15"
+            "15", 
+            "15", 
+            "10"
         ], 
         "Afpersing en afdreiging": [
             "30", 
@@ -3356,11 +3550,11 @@
             "40", 
             "55"
         ], 
-        "Openlijk geweld tegen persoon": [
-            "310", 
-            "320", 
-            "255", 
-            "235"
+        "Seksueel misdrijf (overig)": [
+            "100", 
+            "105", 
+            "110", 
+            "65"
         ], 
         "Openlijke geweldpleging": [
             "390", 
@@ -3374,11 +3568,17 @@
             "33625", 
             "34855"
         ], 
-        "Totaal": [
-            "63015", 
-            "63600", 
-            "62370", 
-            "60075"
+        "Heling": [
+            "230", 
+            "230", 
+            "225", 
+            "235"
+        ], 
+        "Drugsmisdrijven": [
+            "840", 
+            "760", 
+            "725", 
+            "700"
         ], 
         "Verkeersmisdrijven": [
             "7730", 
@@ -3404,49 +3604,43 @@
             "400", 
             "265"
         ], 
-        "Geweldsmisdrijf": [
-            "55", 
-            "45", 
+        "Openbaar gezag misdrijf (overig)": [
+            "15", 
+            "15", 
+            "20", 
+            "15"
+        ], 
+        "Rijdentijdens rijverbod": [
+            "5", 
+            "5", 
+            "5", 
+            "0"
+        ], 
+        "Voeren vals kenteken": [
             "50", 
-            "60"
-        ], 
-        "Harddrugs": [
-            "350", 
-            "265", 
-            "245", 
-            "265"
-        ], 
-        "Drugsmisdrijven": [
-            "840", 
-            "760", 
-            "725", 
-            "700"
+            "80", 
+            "50", 
+            "30"
         ]
     }, 
     "Noord-Brabant": {
-        "Verlaten plaats ongeval": [
-            "16545", 
-            "16115", 
-            "14265", 
-            "14275"
-        ], 
         "Vermogensmisdrijven": [
             "103140", 
             "103740", 
             "104785", 
             "103250"
         ], 
-        "Misdrijf": [
-            "605", 
-            "435", 
-            "605", 
-            "505"
+        "Verkeersmisdrijf (overig)": [
+            "170", 
+            "125", 
+            "525", 
+            "320"
         ], 
-        "Rijden tijdens ontzegging": [
-            "280", 
-            "250", 
-            "190", 
-            "190"
+        "Weigeren blaastest/bloedonderzoek": [
+            "45", 
+            "30", 
+            "45", 
+            "40"
         ], 
         "Oplichting": [
             "3080", 
@@ -3467,34 +3661,40 @@
             "70"
         ], 
         "Seksueel misdrijf": [
-            "235", 
-            "235", 
-            "270", 
-            "255"
+            "1480", 
+            "1365", 
+            "1475", 
+            "1260"
         ], 
         "Bedrog": [
-            "35", 
-            "25", 
-            "30", 
-            "30"
+            "3155", 
+            "2695", 
+            "3095", 
+            "2645"
         ], 
-        "Voeren vals kenteken": [
-            "105", 
-            "115", 
-            "145", 
-            "125"
-        ], 
-        "Mishandeling": [
-            "8580", 
-            "8380", 
-            "8130", 
-            "7310"
+        "totaal": [
+            "175280", 
+            "173010", 
+            "170220", 
+            "162165"
         ], 
         "Bedreiging en stalking": [
             "5005", 
             "4765", 
             "4920", 
             "4585"
+        ], 
+        "Openlijk geweldtegen persoon": [
+            "1095", 
+            "1035", 
+            "1025", 
+            "810"
+        ], 
+        "Joyriding": [
+            "60", 
+            "50", 
+            "50", 
+            "35"
         ], 
         "Ontucht met minderjarige": [
             "135", 
@@ -3514,11 +3714,11 @@
             "30", 
             "95"
         ], 
-        "Wapenmisdrijven": [
-            "925", 
-            "860", 
-            "855", 
-            "845"
+        "Openlijk geweldtegen goed": [
+            "205", 
+            "165", 
+            "160", 
+            "105"
         ], 
         "Vernieling aan openbaar gebouw": [
             "1270", 
@@ -3532,17 +3732,17 @@
             "80", 
             "70"
         ], 
+        "Mishandeling": [
+            "8580", 
+            "8380", 
+            "8130", 
+            "7310"
+        ], 
         "Diefstal en inbraak met geweld": [
             "1885", 
             "1755", 
             "1735", 
             "1470"
-        ], 
-        "Rijden onder invloed": [
-            "6060", 
-            "5765", 
-            "4960", 
-            "4315"
         ], 
         "Bankbreuk": [
             "10", 
@@ -3556,47 +3756,11 @@
             "1400", 
             "1285"
         ], 
-        "Aanranding": [
-            "395", 
-            "325", 
-            "380", 
-            "290"
-        ], 
-        "Softdrugs": [
-            "2110", 
-            "1940", 
-            "1825", 
-            "1705"
-        ], 
-        "Schennis der eerbaarheid": [
-            "295", 
-            "270", 
-            "280", 
-            "210"
-        ], 
-        "Rijden tijdens rijverbod": [
-            "10", 
-            "10", 
-            "10", 
-            "5"
-        ], 
-        "Flessentrekkerij": [
-            "40", 
-            "50", 
-            "70", 
-            "70"
-        ], 
-        "Overige wetten": [
+        "Misdrijven overige wetten": [
             "615", 
             "450", 
             "615", 
             "505"
-        ], 
-        "Vernieling": [
-            " beschadiging", 
-            "9280", 
-            "9410", 
-            "8950"
         ], 
         "Niet opvolgen van ambtelijk bevel": [
             "560", 
@@ -3604,17 +3768,59 @@
             "440", 
             "350"
         ], 
-        "Heling": [
-            "905", 
-            "835", 
-            "895", 
-            "880"
+        "Schennis der eerbaarheid": [
+            "295", 
+            "270", 
+            "280", 
+            "210"
+        ], 
+        "Flessentrekkerij": [
+            "40", 
+            "50", 
+            "70", 
+            "70"
+        ], 
+        "Misdrijven WvSr (overig)": [
+            "1430", 
+            "1615", 
+            "1635", 
+            "1545"
+        ], 
+        "Vernieling": [
+            "9280", 
+            "9410", 
+            "8950", 
+            "7865"
+        ], 
+        "Misdr.openb.orde/gezag": [
+            "26920", 
+            "25765", 
+            "23895", 
+            "20130"
+        ], 
+        "Wederspannigheid": [
+            "145", 
+            "130", 
+            "140", 
+            "130"
         ], 
         "Valsheid in zegels en merken": [
             "20", 
             "10", 
             "30", 
             "15"
+        ], 
+        "Rijden onder invloed": [
+            "6060", 
+            "5765", 
+            "4960", 
+            "4315"
+        ], 
+        "Rijdentijdens ontzegging": [
+            "280", 
+            "250", 
+            "190", 
+            "190"
         ], 
         "Ontucht met misbruik van gezag": [
             "80", 
@@ -3628,11 +3834,11 @@
             "4485", 
             "4180"
         ], 
-        "Vernielingen": [
-            " misdr.openb.orde/gezag", 
-            "26920", 
-            "25765", 
-            "23895"
+        "Openbare orde misdrijf (overig)": [
+            "620", 
+            "560", 
+            "320", 
+            "205"
         ], 
         "Huisvredebreuk": [
             "290", 
@@ -3641,16 +3847,10 @@
             "315"
         ], 
         "Openbare orde misdrijf": [
-            "620", 
-            "560", 
-            "320", 
-            "205"
-        ], 
-        "Militair misdrijf": [
-            "15", 
-            "15", 
-            "15", 
-            "0"
+            "2520", 
+            "2535", 
+            "2725", 
+            "1885"
         ], 
         "Lokaalvredebreuk": [
             "100", 
@@ -3682,17 +3882,11 @@
             "885", 
             "760"
         ], 
-        "Misdrijven WvSr": [
-            "1430", 
-            "1615", 
-            "1635", 
-            "1545"
-        ], 
-        "Wederspannigheid": [
-            "145", 
-            "130", 
-            "140", 
-            "130"
+        "Softdrugs": [
+            "2110", 
+            "1940", 
+            "1825", 
+            "1705"
         ], 
         "Vernieling middel openb.vervoer": [
             "95", 
@@ -3706,11 +3900,17 @@
             "435", 
             "405"
         ], 
-        "Vermogensmisdrijf": [
-            "0", 
-            "0", 
-            "0", 
-            "0"
+        "Vuurwapenmisdrijven": [
+            "925", 
+            "860", 
+            "855", 
+            "845"
+        ], 
+        "Harddrugs": [
+            "970", 
+            "830", 
+            "1030", 
+            "960"
         ], 
         "Muntmisdrijf": [
             "160", 
@@ -3718,11 +3918,17 @@
             "200", 
             "270"
         ], 
-        "Verkeersmisdrijf": [
-            "170", 
-            "125", 
-            "525", 
-            "320"
+        "Aanranding": [
+            "395", 
+            "325", 
+            "380", 
+            "290"
+        ], 
+        "Misdrijf (overig)": [
+            "605", 
+            "435", 
+            "605", 
+            "505"
         ], 
         "Verblijf ongewenste vreemdeling": [
             "5", 
@@ -3737,10 +3943,10 @@
             "20"
         ], 
         "Mensenhandel": [
-            " mensensmokkel", 
             "95", 
             "75", 
-            "90"
+            "90", 
+            "75"
         ], 
         "Pornografie": [
             "65", 
@@ -3748,17 +3954,29 @@
             "75", 
             "105"
         ], 
-        "Openlijk geweld tegen goed": [
-            "205", 
-            "165", 
-            "160", 
-            "105"
+        "Verlaten plaats ongeval": [
+            "16545", 
+            "16115", 
+            "14265", 
+            "14275"
         ], 
-        "Weigeren blaastest/bloedonderzoek": [
-            "45", 
-            "30", 
-            "45", 
-            "40"
+        "Militair misdrijf": [
+            "15", 
+            "15", 
+            "15", 
+            "0"
+        ], 
+        "Geweldsmisdrijf (overig)": [
+            "150", 
+            "140", 
+            "165", 
+            "160"
+        ], 
+        "Vermogensmisdrijf (overig)": [
+            "0", 
+            "0", 
+            "0", 
+            "0"
         ], 
         "Dierenmishandeling": [
             "0", 
@@ -3767,16 +3985,16 @@
             "0"
         ], 
         "Openbaar gezag misdrijf": [
-            "40", 
-            "40", 
-            "30", 
-            "20"
+            "800", 
+            "735", 
+            "690", 
+            "575"
         ], 
-        "Joyriding": [
-            "60", 
-            "50", 
-            "50", 
-            "35"
+        "Bedrog (overig)": [
+            "35", 
+            "25", 
+            "30", 
+            "30"
         ], 
         "Afpersing en afdreiging": [
             "110", 
@@ -3784,11 +4002,11 @@
             "130", 
             "165"
         ], 
-        "Openlijk geweld tegen persoon": [
-            "1095", 
-            "1035", 
-            "1025", 
-            "810"
+        "Seksueel misdrijf (overig)": [
+            "235", 
+            "235", 
+            "270", 
+            "255"
         ], 
         "Openlijke geweldpleging": [
             "1300", 
@@ -3802,11 +4020,17 @@
             "97490", 
             "96710"
         ], 
-        "Totaal": [
-            "175280", 
-            "173010", 
-            "170220", 
-            "162165"
+        "Heling": [
+            "905", 
+            "835", 
+            "895", 
+            "880"
+        ], 
+        "Drugsmisdrijven": [
+            "3080", 
+            "2770", 
+            "2850", 
+            "2665"
         ], 
         "Verkeersmisdrijven": [
             "23280", 
@@ -3832,49 +4056,43 @@
             "785", 
             "365"
         ], 
-        "Geweldsmisdrijf": [
-            "150", 
-            "140", 
-            "165", 
-            "160"
+        "Openbaar gezag misdrijf (overig)": [
+            "40", 
+            "40", 
+            "30", 
+            "20"
         ], 
-        "Harddrugs": [
-            "970", 
-            "830", 
-            "1030", 
-            "960"
+        "Rijdentijdens rijverbod": [
+            "10", 
+            "10", 
+            "10", 
+            "5"
         ], 
-        "Drugsmisdrijven": [
-            "3080", 
-            "2770", 
-            "2850", 
-            "2665"
+        "Voeren vals kenteken": [
+            "105", 
+            "115", 
+            "145", 
+            "125"
         ]
     }, 
     "Limburg": {
-        "Verlaten plaats ongeval": [
-            "7835", 
-            "7755", 
-            "6775", 
-            "6970"
-        ], 
         "Vermogensmisdrijven": [
             "48850", 
             "52730", 
             "50665", 
             "47535"
         ], 
-        "Misdrijf": [
-            "695", 
+        "Verkeersmisdrijf (overig)": [
+            "55", 
+            "45", 
             "235", 
-            "300", 
-            "325"
+            "140"
         ], 
-        "Rijden tijdens ontzegging": [
-            "115", 
-            "105", 
-            "70", 
-            "70"
+        "Weigeren blaastest/bloedonderzoek": [
+            "15", 
+            "15", 
+            "30", 
+            "15"
         ], 
         "Oplichting": [
             "1640", 
@@ -3895,34 +4113,40 @@
             "30"
         ], 
         "Seksueel misdrijf": [
-            "65", 
-            "75", 
-            "70", 
-            "55"
+            "650", 
+            "570", 
+            "515", 
+            "500"
         ], 
         "Bedrog": [
-            "20", 
-            "10", 
-            "15", 
-            "20"
+            "1715", 
+            "1425", 
+            "1535", 
+            "1270"
         ], 
-        "Voeren vals kenteken": [
-            "40", 
-            "45", 
-            "45", 
-            "40"
-        ], 
-        "Mishandeling": [
-            "3925", 
-            "3800", 
-            "3760", 
-            "3590"
+        "totaal": [
+            "84590", 
+            "85760", 
+            "81685", 
+            "76575"
         ], 
         "Bedreiging en stalking": [
             "2735", 
             "2620", 
             "2760", 
             "2605"
+        ], 
+        "Openlijk geweldtegen persoon": [
+            "365", 
+            "410", 
+            "255", 
+            "260"
+        ], 
+        "Joyriding": [
+            "15", 
+            "15", 
+            "15", 
+            "15"
         ], 
         "Ontucht met minderjarige": [
             "65", 
@@ -3942,11 +4166,11 @@
             "20", 
             "20"
         ], 
-        "Wapenmisdrijven": [
-            "565", 
-            "585", 
-            "540", 
-            "490"
+        "Openlijk geweldtegen goed": [
+            "80", 
+            "75", 
+            "65", 
+            "45"
         ], 
         "Vernieling aan openbaar gebouw": [
             "475", 
@@ -3960,17 +4184,17 @@
             "40", 
             "25"
         ], 
+        "Mishandeling": [
+            "3925", 
+            "3800", 
+            "3760", 
+            "3590"
+        ], 
         "Diefstal en inbraak met geweld": [
             "875", 
             "930", 
             "800", 
             "695"
-        ], 
-        "Rijden onder invloed": [
-            "2615", 
-            "2545", 
-            "1955", 
-            "1735"
         ], 
         "Bankbreuk": [
             "5", 
@@ -3984,47 +4208,11 @@
             "475", 
             "475"
         ], 
-        "Aanranding": [
-            "150", 
-            "125", 
-            "100", 
-            "120"
-        ], 
-        "Softdrugs": [
-            "1260", 
-            "985", 
-            "1280", 
-            "985"
-        ], 
-        "Schennis der eerbaarheid": [
-            "195", 
-            "165", 
-            "135", 
-            "135"
-        ], 
-        "Rijden tijdens rijverbod": [
-            "5", 
-            "5", 
-            "5", 
-            "5"
-        ], 
-        "Flessentrekkerij": [
-            "55", 
-            "35", 
-            "60", 
-            "50"
-        ], 
-        "Overige wetten": [
+        "Misdrijven overige wetten": [
             "705", 
             "250", 
             "305", 
             "330"
-        ], 
-        "Vernieling": [
-            " beschadiging", 
-            "4865", 
-            "4415", 
-            "4190"
         ], 
         "Niet opvolgen van ambtelijk bevel": [
             "200", 
@@ -4032,17 +4220,59 @@
             "165", 
             "110"
         ], 
-        "Heling": [
-            "315", 
-            "300", 
-            "380", 
-            "325"
+        "Schennis der eerbaarheid": [
+            "195", 
+            "165", 
+            "135", 
+            "135"
+        ], 
+        "Flessentrekkerij": [
+            "55", 
+            "35", 
+            "60", 
+            "50"
+        ], 
+        "Misdrijven WvSr (overig)": [
+            "585", 
+            "600", 
+            "630", 
+            "610"
+        ], 
+        "Vernieling": [
+            "4865", 
+            "4415", 
+            "4190", 
+            "4085"
+        ], 
+        "Misdr.openb.orde/gezag": [
+            "13390", 
+            "12030", 
+            "10890", 
+            "9970"
+        ], 
+        "Wederspannigheid": [
+            "55", 
+            "50", 
+            "45", 
+            "50"
         ], 
         "Valsheid in zegels en merken": [
             "10", 
             "10", 
             "5", 
             "5"
+        ], 
+        "Rijden onder invloed": [
+            "2615", 
+            "2545", 
+            "1955", 
+            "1735"
+        ], 
+        "Rijdentijdens ontzegging": [
+            "115", 
+            "105", 
+            "70", 
+            "70"
         ], 
         "Ontucht met misbruik van gezag": [
             "30", 
@@ -4056,11 +4286,11 @@
             "2490", 
             "2355"
         ], 
-        "Vernielingen": [
-            " misdr.openb.orde/gezag", 
-            "13390", 
-            "12030", 
-            "10890"
+        "Openbare orde misdrijf (overig)": [
+            "425", 
+            "315", 
+            "125", 
+            "100"
         ], 
         "Huisvredebreuk": [
             "160", 
@@ -4069,16 +4299,10 @@
             "160"
         ], 
         "Openbare orde misdrijf": [
-            "425", 
-            "315", 
-            "125", 
-            "100"
-        ], 
-        "Militair misdrijf": [
-            "10", 
-            "15", 
-            "0", 
-            "5"
+            "1160", 
+            "1130", 
+            "890", 
+            "700"
         ], 
         "Lokaalvredebreuk": [
             "40", 
@@ -4110,17 +4334,11 @@
             "610", 
             "475"
         ], 
-        "Misdrijven WvSr": [
-            "585", 
-            "600", 
-            "630", 
-            "610"
-        ], 
-        "Wederspannigheid": [
-            "55", 
-            "50", 
-            "45", 
-            "50"
+        "Softdrugs": [
+            "1260", 
+            "985", 
+            "1280", 
+            "985"
         ], 
         "Vernieling middel openb.vervoer": [
             "55", 
@@ -4134,11 +4352,17 @@
             "270", 
             "245"
         ], 
-        "Vermogensmisdrijf": [
-            "0", 
-            "0", 
-            "0", 
-            "0"
+        "Vuurwapenmisdrijven": [
+            "565", 
+            "585", 
+            "540", 
+            "490"
+        ], 
+        "Harddrugs": [
+            "720", 
+            "620", 
+            "670", 
+            "560"
         ], 
         "Muntmisdrijf": [
             "60", 
@@ -4146,11 +4370,17 @@
             "60", 
             "175"
         ], 
-        "Verkeersmisdrijf": [
-            "55", 
-            "45", 
+        "Aanranding": [
+            "150", 
+            "125", 
+            "100", 
+            "120"
+        ], 
+        "Misdrijf (overig)": [
+            "695", 
             "235", 
-            "140"
+            "300", 
+            "325"
         ], 
         "Verblijf ongewenste vreemdeling": [
             "0", 
@@ -4165,10 +4395,10 @@
             "10"
         ], 
         "Mensenhandel": [
-            " mensensmokkel", 
             "70", 
             "50", 
-            "75"
+            "75", 
+            "45"
         ], 
         "Pornografie": [
             "30", 
@@ -4176,17 +4406,29 @@
             "50", 
             "55"
         ], 
-        "Openlijk geweld tegen goed": [
-            "80", 
-            "75", 
-            "65", 
-            "45"
+        "Verlaten plaats ongeval": [
+            "7835", 
+            "7755", 
+            "6775", 
+            "6970"
         ], 
-        "Weigeren blaastest/bloedonderzoek": [
+        "Militair misdrijf": [
+            "10", 
             "15", 
-            "15", 
-            "30", 
-            "15"
+            "0", 
+            "5"
+        ], 
+        "Geweldsmisdrijf (overig)": [
+            "90", 
+            "90", 
+            "105", 
+            "60"
+        ], 
+        "Vermogensmisdrijf (overig)": [
+            "0", 
+            "0", 
+            "0", 
+            "0"
         ], 
         "Dierenmishandeling": [
             "0", 
@@ -4195,16 +4437,16 @@
             "0"
         ], 
         "Openbaar gezag misdrijf": [
-            "30", 
-            "20", 
-            "25", 
-            "15"
+            "325", 
+            "225", 
+            "290", 
+            "200"
         ], 
-        "Joyriding": [
+        "Bedrog (overig)": [
+            "20", 
+            "10", 
             "15", 
-            "15", 
-            "15", 
-            "15"
+            "20"
         ], 
         "Afpersing en afdreiging": [
             "50", 
@@ -4212,11 +4454,11 @@
             "65", 
             "70"
         ], 
-        "Openlijk geweld tegen persoon": [
-            "365", 
-            "410", 
-            "255", 
-            "260"
+        "Seksueel misdrijf (overig)": [
+            "65", 
+            "75", 
+            "70", 
+            "55"
         ], 
         "Openlijke geweldpleging": [
             "445", 
@@ -4230,11 +4472,17 @@
             "47395", 
             "44670"
         ], 
-        "Totaal": [
-            "84590", 
-            "85760", 
-            "81685", 
-            "76575"
+        "Heling": [
+            "315", 
+            "300", 
+            "380", 
+            "325"
+        ], 
+        "Drugsmisdrijven": [
+            "1980", 
+            "1605", 
+            "1950", 
+            "1545"
         ], 
         "Verkeersmisdrijven": [
             "10690", 
@@ -4260,49 +4508,43 @@
             "235", 
             "110"
         ], 
-        "Geweldsmisdrijf": [
-            "90", 
-            "90", 
-            "105", 
-            "60"
+        "Openbaar gezag misdrijf (overig)": [
+            "30", 
+            "20", 
+            "25", 
+            "15"
         ], 
-        "Harddrugs": [
-            "720", 
-            "620", 
-            "670", 
-            "560"
+        "Rijdentijdens rijverbod": [
+            "5", 
+            "5", 
+            "5", 
+            "5"
         ], 
-        "Drugsmisdrijven": [
-            "1980", 
-            "1605", 
-            "1950", 
-            "1545"
+        "Voeren vals kenteken": [
+            "40", 
+            "45", 
+            "45", 
+            "40"
         ]
     }, 
     "Utrecht": {
-        "Verlaten plaats ongeval": [
-            "5680", 
-            "5920", 
-            "5230", 
-            "5600"
-        ], 
         "Vermogensmisdrijven": [
             "57760", 
             "54710", 
             "53075", 
             "51890"
         ], 
-        "Misdrijf": [
-            "230", 
-            "220", 
-            "195", 
-            "170"
-        ], 
-        "Rijden tijdens ontzegging": [
-            "190", 
-            "165", 
+        "Verkeersmisdrijf (overig)": [
+            "75", 
+            "70", 
             "100", 
-            "110"
+            "95"
+        ], 
+        "Weigeren blaastest/bloedonderzoek": [
+            "20", 
+            "35", 
+            "20", 
+            "15"
         ], 
         "Oplichting": [
             "1495", 
@@ -4323,34 +4565,40 @@
             "35"
         ], 
         "Seksueel misdrijf": [
-            "110", 
-            "130", 
-            "85", 
-            "65"
+            "705", 
+            "595", 
+            "575", 
+            "435"
         ], 
         "Bedrog": [
-            "20", 
-            "20", 
-            "10", 
-            "10"
+            "1540", 
+            "1320", 
+            "1560", 
+            "1350"
         ], 
-        "Voeren vals kenteken": [
-            "130", 
-            "130", 
-            "95", 
-            "90"
-        ], 
-        "Mishandeling": [
-            "3655", 
-            "3600", 
-            "3315", 
-            "2995"
+        "totaal": [
+            "89205", 
+            "85430", 
+            "80745", 
+            "78015"
         ], 
         "Bedreiging en stalking": [
             "2300", 
             "2200", 
             "2215", 
             "2020"
+        ], 
+        "Openlijk geweldtegen persoon": [
+            "525", 
+            "575", 
+            "485", 
+            "460"
+        ], 
+        "Joyriding": [
+            "20", 
+            "30", 
+            "15", 
+            "25"
         ], 
         "Ontucht met minderjarige": [
             "50", 
@@ -4370,11 +4618,11 @@
             "70", 
             "60"
         ], 
-        "Wapenmisdrijven": [
-            "345", 
-            "435", 
-            "320", 
-            "340"
+        "Openlijk geweldtegen goed": [
+            "170", 
+            "155", 
+            "135", 
+            "105"
         ], 
         "Vernieling aan openbaar gebouw": [
             "880", 
@@ -4388,17 +4636,17 @@
             "30", 
             "35"
         ], 
+        "Mishandeling": [
+            "3655", 
+            "3600", 
+            "3315", 
+            "2995"
+        ], 
         "Diefstal en inbraak met geweld": [
             "1045", 
             "935", 
             "890", 
             "790"
-        ], 
-        "Rijden onder invloed": [
-            "3325", 
-            "3110", 
-            "2405", 
-            "2355"
         ], 
         "Bankbreuk": [
             "5", 
@@ -4412,47 +4660,11 @@
             "800", 
             "635"
         ], 
-        "Aanranding": [
-            "225", 
-            "155", 
-            "170", 
-            "100"
-        ], 
-        "Softdrugs": [
-            "455", 
-            "440", 
-            "440", 
-            "540"
-        ], 
-        "Schennis der eerbaarheid": [
-            "110", 
-            "110", 
-            "105", 
-            "105"
-        ], 
-        "Rijden tijdens rijverbod": [
-            "10", 
-            "5", 
-            "5", 
-            "5"
-        ], 
-        "Flessentrekkerij": [
-            "25", 
-            "15", 
-            "25", 
-            "30"
-        ], 
-        "Overige wetten": [
+        "Misdrijven overige wetten": [
             "235", 
             "220", 
             "200", 
             "175"
-        ], 
-        "Vernieling": [
-            " beschadiging", 
-            "4580", 
-            "4520", 
-            "4415"
         ], 
         "Niet opvolgen van ambtelijk bevel": [
             "235", 
@@ -4460,17 +4672,59 @@
             "165", 
             "140"
         ], 
-        "Heling": [
-            "550", 
-            "550", 
-            "555", 
-            "545"
+        "Schennis der eerbaarheid": [
+            "110", 
+            "110", 
+            "105", 
+            "105"
+        ], 
+        "Flessentrekkerij": [
+            "25", 
+            "15", 
+            "25", 
+            "30"
+        ], 
+        "Misdrijven WvSr (overig)": [
+            "705", 
+            "860", 
+            "1015", 
+            "910"
+        ], 
+        "Vernieling": [
+            "4580", 
+            "4520", 
+            "4415", 
+            "3780"
+        ], 
+        "Misdr.openb.orde/gezag": [
+            "12865", 
+            "12210", 
+            "10925", 
+            "9715"
+        ], 
+        "Wederspannigheid": [
+            "50", 
+            "60", 
+            "50", 
+            "65"
         ], 
         "Valsheid in zegels en merken": [
             "10", 
             "10", 
             "10", 
             "10"
+        ], 
+        "Rijden onder invloed": [
+            "3325", 
+            "3110", 
+            "2405", 
+            "2355"
+        ], 
+        "Rijdentijdens ontzegging": [
+            "190", 
+            "165", 
+            "100", 
+            "110"
         ], 
         "Ontucht met misbruik van gezag": [
             "40", 
@@ -4484,11 +4738,11 @@
             "1995", 
             "1870"
         ], 
-        "Vernielingen": [
-            " misdr.openb.orde/gezag", 
-            "12865", 
-            "12210", 
-            "10925"
+        "Openbare orde misdrijf (overig)": [
+            "365", 
+            "425", 
+            "130", 
+            "90"
         ], 
         "Huisvredebreuk": [
             "205", 
@@ -4497,16 +4751,10 @@
             "230"
         ], 
         "Openbare orde misdrijf": [
-            "365", 
-            "425", 
-            "130", 
-            "90"
-        ], 
-        "Militair misdrijf": [
-            "5", 
-            "0", 
-            "5", 
-            "5"
+            "1410", 
+            "1600", 
+            "1620", 
+            "1270"
         ], 
         "Lokaalvredebreuk": [
             "35", 
@@ -4538,17 +4786,11 @@
             "380", 
             "405"
         ], 
-        "Misdrijven WvSr": [
-            "705", 
-            "860", 
-            "1015", 
-            "910"
-        ], 
-        "Wederspannigheid": [
-            "50", 
-            "60", 
-            "50", 
-            "65"
+        "Softdrugs": [
+            "455", 
+            "440", 
+            "440", 
+            "540"
         ], 
         "Vernieling middel openb.vervoer": [
             "125", 
@@ -4562,11 +4804,17 @@
             "220", 
             "145"
         ], 
-        "Vermogensmisdrijf": [
-            "0", 
-            "0", 
-            "0", 
-            "0"
+        "Vuurwapenmisdrijven": [
+            "345", 
+            "435", 
+            "320", 
+            "340"
+        ], 
+        "Harddrugs": [
+            "420", 
+            "310", 
+            "345", 
+            "370"
         ], 
         "Muntmisdrijf": [
             "80", 
@@ -4574,11 +4822,17 @@
             "85", 
             "130"
         ], 
-        "Verkeersmisdrijf": [
-            "75", 
-            "70", 
-            "100", 
-            "95"
+        "Aanranding": [
+            "225", 
+            "155", 
+            "170", 
+            "100"
+        ], 
+        "Misdrijf (overig)": [
+            "230", 
+            "220", 
+            "195", 
+            "170"
         ], 
         "Verblijf ongewenste vreemdeling": [
             "0", 
@@ -4593,10 +4847,10 @@
             "25"
         ], 
         "Mensenhandel": [
-            " mensensmokkel", 
             "25", 
             "25", 
-            "35"
+            "35", 
+            "20"
         ], 
         "Pornografie": [
             "70", 
@@ -4604,17 +4858,29 @@
             "30", 
             "35"
         ], 
-        "Openlijk geweld tegen goed": [
-            "170", 
-            "155", 
-            "135", 
-            "105"
+        "Verlaten plaats ongeval": [
+            "5680", 
+            "5920", 
+            "5230", 
+            "5600"
         ], 
-        "Weigeren blaastest/bloedonderzoek": [
-            "20", 
-            "35", 
-            "20", 
-            "15"
+        "Militair misdrijf": [
+            "5", 
+            "0", 
+            "5", 
+            "5"
+        ], 
+        "Geweldsmisdrijf (overig)": [
+            "55", 
+            "65", 
+            "65", 
+            "70"
+        ], 
+        "Vermogensmisdrijf (overig)": [
+            "0", 
+            "0", 
+            "0", 
+            "0"
         ], 
         "Dierenmishandeling": [
             "0", 
@@ -4623,16 +4889,16 @@
             "0"
         ], 
         "Openbaar gezag misdrijf": [
+            "340", 
+            "350", 
+            "265", 
+            "245"
+        ], 
+        "Bedrog (overig)": [
+            "20", 
             "20", 
             "10", 
-            "20", 
-            "5"
-        ], 
-        "Joyriding": [
-            "20", 
-            "30", 
-            "15", 
-            "25"
+            "10"
         ], 
         "Afpersing en afdreiging": [
             "80", 
@@ -4640,11 +4906,11 @@
             "75", 
             "120"
         ], 
-        "Openlijk geweld tegen persoon": [
-            "525", 
-            "575", 
-            "485", 
-            "460"
+        "Seksueel misdrijf (overig)": [
+            "110", 
+            "130", 
+            "85", 
+            "65"
         ], 
         "Openlijke geweldpleging": [
             "695", 
@@ -4658,11 +4924,17 @@
             "49125", 
             "48390"
         ], 
-        "Totaal": [
-            "89205", 
-            "85430", 
-            "80745", 
-            "78015"
+        "Heling": [
+            "550", 
+            "550", 
+            "555", 
+            "545"
+        ], 
+        "Drugsmisdrijven": [
+            "875", 
+            "750", 
+            "780", 
+            "910"
         ], 
         "Verkeersmisdrijven": [
             "9450", 
@@ -4688,49 +4960,43 @@
             "600", 
             "340"
         ], 
-        "Geweldsmisdrijf": [
-            "55", 
-            "65", 
-            "65", 
-            "70"
+        "Openbaar gezag misdrijf (overig)": [
+            "20", 
+            "10", 
+            "20", 
+            "5"
         ], 
-        "Harddrugs": [
-            "420", 
-            "310", 
-            "345", 
-            "370"
+        "Rijdentijdens rijverbod": [
+            "10", 
+            "5", 
+            "5", 
+            "5"
         ], 
-        "Drugsmisdrijven": [
-            "875", 
-            "750", 
-            "780", 
-            "910"
+        "Voeren vals kenteken": [
+            "130", 
+            "130", 
+            "95", 
+            "90"
         ]
     }, 
-    "Niet in te delen": {
-        "Verlaten plaats ongeval": [
-            "430", 
-            "355", 
-            "175", 
-            "175"
-        ], 
+    "niet in te delen": {
         "Vermogensmisdrijven": [
             "4185", 
             "3520", 
             "2785", 
             "2245"
         ], 
-        "Misdrijf": [
-            "50", 
-            "25", 
-            "15", 
-            "20"
-        ], 
-        "Rijden tijdens ontzegging": [
-            "5", 
+        "Verkeersmisdrijf (overig)": [
+            "20", 
             "10", 
-            "5", 
-            "0"
+            "10", 
+            "5"
+        ], 
+        "Weigeren blaastest/bloedonderzoek": [
+            "0", 
+            "0", 
+            "0", 
+            "5"
         ], 
         "Oplichting": [
             "675", 
@@ -4751,34 +5017,40 @@
             "5"
         ], 
         "Seksueel misdrijf": [
-            "35", 
-            "40", 
-            "30", 
-            "15"
+            "215", 
+            "235", 
+            "170", 
+            "160"
         ], 
         "Bedrog": [
-            "5", 
-            "5", 
-            "5", 
-            "5"
+            "685", 
+            "485", 
+            "460", 
+            "315"
         ], 
-        "Voeren vals kenteken": [
-            "35", 
-            "25", 
-            "15", 
-            "25"
-        ], 
-        "Mishandeling": [
-            "180", 
-            "150", 
-            "110", 
-            "105"
+        "totaal": [
+            "6005", 
+            "5080", 
+            "3865", 
+            "3175"
         ], 
         "Bedreiging en stalking": [
             "165", 
             "130", 
             "100", 
             "90"
+        ], 
+        "Openlijk geweldtegen persoon": [
+            "15", 
+            "15", 
+            "5", 
+            "5"
+        ], 
+        "Joyriding": [
+            "10", 
+            "5", 
+            "5", 
+            "5"
         ], 
         "Ontucht met minderjarige": [
             "45", 
@@ -4798,11 +5070,11 @@
             "0", 
             "0"
         ], 
-        "Wapenmisdrijven": [
-            "25", 
-            "25", 
-            "30", 
-            "5"
+        "Openlijk geweldtegen goed": [
+            "0", 
+            "5", 
+            "0", 
+            "0"
         ], 
         "Vernieling aan openbaar gebouw": [
             "10", 
@@ -4816,17 +5088,17 @@
             "0", 
             "5"
         ], 
+        "Mishandeling": [
+            "180", 
+            "150", 
+            "110", 
+            "105"
+        ], 
         "Diefstal en inbraak met geweld": [
             "60", 
             "60", 
             "40", 
             "40"
-        ], 
-        "Rijden onder invloed": [
-            "190", 
-            "165", 
-            "130", 
-            "95"
         ], 
         "Bankbreuk": [
             "10", 
@@ -4840,47 +5112,11 @@
             "255", 
             "145"
         ], 
-        "Aanranding": [
-            "40", 
-            "35", 
-            "20", 
-            "25"
-        ], 
-        "Softdrugs": [
-            "35", 
-            "20", 
-            "25", 
-            "10"
-        ], 
-        "Schennis der eerbaarheid": [
-            "5", 
-            "10", 
-            "0", 
-            "5"
-        ], 
-        "Rijden tijdens rijverbod": [
-            "0", 
-            "0", 
-            "0", 
-            "0"
-        ], 
-        "Flessentrekkerij": [
-            "5", 
-            "0", 
-            "5", 
-            "0"
-        ], 
-        "Overige wetten": [
+        "Misdrijven overige wetten": [
             "55", 
             "25", 
             "20", 
             "25"
-        ], 
-        "Vernieling": [
-            " beschadiging", 
-            "75", 
-            "60", 
-            "20"
         ], 
         "Niet opvolgen van ambtelijk bevel": [
             "5", 
@@ -4888,16 +5124,58 @@
             "0", 
             "0"
         ], 
-        "Heling": [
-            "15", 
+        "Schennis der eerbaarheid": [
+            "5", 
             "10", 
-            "15", 
+            "0", 
             "5"
+        ], 
+        "Flessentrekkerij": [
+            "5", 
+            "0", 
+            "5", 
+            "0"
+        ], 
+        "Misdrijven WvSr (overig)": [
+            "50", 
+            "35", 
+            "35", 
+            "35"
+        ], 
+        "Vernieling": [
+            "75", 
+            "60", 
+            "20", 
+            "20"
+        ], 
+        "Misdr.openb.orde/gezag": [
+            "225", 
+            "225", 
+            "115", 
+            "90"
+        ], 
+        "Wederspannigheid": [
+            "0", 
+            "0", 
+            "0", 
+            "0"
         ], 
         "Valsheid in zegels en merken": [
             "0", 
             "0", 
             "0", 
+            "0"
+        ], 
+        "Rijden onder invloed": [
+            "190", 
+            "165", 
+            "130", 
+            "95"
+        ], 
+        "Rijdentijdens ontzegging": [
+            "5", 
+            "10", 
+            "5", 
             "0"
         ], 
         "Ontucht met misbruik van gezag": [
@@ -4912,11 +5190,11 @@
             "90", 
             "75"
         ], 
-        "Vernielingen": [
-            " misdr.openb.orde/gezag", 
-            "225", 
-            "225", 
-            "115"
+        "Openbare orde misdrijf (overig)": [
+            "10", 
+            "5", 
+            "0", 
+            "0"
         ], 
         "Huisvredebreuk": [
             "0", 
@@ -4925,16 +5203,10 @@
             "0"
         ], 
         "Openbare orde misdrijf": [
-            "10", 
-            "5", 
-            "0", 
-            "0"
-        ], 
-        "Militair misdrijf": [
-            "0", 
-            "0", 
-            "5", 
-            "5"
+            "50", 
+            "65", 
+            "50", 
+            "30"
         ], 
         "Lokaalvredebreuk": [
             "0", 
@@ -4966,17 +5238,11 @@
             "5", 
             "0"
         ], 
-        "Misdrijven WvSr": [
-            "50", 
+        "Softdrugs": [
             "35", 
-            "35", 
-            "35"
-        ], 
-        "Wederspannigheid": [
-            "0", 
-            "0", 
-            "0", 
-            "0"
+            "20", 
+            "25", 
+            "10"
         ], 
         "Vernieling middel openb.vervoer": [
             "5", 
@@ -4990,11 +5256,17 @@
             "10", 
             "15"
         ], 
-        "Vermogensmisdrijf": [
-            "0", 
-            "0", 
-            "0", 
-            "0"
+        "Vuurwapenmisdrijven": [
+            "25", 
+            "25", 
+            "30", 
+            "5"
+        ], 
+        "Harddrugs": [
+            "30", 
+            "20", 
+            "15", 
+            "5"
         ], 
         "Muntmisdrijf": [
             "0", 
@@ -5002,11 +5274,17 @@
             "0", 
             "0"
         ], 
-        "Verkeersmisdrijf": [
+        "Aanranding": [
+            "40", 
+            "35", 
             "20", 
-            "10", 
-            "10", 
-            "5"
+            "25"
+        ], 
+        "Misdrijf (overig)": [
+            "50", 
+            "25", 
+            "15", 
+            "20"
         ], 
         "Verblijf ongewenste vreemdeling": [
             "5", 
@@ -5021,10 +5299,10 @@
             "5"
         ], 
         "Mensenhandel": [
-            " mensensmokkel", 
             "85", 
             "85", 
-            "80"
+            "80", 
+            "60"
         ], 
         "Pornografie": [
             "0", 
@@ -5032,17 +5310,29 @@
             "5", 
             "10"
         ], 
-        "Openlijk geweld tegen goed": [
+        "Verlaten plaats ongeval": [
+            "430", 
+            "355", 
+            "175", 
+            "175"
+        ], 
+        "Militair misdrijf": [
+            "0", 
             "0", 
             "5", 
+            "5"
+        ], 
+        "Geweldsmisdrijf (overig)": [
+            "20", 
+            "15", 
+            "10", 
+            "10"
+        ], 
+        "Vermogensmisdrijf (overig)": [
+            "0", 
+            "0", 
             "0", 
             "0"
-        ], 
-        "Weigeren blaastest/bloedonderzoek": [
-            "0", 
-            "0", 
-            "0", 
-            "5"
         ], 
         "Dierenmishandeling": [
             "0", 
@@ -5051,13 +5341,13 @@
             "0"
         ], 
         "Openbaar gezag misdrijf": [
+            "15", 
             "5", 
-            "0", 
             "5", 
-            "0"
+            "5"
         ], 
-        "Joyriding": [
-            "10", 
+        "Bedrog (overig)": [
+            "5", 
             "5", 
             "5", 
             "5"
@@ -5068,11 +5358,11 @@
             "10", 
             "5"
         ], 
-        "Openlijk geweld tegen persoon": [
-            "15", 
-            "15", 
-            "5", 
-            "5"
+        "Seksueel misdrijf (overig)": [
+            "35", 
+            "40", 
+            "30", 
+            "15"
         ], 
         "Openlijke geweldpleging": [
             "15", 
@@ -5086,11 +5376,17 @@
             "2005", 
             "1730"
         ], 
-        "Totaal": [
-            "6005", 
-            "5080", 
-            "3865", 
-            "3175"
+        "Heling": [
+            "15", 
+            "10", 
+            "15", 
+            "5"
+        ], 
+        "Drugsmisdrijven": [
+            "65", 
+            "40", 
+            "40", 
+            "15"
         ], 
         "Verkeersmisdrijven": [
             "690", 
@@ -5116,49 +5412,43 @@
             "40", 
             "20"
         ], 
-        "Geweldsmisdrijf": [
-            "20", 
-            "15", 
-            "10", 
-            "10"
+        "Openbaar gezag misdrijf (overig)": [
+            "5", 
+            "0", 
+            "5", 
+            "0"
         ], 
-        "Harddrugs": [
-            "30", 
-            "20", 
-            "15", 
-            "5"
+        "Rijdentijdens rijverbod": [
+            "0", 
+            "0", 
+            "0", 
+            "0"
         ], 
-        "Drugsmisdrijven": [
-            "65", 
-            "40", 
-            "40", 
-            "15"
+        "Voeren vals kenteken": [
+            "35", 
+            "25", 
+            "15", 
+            "25"
         ]
     }, 
     "Zeeland": {
-        "Verlaten plaats ongeval": [
-            "1740", 
-            "1930", 
-            "1690", 
-            "1580"
-        ], 
         "Vermogensmisdrijven": [
             "11210", 
             "11170", 
             "10500", 
             "9740"
         ], 
-        "Misdrijf": [
-            "115", 
-            "100", 
-            "175", 
-            "115"
-        ], 
-        "Rijden tijdens ontzegging": [
-            "50", 
-            "40", 
+        "Verkeersmisdrijf (overig)": [
+            "30", 
             "20", 
-            "25"
+            "70", 
+            "50"
+        ], 
+        "Weigeren blaastest/bloedonderzoek": [
+            "10", 
+            "5", 
+            "5", 
+            "5"
         ], 
         "Oplichting": [
             "535", 
@@ -5179,34 +5469,40 @@
             "10"
         ], 
         "Seksueel misdrijf": [
-            "45", 
-            "55", 
-            "50", 
-            "50"
+            "235", 
+            "255", 
+            "245", 
+            "240"
         ], 
         "Bedrog": [
-            "5", 
-            "10", 
-            "5", 
-            "0"
+            "550", 
+            "445", 
+            "510", 
+            "390"
         ], 
-        "Voeren vals kenteken": [
-            "10", 
-            "20", 
-            "10", 
-            "15"
-        ], 
-        "Mishandeling": [
-            "1165", 
-            "1250", 
-            "1285", 
-            "1150"
+        "totaal": [
+            "22240", 
+            "22345", 
+            "20740", 
+            "18880"
         ], 
         "Bedreiging en stalking": [
             "770", 
             "885", 
             "910", 
             "795"
+        ], 
+        "Openlijk geweldtegen persoon": [
+            "120", 
+            "115", 
+            "120", 
+            "90"
+        ], 
+        "Joyriding": [
+            "10", 
+            "5", 
+            "5", 
+            "10"
         ], 
         "Ontucht met minderjarige": [
             "5", 
@@ -5226,11 +5522,11 @@
             "5", 
             "10"
         ], 
-        "Wapenmisdrijven": [
-            "115", 
-            "150", 
-            "160", 
-            "100"
+        "Openlijk geweldtegen goed": [
+            "35", 
+            "40", 
+            "25", 
+            "25"
         ], 
         "Vernieling aan openbaar gebouw": [
             "270", 
@@ -5244,17 +5540,17 @@
             "10", 
             "10"
         ], 
+        "Mishandeling": [
+            "1165", 
+            "1250", 
+            "1285", 
+            "1150"
+        ], 
         "Diefstal en inbraak met geweld": [
             "235", 
             "175", 
             "185", 
             "180"
-        ], 
-        "Rijden onder invloed": [
-            "1635", 
-            "1445", 
-            "1180", 
-            "1125"
         ], 
         "Bankbreuk": [
             "0", 
@@ -5268,47 +5564,11 @@
             "155", 
             "120"
         ], 
-        "Aanranding": [
-            "50", 
-            "60", 
-            "45", 
-            "35"
-        ], 
-        "Softdrugs": [
-            "325", 
-            "290", 
-            "235", 
-            "220"
-        ], 
-        "Schennis der eerbaarheid": [
-            "55", 
-            "60", 
-            "35", 
-            "35"
-        ], 
-        "Rijden tijdens rijverbod": [
-            "0", 
-            "5", 
-            "0", 
-            "0"
-        ], 
-        "Flessentrekkerij": [
-            "10", 
-            "15", 
-            "10", 
-            "10"
-        ], 
-        "Overige wetten": [
+        "Misdrijven overige wetten": [
             "115", 
             "100", 
             "175", 
             "115"
-        ], 
-        "Vernieling": [
-            " beschadiging", 
-            "1740", 
-            "1805", 
-            "1695"
         ], 
         "Niet opvolgen van ambtelijk bevel": [
             "60", 
@@ -5316,17 +5576,59 @@
             "65", 
             "55"
         ], 
-        "Heling": [
-            "45", 
-            "45", 
-            "45", 
-            "60"
+        "Schennis der eerbaarheid": [
+            "55", 
+            "60", 
+            "35", 
+            "35"
+        ], 
+        "Flessentrekkerij": [
+            "10", 
+            "15", 
+            "10", 
+            "10"
+        ], 
+        "Misdrijven WvSr (overig)": [
+            "165", 
+            "200", 
+            "220", 
+            "175"
+        ], 
+        "Vernieling": [
+            "1740", 
+            "1805", 
+            "1695", 
+            "1435"
+        ], 
+        "Misdr.openb.orde/gezag": [
+            "4420", 
+            "4365", 
+            "3820", 
+            "3320"
+        ], 
+        "Wederspannigheid": [
+            "10", 
+            "10", 
+            "15", 
+            "10"
         ], 
         "Valsheid in zegels en merken": [
             "5", 
             "0", 
             "0", 
             "0"
+        ], 
+        "Rijden onder invloed": [
+            "1635", 
+            "1445", 
+            "1180", 
+            "1125"
+        ], 
+        "Rijdentijdens ontzegging": [
+            "50", 
+            "40", 
+            "20", 
+            "25"
         ], 
         "Ontucht met misbruik van gezag": [
             "20", 
@@ -5340,11 +5642,11 @@
             "810", 
             "710"
         ], 
-        "Vernielingen": [
-            " misdr.openb.orde/gezag", 
-            "4420", 
-            "4365", 
-            "3820"
+        "Openbare orde misdrijf (overig)": [
+            "110", 
+            "85", 
+            "45", 
+            "35"
         ], 
         "Huisvredebreuk": [
             "35", 
@@ -5353,16 +5655,10 @@
             "35"
         ], 
         "Openbare orde misdrijf": [
-            "110", 
-            "85", 
-            "45", 
-            "35"
-        ], 
-        "Militair misdrijf": [
-            "0", 
-            "0", 
-            "0", 
-            "0"
+            "335", 
+            "355", 
+            "325", 
+            "245"
         ], 
         "Lokaalvredebreuk": [
             "10", 
@@ -5394,17 +5690,11 @@
             "135", 
             "205"
         ], 
-        "Misdrijven WvSr": [
-            "165", 
-            "200", 
-            "220", 
-            "175"
-        ], 
-        "Wederspannigheid": [
-            "10", 
-            "10", 
-            "15", 
-            "10"
+        "Softdrugs": [
+            "325", 
+            "290", 
+            "235", 
+            "220"
         ], 
         "Vernieling middel openb.vervoer": [
             "25", 
@@ -5418,11 +5708,17 @@
             "105", 
             "80"
         ], 
-        "Vermogensmisdrijf": [
-            "0", 
-            "0", 
-            "0", 
-            "0"
+        "Vuurwapenmisdrijven": [
+            "115", 
+            "150", 
+            "160", 
+            "100"
+        ], 
+        "Harddrugs": [
+            "125", 
+            "95", 
+            "105", 
+            "105"
         ], 
         "Muntmisdrijf": [
             "25", 
@@ -5430,11 +5726,17 @@
             "10", 
             "15"
         ], 
-        "Verkeersmisdrijf": [
-            "30", 
-            "20", 
-            "70", 
-            "50"
+        "Aanranding": [
+            "50", 
+            "60", 
+            "45", 
+            "35"
+        ], 
+        "Misdrijf (overig)": [
+            "115", 
+            "100", 
+            "175", 
+            "115"
         ], 
         "Verblijf ongewenste vreemdeling": [
             "0", 
@@ -5449,10 +5751,10 @@
             "5"
         ], 
         "Mensenhandel": [
-            " mensensmokkel", 
             "10", 
             "5", 
-            "10"
+            "10", 
+            "15"
         ], 
         "Pornografie": [
             "15", 
@@ -5460,17 +5762,29 @@
             "20", 
             "30"
         ], 
-        "Openlijk geweld tegen goed": [
-            "35", 
-            "40", 
-            "25", 
-            "25"
+        "Verlaten plaats ongeval": [
+            "1740", 
+            "1930", 
+            "1690", 
+            "1580"
         ], 
-        "Weigeren blaastest/bloedonderzoek": [
-            "10", 
-            "5", 
-            "5", 
-            "5"
+        "Militair misdrijf": [
+            "0", 
+            "0", 
+            "0", 
+            "0"
+        ], 
+        "Geweldsmisdrijf (overig)": [
+            "30", 
+            "20", 
+            "15", 
+            "15"
+        ], 
+        "Vermogensmisdrijf (overig)": [
+            "0", 
+            "0", 
+            "0", 
+            "0"
         ], 
         "Dierenmishandeling": [
             "0", 
@@ -5479,16 +5793,16 @@
             "0"
         ], 
         "Openbaar gezag misdrijf": [
-            "5", 
-            "5", 
-            "5", 
-            "5"
+            "80", 
+            "90", 
+            "95", 
+            "90"
         ], 
-        "Joyriding": [
+        "Bedrog (overig)": [
+            "5", 
             "10", 
             "5", 
-            "5", 
-            "10"
+            "0"
         ], 
         "Afpersing en afdreiging": [
             "10", 
@@ -5496,11 +5810,11 @@
             "25", 
             "20"
         ], 
-        "Openlijk geweld tegen persoon": [
-            "120", 
-            "115", 
-            "120", 
-            "90"
+        "Seksueel misdrijf (overig)": [
+            "45", 
+            "55", 
+            "50", 
+            "50"
         ], 
         "Openlijke geweldpleging": [
             "155", 
@@ -5514,11 +5828,17 @@
             "9570", 
             "8955"
         ], 
-        "Totaal": [
-            "22240", 
-            "22345", 
-            "20740", 
-            "18880"
+        "Heling": [
+            "45", 
+            "45", 
+            "45", 
+            "60"
+        ], 
+        "Drugsmisdrijven": [
+            "450", 
+            "385", 
+            "340", 
+            "325"
         ], 
         "Verkeersmisdrijven": [
             "3480", 
@@ -5544,23 +5864,23 @@
             "75", 
             "40"
         ], 
-        "Geweldsmisdrijf": [
-            "30", 
+        "Openbaar gezag misdrijf (overig)": [
+            "5", 
+            "5", 
+            "5", 
+            "5"
+        ], 
+        "Rijdentijdens rijverbod": [
+            "0", 
+            "5", 
+            "0", 
+            "0"
+        ], 
+        "Voeren vals kenteken": [
+            "10", 
             "20", 
-            "15", 
+            "10", 
             "15"
-        ], 
-        "Harddrugs": [
-            "125", 
-            "95", 
-            "105", 
-            "105"
-        ], 
-        "Drugsmisdrijven": [
-            "450", 
-            "385", 
-            "340", 
-            "325"
         ]
     }
 }

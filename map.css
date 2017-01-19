@@ -5,21 +5,26 @@ svg#map{
 	width: 650px;
 }
 
-path { 
+#map path { 
 	fill: #d3d3d3; 
-	transition: .6s fill; 
+    /*transition: .6s fill; */
 }
 
-path:hover { 
-	fill: orange; 
+#map path:hover { 
+	opacity: 0.5; 
 }
 
 svg#pie{
-	float: right;
 	position: absolute;
-	width: 200px;
-	height: 200px;
+    right: 200px;
+    top: 100px;
+	width: 250px;
+	height: 250px;
 	border: 3px;
+}
+
+#pie path:hover {
+    fill: red;
 }
 
 /* Dropdown Button */
@@ -49,7 +54,7 @@ svg#pie{
     position: absolute;
     background-color: #f9f9f9;
     min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.8);
 }
 
 /* Links inside the dropdown */
@@ -65,3 +70,27 @@ svg#pie{
 
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 .show {display:block;}
+
+
+#plot path { 
+    stroke: steelblue;
+    stroke-width: 2;
+    fill: none;
+}
+
+#plot .axis path,
+#plot .axis line {
+    fill: none;
+    stroke: grey;
+    stroke-width: 1;
+    shape-rendering: crispEdges;
+}
+#crimeDrop { 
+    max-height:180px; 
+    overflow-y:scroll; 
+}
+svg#plot {
+    position: absolute;
+    bottom: 30px;
+    right: 50px;
+}
