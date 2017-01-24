@@ -15,17 +15,15 @@ d3map html file
   </head>
   <body>
     <div class="dropdown">
-      <button id="home" class="dropbtn">Home</button>
-        <div id="Home" class="dropdown-content">
-          <a href="#" class="homebtn" >Home</a>
-        </div>
+      <button id="home" class="dropbtn">Nederland</button>
     </div>    
     <div class="dropdown">
       <button onclick="crimeFunction()" class="dropbtn">Misdrijf</button>
         <div id="crimeDrop" class="dropdown-content">
         </div>
     </div>
-    <div class="dropdown">
+    <div class="slider" id="timeSlider"></div>
+<!--     <div class="dropdown">
       <button onclick="yearFunction()" class="dropbtn">Jaar</button>
         <div id="yearDrop" class="dropdown-content">
           <a href="#" class="year" id="0">2010</a>
@@ -33,7 +31,7 @@ d3map html file
           <a href="#" class="year" id="2">2012</a>
           <a href="#" class="year" id="3">2013</a>
         </div>
-    </div>
+    </div> -->
   	<script type="text/javascript" src="map.js"></script>
   </body>
 </html>

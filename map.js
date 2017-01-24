@@ -8,6 +8,7 @@ var isPlot = false
 var isPie = false
 
 var province = 'Nederland'
+var curProvince = 'Nederland'
 var crime = 'totaal' 
 var year = '3'
 var total
@@ -21,11 +22,11 @@ var margin = {
     top: 30,
     right: 20,
     bottom: 30,
-    left: 60
+    left: 40
 };
 var width = 500 - margin.left - margin.right;
 var height = 270 - margin.top - margin.bottom;
-var parseDate = d3.time.format("%y").parse;
+var parseDate = d3.time.format("%Y").parse;
 var x = d3.time.scale().range([0, width]);
 var y = d3.scale.linear().range([height, 0]);
 var xAxis = d3.svg.axis().scale(x)
@@ -34,10 +35,10 @@ var yAxis = d3.svg.axis().scale(y)
     .orient("left").ticks(5);
 
 var pieColors = ['#a50026','#d73027','#f46d43','#fdae61','#fee090','#ffffbf','#e0f3f8','#abd9e9','#74add1','#4575b4','#313695']
-var widthPie = 200;
-var heightPie = 200;
+var widthPie = 300;
+var heightPie = 300;
 var radius = Math.min(widthPie, heightPie) / 2;
-var donutWidth = 50;
+var donutWidth = 35;
 var color = d3.scale.ordinal()
 	.range(pieColors)
 	.domain(provinces)
@@ -45,10 +46,50 @@ var arc = d3.svg.arc()
 	.outerRadius(radius)
 	.innerRadius(radius - donutWidth)
 
+var widthSlider = 480;
+var xSlider = d3.scale.linear()
+    .domain([2010, 2013])
+    .range([0, widthSlider])
+    .clamp(true);
+var dispatch = d3.dispatch("sliderChange");
+var slider = d3.select(".slider")
+    .style("width", widthSlider + "px");
+var sliderTray = slider.append("div")
+    .attr("class", "slider-tray");
+var sliderHandle = slider.append("div")
+    .attr("class", "slider-handle");
+sliderHandle.append("div")
+    .attr("class", "slider-handle-icon")
+
+slider.call(d3.behavior.drag()
+    .on("dragstart", function() {
+      dispatch.sliderChange(xSlider.invert(d3.mouse(sliderTray.node())[0]));
+      d3.event.sourceEvent.preventDefault();
+    })
+    .on("drag", function() {
+      dispatch.sliderChange(xSlider.invert(d3.mouse(sliderTray.node())[0]));
+    })
+);
+
+dispatch.on("sliderChange.slider", function(value) {
+  	sliderHandle.style("left", xSlider(value) + "px")
+  	// console.log(value)
+  	// if (value <= 2010.5) {
+  	// 	console.log(2010)
+  	// }  	
+  	// else if (value >= 2010.6) {
+  	// 	console.log(2011)
+  	// }
+  	// else if (value >= 2011.6) {
+  	// 	console.log(2012)
+  	// }
+  	// else if (value >= 2012.6) {
+  	// 	console.log(2013)
+  	// }
+});
+
 var container = d3.select('body').append('div')
 	.attr('id','container');
-
-
 
 
 d3.xml('nederland.svg', 'image/svg+xml', function(error, xml) {
@@ -65,7 +106,7 @@ d3.xml('nederland.svg', 'image/svg+xml', function(error, xml) {
 	    .attr("width", width + margin.left + margin.right)
 	    .attr("height", height + margin.top + margin.bottom)
 	  .append("g")
-	    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+	    .attr("transform", "translate(" + (margin.left + 50) +"," + margin.top + ")");
 	
 	d3.json('data/dataCrimi.json', function(error, data) {
 		if (error) throw error;
@@ -79,15 +120,15 @@ d3.xml('nederland.svg', 'image/svg+xml', function(error, xml) {
 			document.getElementById('crimeDrop').innerHTML += "<a href='#' class='crime' id=" + crimes[i].replace(/\s+/g, '') + ">" + String(crimes[i]) + "</a>"
 		} 
 
-		var mainTitle = d3.select('#container').append('div').append('h1')
+		var mainTitle = d3.select('body').append('div').append('h1')
 			.attr('id', 'maintitle')
 			.text(crime+", 201"+year)
 
-		var pieTitle = d3.select('#container').append('div').append('h3')
+		var pieTitle = d3.select('body').append('div').append('h3')
 			.attr('id', 'pietitle')
 			.text('Provincie jaar:')
 
-		var plotTitle = d3.select('#container').append('div').append('h3')
+		var plotTitle = d3.select('body').append('div').append('h3')
 			.attr('id', 'plottitle')
 			.text(crime+' in '+province+' van \'10 to \'13')
 		
@@ -131,32 +172,65 @@ d3.xml('nederland.svg', 'image/svg+xml', function(error, xml) {
 		d3.selectAll('[title]')
 			.on('mouseover', function(){
 				province = document.getElementById(this.id).getAttribute('title')
-				d3.select('path.'+fuseString(province))
+				d3.select('path.'+province)
 					.style('opacity', 0.5)
 					.style('stroke', 'grey')
-					.style('stroke-width', 5)
+					.style('stroke-width', 3)
 				d3.select('#pietitle').text(province+' 201'+year+' : '+data[province][crime][year])
 			})
 			.on('mouseout', function(){
 				province = document.getElementById(this.id).getAttribute('title')
-				d3.select('path.'+fuseString(province))
+				d3.select('path.'+province)
 					.style('opacity', null)
-					.style('stroke', null)				
+					.style('stroke', null)
+					d3.select('#pietitle').text(curProvince+' 201'+year+' : '+data[province][crime][year])			
 			})
 			.on('click', function(){
-				province = document.getElementById(this.id).getAttribute('title')
+				curProvince = document.getElementById(this.id).getAttribute('title')
 				makePie(provincePie(data, province, year))
 				makePlot(plotProvince(data, province, crime))
 				d3.select('#maintitle').text(crime+", 201"+year)
-				d3.select('#plottitle').text(crime+' in '+province+' van \'10 to \'13')
+				d3.select('#plottitle').text(crime+' in '+province+' van \'10 tot \'13')
+				if (province != 'Nederland'){
+					d3.selectAll('#map path').style('opacity', null)
+					d3.select('#map [title="'+province+'"]')
+						.style('opacity', 0.5)
+				}
+			})
+		
+		d3.selectAll('#pie path')
+			.on('mouseover', function(){
+				province = this.id
+				d3.select(this)
+					.style('opacity', 0.5)
+					.style('stroke', 'grey')
+					.style('stroke-width', 3)
+				d3.select('#pietitle').text(province+' 201'+year+' : '+data[province][crime][year])
+				document.querySelector('path[title="' + this.id + '"]')
+					.setAttribute('opacity', 0.5)
+			})
+			.on('mouseout', function(){
+				d3.select(this)
+					.style('opacity', null)
+					.style('stroke', 'grey')
+					.style('stroke-width', 0)
+				document.querySelector('path[title="' + this.id + '"]')
+					.setAttribute('opacity', null)
+			})
+			.on('click', function(){
+				curProvince = document.getElementById(this.id).getAttribute('title')
+				makePie(provincePie(data, province, year))
+				makePlot(plotProvince(data, province, crime))
+				d3.select('#maintitle').text(crime+", 201"+year)
+				d3.select('#plottitle').text(crime+' in '+province+' van \'10 tot \'13')
 				d3.select('path.'+fuseString(crime))
 					.style('opacity', 0.5)
 					.style('stroke', 'grey')	
-					.style('stroke-width', 5)				
+					.style('stroke-width', 3)				
 			})
-		
 		d3.select('#home')
 			.on('click', function(){
+				d3.selectAll('#map path').style('opacity', null)
 				crime = 'totaal'
 				province = 'Nederland'
 				year = '3'
@@ -164,8 +238,8 @@ d3.xml('nederland.svg', 'image/svg+xml', function(error, xml) {
 				fillMap(data, crime, year)
 				makePie(dataPie(data, crime, year))
 				d3.select('#maintitle').text(crime+", 201"+year)
-				d3.select('#plottitle').text(crime+' in '+province+' van \'10 to \'13')
-			})
+				d3.select('#plottitle').text(crime+' in '+province+' van \'10 tot \'13')
+			})	
 	})
 })
 
@@ -179,10 +253,9 @@ function makePie(data) {
 		    .attr("width", width)
 		    .attr("height", height)
 	  	  .append("g")
-	    		.attr("transform", "translate(" + width /4 + "," + height/2 + ")");
+	    		.attr("transform", "translate(" + width /2.7 + "," + height/1.35 + ")");
 
 	var pie = d3.layout.pie()
-	    .sort(null)
 	    .value(function(d) { return d.count})
 
 	var g = pieChart.selectAll(".arc")
@@ -191,7 +264,8 @@ function makePie(data) {
 		.attr("class", "arc" )
 
 	g.append("path")
-		.attr("class", function(d){ return fuseString(d.data.label)})
+		.attr("class", function(d){ return d.data.label})
+		.attr("id", function(d){ return d.data.label})
 	  	.attr("d", arc)
 	  	.style("fill", function(d) { return color(d.data.label); });
 };
@@ -222,6 +296,11 @@ function provincePie(data, province, year) {
 
 
 function makePlot(data) {
+
+    data.forEach(function(d) {
+        d.Year = parseDate(d.Year);
+        d.Value = +d.Value;
+    });
 
 	if (isPlot == true){
 		var valueline = d3.svg.line()
@@ -265,19 +344,12 @@ function makePlot(data) {
 };
 
 function plotProvince(data, province, crime) {
-	var obj, tien = 0, elf = 0, twaalf = 0, dertien = 0;
-	for (var i = 0; i < crimes.length; i++) {
-		obj = data[province][crime]
-		tien += +obj[0]
-		elf += +obj[1]
-		twaalf += +obj[2]
-		dertien += +obj[3]		
-	};
-	var dataset = [
-	{'Value': tien, 'Year':years[0]},
-	{'Value': elf, 'Year':years[1]},
-	{'Value': twaalf, 'Year':years[2]},
-	{'Value': dertien, 'Year':years[3]}	
+	obj = data[province][crime]
+	dataset = [
+	{'Value': obj[0], 'Year':years[0]},	
+	{'Value': obj[1], 'Year':years[1]},
+	{'Value': obj[2], 'Year':years[2]},
+	{'Value': obj[3], 'Year':years[3]}	
 	]
 	return dataset
 }
@@ -321,8 +393,11 @@ function calcFill(data, province, crime, year, total) {
 	var value = data[province][crime][year]
 	var perc = value/total*100
 	var percIndex = [2, 4, 8, 16, 32, 64]
-
-	if (perc <= percIndex[0]){
+	console.log(value)
+	if (value == 0){
+		index = 0
+	}
+	else if (perc <= percIndex[0]){
 		index = 0
 	}
 	else if (perc <= percIndex[1]){
@@ -340,7 +415,7 @@ function calcFill(data, province, crime, year, total) {
 	else if (perc >= percIndex[5]){
 		index = 5
 	}
-
+	console.log(index)
 	return String(colors[index]) 
 };
 function fuseString(string) {
