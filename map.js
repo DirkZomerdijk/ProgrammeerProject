@@ -113,7 +113,6 @@ d3.xml('nederland.svg', 'image/svg+xml', function(error, xml) {
 		dataset = data
 
 		for (var k in data.Groningen) crimes.push(k);
-
 		crimes.sort();
 
 		for ( var i = 0; i < crimes.length; i++ ) {
@@ -424,12 +423,12 @@ function fuseString(string) {
 /* When the user clicks on the button, 
 toggle between hiding and showing the dropdown content */
 function yearFunction() {
-    document.getElementById("yearDrop").classList.toggle("show");
+    // document.getElementById("yearDrop").classList.toggle("show");
     document.getElementById("crimeDrop").classList.remove('show');
 }
 function crimeFunction() {
     document.getElementById("crimeDrop").classList.toggle("show");
-    document.getElementById("yearDrop").classList.remove('show');
+    // document.getElementById("yearDrop").classList.remove('show');
 }
 
 // Close the dropdown menu if the user clicks outside of it
