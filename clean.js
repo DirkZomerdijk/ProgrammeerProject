@@ -2,6 +2,7 @@
 var preProvince 
 var curProvince = 'Nederland'
 var pointProvince
+var pointCrime
 var curCrime = 'totaal'
 var year = '3'
 var total
@@ -10,8 +11,10 @@ var years = ['2010','2011','2012','2013']
 var colors = ['#fed976','#feb24c','#fd8d3c','#fc4e2a','#e31a1c','#b10026']
 var crimes = []
 
+var selProvince = false
+
 // lineplot variables
-var plotMargin = { top: 30, right: 20, bottom: 30, left: 40 };
+var plotMargin = { top: 20, right: 80, bottom: 20, left: 20 };
 var plotWidth = 500 - plotMargin.left - plotMargin.right;
 var plotHeight = 270 - plotMargin.top - plotMargin.bottom;
 
@@ -23,11 +26,11 @@ var y = d3.scale.linear().range([plotHeight, 0]);
 var xAxis = d3.svg.axis()
 	.scale(x)
 	.orient("bottom")
-	.ticks(4);
+	.ticks(4)
 var yAxis = d3.svg.axis()
 	.scale(y)
 	.orient("left")
-	.ticks(5);
+	.ticks(6)
 
 var plot = d3.select("#plotContainer")
   .append("svg")
@@ -56,7 +59,7 @@ var mainTitle = d3.select('#mainContainer').append('div').append('h1')
 	.text('mainTitle')
 
 var mapTitle = d3.select('#mapContainer').append('div').append('h3')
-	.attr('id', 'maintitle')
+	.attr('id', 'mapTitletitle')
 	.text('mapTitle')
 
 var pieTitle = d3.select('#pieContainer').append('div').append('h3')
@@ -84,91 +87,114 @@ d3.xml('nederland.svg', 'image/svg+xml', function(error, xml) {
 		for ( var i = 0; i < crimes.length; i++ ) {
 			document.getElementById('crimeDrop').innerHTML += "<a href='#' class='crimeDrop' id=" + crimes[i].replace(/\s+/g, '') + ">" + String(crimes[i]) + "</a>"
 		} 
+	    var width = 700;
+	    var height = 100;
+	    var radius = 10;
+	    var margin = 100;
+	    
+	    var x1 = margin;
+	    var x2 = width - margin;
+	    var y = height / 2;
+	        
+	    var drag = d3.behavior.drag()
+	      .origin(function(d) { return d; })
+	      .on("drag", dragmove);
+	    
+	    var slider = d3.select("body")
+	      .append('div')
+	      	.attr('id', 'slidercontainer')
+	      .append("svg")
+	    	.attr('id', 'slider')
+	      	.attr("width", width)
+	      	.attr("height", height)
+	      	.datum({
+	        x: width - margin,
+	        y: height / 2
+	      });
+	    
+	    var line = slider.append("line")
+	      .attr("x1", x1)
+	      .attr("x2", x2)
+	      .attr("y1", y)
+	      .attr("y2", y)
+	      .style("stroke", "black")
+	      .style("stroke-linecap", "round")
+	      .style("stroke-width", 5);
+
+	    var circle = slider.append("circle")
+	      .attr("r", radius)
+	      .attr("cy", function(d) { return d.y; })
+	      .attr("cx", function(d) { return d.x; })
+	      .style("cursor", "ew-resize")
+	      .call(drag);
+	    
+	    function dragmove(d) {
+	      
+			// Get the updated X location computed by the drag behavior.
+			var x = d3.event.x;
+			var pointValue = x2 / 4
+			
+			if (curProvince == 'Nederland')
+				var choosePie = makePie(dataPie(data, curCrime, year))
+			else {
+				var choosePie = makePie(provincePie(data, curProvince, year))
+			}
+			
+			if (x <= pointValue) {
+				year = '0'
+				fillMap(data, curCrime, year)
+				choosePie
+				d3.select('#pietitle')
+					.text(curProvince+', '+curCrime+', 201'+year)
+			}
+			else if (x <= pointValue*2) {
+				year = '1'
+				fillMap(data, curCrime, year)
+				choosePie
+				d3.select('#pietitle')
+					.text(curProvince+', '+curCrime+', 201'+year)
+			}
+			else if (x <= pointValue*3) {
+				year = '2'
+				fillMap(data, curCrime, year)
+				choosePie
+				d3.select('#pietitle')
+					.text(curProvince+', '+curCrime+', 201'+year)
+			}
+			else if (x <= pointValue*4) {
+				year = '3'
+				fillMap(data, curCrime, year)
+				choosePie
+				d3.select('#pietitle')
+					.text(curProvince+', '+curCrime+', 201'+year)
+			}
+			// Constrain x to be between x1 and x2 (the ends of the line).
+			x = x < x1 ? x1 : x > x2 ? x2 : x;
+
+			// This assignment is necessary for multiple drag gestures.
+			// It makes the drag.origin function yield the correct value.
+			d.x = x;
+
+			// Update the circle location.
+			circle.attr("cx", x);
+	    }
 
 		fillMap(data, curCrime, year)
 		makePlot(plotData(data, curCrime))
 		makePie(dataPie(data, curCrime, year))
 
-		d3.selectAll('.land')
-			.on('mouseover', function(){
-				pointProvince = d3.select(this).attr('title')
-				d3.select(this)
-					.style('opacity', 0.5)
-					.style('stroke', 'grey')
-					.style('stroke-width', 3)
-			})
-			.on('mouseout', function(){
-				d3.select('#map [title="'+pointProvince+'"]')
-					.style('opacity', null)
-					.style('stroke', null)
-					.style('stroke-width', null)
-			})
-			.on('click', function(){
-				curProvince = pointProvince
-				makePie(provincePie(data, curProvince, year))
-			})
-
-		d3.selectAll('.province-label')
-			.on('mouseover', function(){
-				pointProvince = this.id
-				d3.select(this)
-					.style('opacity', 0.5)
-					.style('stroke', 'grey')
-					.style('stroke-width', 3)
-
-				d3.select('#map [title="'+pointProvince+'"]')
-					.style('opacity', 0.5)
-					.style('stroke', 'grey')
-					.style('stroke-width', 3)
-			})
-			.on('mouseout', function(){
-				d3.select('#'+pointProvince)
-					.style('opacity', null)
-					.style('stroke', null)
-					.style('stroke-width', null)
-
-				d3.select('#map [title="'+pointProvince+'"]')
-					.style('opacity', null)
-					.style('stroke', null)
-					.style('stroke-width', null)
-			})
-			.on('click', function(){
-				curProvince = pointProvince
-				makePie(provincePie(data, curProvince, year))
-			})
-
-		d3.selectAll('.crimeDrop')
-			.on('click', function(){
-				curCrime = this.innerHTML
-
-				fillMap(data, curCrime, year)
-				makePlot(plotData(data, curCrime))
-
-				if (curProvince == 'Nederland') {
-					makePie(dataPie(data, curCrime, year))
-				} else {
-					makePie(provincePie(data, curProvince, year))
-				}
-
-			})
-
-		d3.select('#home')
-			.on('click', function(){
-				curProvince = 'Nederland'
-				makePie(dataPie(data, curCrime, year))
-			})
+		callListeners(data)
+		window.onclick = function(event) {
+			callListeners(data)
+			if (!event.target.matches('.dropbtn')) {
+			    var dropdowns = document.getElementsByClassName("dropdown-content");
+			    for (var i = 0; i < dropdowns.length; i++) {
+			    	var openDropdown = dropdowns[i];
+			    	if (openDropdown.classList.contains('show')) {
+			        	openDropdown.classList.remove('show');
+			      	}
+			    }
+			}			
+		}
 	})
 });
-// Close the dropdown menu if the user clicks outside of it
-window.onclick = function(event) {
-  if (!event.target.matches('.dropbtn')) {
-
-    var dropdowns = document.getElementsByClassName("dropdown-content");
-    for (var i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
-      }
-    }
-  }
-}

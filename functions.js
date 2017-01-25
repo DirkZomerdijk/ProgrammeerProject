@@ -15,15 +15,23 @@ function makePie(data) {
 	var g = pieChart.selectAll(".arc")
 		.data(pie(data))
 	  .enter().append("g")
-		.attr("class", "arc" )
+		.attr("class", "arc")
 
 	g.append("path")
-		.attr("class", 'province-label')
+		.attr("class", selPieClass(data))
 		.attr("id", function(d){ return d.data.label})
 	  	.attr("d", arc)
 	  	.style("fill", function(d) { return color(d.data.label); });
 };
 
+function selPieClass (data) {
+	if (data.length == crimes.length) {
+		return 'crime-label'
+	}
+	else {
+		return 'province-label'
+	}
+}
 function dataPie(data, crime, year) {
 	var pieData = []
 	for (var i = 0; i < provinces.length; i++) {
@@ -62,7 +70,7 @@ function makePlot(data) {
 	    	.y(function (d) { return y(d.Value);})
 	    	.interpolate("monotone");
 		// Scale the range of the data
-		x.domain(d3.extent(data, function (d) { return d.Year; }));
+		x.domain(d3.extent(data, function (d) { return d.Year; })).nice();
 		y.domain([0, d3.max(data, function (d) { return d.Value + d.Value/5; })]);
 
 		var change = d3.select("#plot").transition().duration(200);
@@ -127,17 +135,18 @@ function plotData(data, crime) {
 };
 
 function fillMap(data, crime, year) {
-	total = calcTotal(data, crime)
+	// total = calcTotal(data, crime)
 	for (var i = 0; i < provinces.length; i++) {
 		d3.select("[title=" + String(provinces[i]) + "]")
-			.style('fill', calcFill(data, provinces[i],crime,year,calcTotal(data, crime)))
+			.style('fill', calcFill(data, provinces[i],crime,year,calcTotal(data, curCrime)))
+
 	};
 };
 
 function calcTotal(data, crime){
 	var total = 0
 	for (var i = 0; i < provinces.length; i++) {
-		total += +data[String(provinces[i])][crime][year]
+		total += +data[String(provinces[i])][curCrime][year]
 	};
 	return total
 };
@@ -175,25 +184,157 @@ function fuseString(string) {
 }
 /* When the user clicks on the button, 
 toggle between hiding and showing the dropdown content */
-function yearFunction() {
+// function yearFunction() {
     // document.getElementById("yearDrop").classList.toggle("show");
-    document.getElementById("crimeDrop").classList.remove('show');
-}
+    // document.getElementById("crimeDrop").classList.remove('show');
+// }
 function crimeFunction() {
     document.getElementById("crimeDrop").classList.toggle("show");
     // document.getElementById("yearDrop").classList.remove('show');
 }
 
-// Close the dropdown menu if the user clicks outside of it
-window.onclick = function(event) {
-  if (!event.target.matches('.dropbtn')) {
+function callListeners(data) {
 
-    var dropdowns = document.getElementsByClassName("dropdown-content");
-    for (var i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
-      }
-    }
-  }
-}
+	d3.selectAll('.land')
+		.on('mouseover', function(){
+			pointProvince = d3.select(this).attr('title')
+			// d3.select(this)
+			// 	.style('opacity', 0.5)
+			// 	.style('stroke', 'grey')
+			// 	.style('stroke-width', 3)
+			d3.select('#'+pointProvince)
+				.style('opacity', 0.5)
+				.style('stroke', 'grey')
+				.style('stroke-width', 3)				
+		})
+		.on('mouseout', function(){
+			// d3.select('#map [title="'+pointProvince+'"]')
+			// 	.style('opacity', null)
+			// 	.style('stroke', null)
+			// 	.style('stroke-width', null)
+			d3.select('#'+pointProvince)
+				.style('opacity', null)
+				.style('stroke', null)
+				.style('stroke-width', null)
+		})
+		.on('click', function(){
+			preProvince = curProvince
+			curProvince = pointProvince
+			d3.select('#map [title="'+curProvince+'"]')
+				.style('opacity', 0.5)
+				.style('stroke', 'grey')
+				.style('stroke-width', 3)
+			d3.select('#map [title="'+preProvince+'"]')
+				.style('opacity', null)
+				.style('stroke', null)
+				.style('stroke-width', null)			
+			
+			d3.select('#plottitle')
+				.text(curProvince+', '+curCrime)
+			d3.select('#pietitle')
+				.text(curProvince+', '+curCrime+', 201'+year)
+
+			makePie(provincePie(data, curProvince, year))
+			makePlot(plotProvince(data, curProvince, curCrime))
+		})
+
+	d3.selectAll('.province-label')
+		.on('mouseover', function(){
+			pointProvince = this.id
+			d3.select(this)
+				.style('opacity', 0.5)
+				.style('stroke', 'grey')
+				.style('stroke-width', 3)
+
+			d3.select('#map [title="'+pointProvince+'"]')
+				.style('opacity', 0.5)
+				.style('stroke', 'grey')
+				.style('stroke-width', 3)
+		})
+		.on('mouseout', function(){
+			d3.select('#'+pointProvince)
+				.style('opacity', null)
+				.style('stroke', null)
+				.style('stroke-width', null)
+
+			d3.select('#map [title="'+pointProvince+'"]')
+				.style('opacity', null)
+				.style('stroke', null)
+				.style('stroke-width', null)
+		})
+		.on('click', function(){
+			curProvince = pointProvince
+			makePie(provincePie(data, curProvince, year))
+			makePlot(plotProvince(data, curProvince, curCrime))
+			d3.select('#pietitle')
+				.text(curProvince+', '+curCrime+', 201'+year)
+			d3.select('#plottitle')
+				.text(curProvince+', '+curCrime)
+		})
+
+
+	d3.selectAll('.crime-label')
+		.on('mouseover', function(){
+			pointCrime = this.id
+			d3.select(this)
+				.style('opacity', 0.5)
+				.style('stroke', 'grey')
+				.style('stroke-width', 3)			
+		})
+		.on('mouseout', function(){
+			d3.select(this)
+				.style('opacity', null)
+				.style('stroke', null)
+				.style('stroke-width', null)			
+		})
+		.on('click', function() {
+			curCrime = this.id
+			makePlot(plotProvince(data, curProvince, curCrime))
+			fillMap(data, curCrime, year)
+			d3.select('#plottitle')
+				.text(curProvince+', '+curCrime)
+			d3.select('#maptitle')
+				.text(curCrime+', 201'+year)
+			d3.select('#pietitle')
+				.text(curProvince+', '+curCrime+', 201'+year)
+		})
+
+	d3.selectAll('.crimeDrop')
+		.on('click', function(){
+			curCrime = this.innerHTML
+
+			fillMap(data, curCrime, year)
+			makePlot(plotData(data, curCrime))
+
+			if (curProvince == 'Nederland') {
+				makePie(dataPie(data, curCrime, year))
+			} else {
+				makePie(provincePie(data, curProvince, year))
+			}
+			d3.select('#pietitle')
+				.text(curProvince+', '+curCrime+', 201'+year)
+			d3.select('#plottitle')
+				.text(curProvince+', '+curCrime)
+			d3.select('#maptitle')
+				.text(curCrime+', 201'+year)
+		})
+
+	d3.select('#home')
+		.on('click', function(){
+			curProvince = 'Nederland'
+			makePie(dataPie(data, curCrime, year))
+			makePlot(plotData(data, curCrime))
+
+			d3.selectAll('.land')
+				.style('opacity', null)
+				.style('stroke', null)
+				.style('stroke-width', null)
+
+			d3.select('#maptitle')
+				.text(curCrime+', 201'+year)
+			d3.select('#plottitle')
+				.text(curProvince+', '+curCrime)
+			d3.select('#pietitle')
+				.text(curProvince+', '+curCrime+', 201'+year)
+		})
+	}
