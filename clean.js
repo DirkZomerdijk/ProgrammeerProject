@@ -1,5 +1,6 @@
 var test
 // datamap variables
+var nedTotaalPlot
 var preProvince 
 var curProvince = 'Nederland'
 var pointProvince
@@ -10,7 +11,6 @@ var total
 var provinces = ['Groningen','Friesland','Gelderland','Drenthe','Overijssel','Flevoland','Utrecht','Noord-Holland','Zuid-Holland','Zeeland','Noord-Brabant','Limburg']
 var inwoners= {'Groningen': 583942,'Friesland': 646257,'Gelderland': 2026578,'Drenthe': 488576,'Overijssel': 1140652,'Flevoland': 401791,'Utrecht': 1263572,'Noord-Holland': 2761929,'Zuid-Holland': 3600011,'Zeeland': 380726,'Noord-Brabant': 2488751,'Limburg': 1117941,'Nederland': 16900726}
 var years = ['2010','2011','2012','2013']
-// var colors = ['#fed976','#feb24c','#fd8d3c','#fc4e2a','#e31a1c','#b10026']
 var colors = ['#fff7fb','#ece2f0','#d0d1e6','#a6bddb','#67a9cf','#3690c0','#02818a','#016c59','#014636']
 var crimes = []
 
@@ -19,7 +19,7 @@ var selProvince = false
 // lineplot variables
 var plotMargin = { top: 20, right: 80, bottom: 20, left: 25 };
 var plotWidth = 500 - plotMargin.left - plotMargin.right;
-var plotHeight = 270 - plotMargin.top - plotMargin.bottom;
+var plotHeight = 200 - plotMargin.top - plotMargin.bottom;
 
 var parseDate = d3.time.format("%Y").parse;
 
@@ -33,7 +33,7 @@ var xAxis = d3.svg.axis()
 var yAxis = d3.svg.axis()
 	.scale(y)
 	.orient("left")
-	.ticks(6)
+	.ticks(6, 's')
 
 var plot = d3.select("#plotContainer")
   .append("svg")
@@ -61,10 +61,10 @@ var arcHover = d3.svg.arc()
 	.outerRadius(radiusHover)
 	.innerRadius(radiusHover - donutWidth)
 
-var sliderWidth = 450;
+var sliderWidth = 200;
 var sliderHeight = 100;
 var sliderRadius = 10;
-var sliderMargin = 100;
+var sliderMargin = 20;
 
 var sliderx1 = sliderMargin;
 var sliderx2 = sliderWidth - sliderMargin;
@@ -92,17 +92,18 @@ var line = slider.append("line")
 	.style("stroke-width", 5);
   
 
-var mainTitle = d3.select('#mainContainer').append('div').append('h1')
-	.attr('id', 'maintitle')
-	.text('mainTitle')
 
-var mapTitle = d3.select('#mapContainer').append('div').append('h3')
-	.attr('id', 'mapTitletitle')
-	.text('mapTitle')
+// var mapTitle = d3.select('#mapContainer').append('div').append('h3')
+// 	.attr('id', 'mapTitletitle')
+// 	.text('mapTitle')
 
-var pieTitle = d3.select('#pieContainer').append('div').append('h3')
-	.attr('id', 'pietitle')
-	.text('pieTitle')
+// var pieTitle = d3.select('#pieContainer').append('div').append('h3')
+// 	.attr('id', 'pietitle')
+// 	.text('pieTitle')
+
+var piePercentage = d3.select('#pieContainer').append('div')
+	.attr('id', 'percentage')
+	.text('%')
 
 var plotTitle = d3.select('#plotContainer').append('div').append('h3')
 	.attr('id', 'plottitle')
@@ -112,13 +113,18 @@ var plotSubtitle = d3.select('#plotContainer').append('div').append('h3')
   	.attr('id', 'plotsubtitle')
   	.html('Totaal')
 
+var sliderTitle = d3.select("#slidercontainer").append('div')
+	.attr('id', 'slidertitle')
+	.text('201'+year)
+
+
 d3.xml('nederland.svg', 'image/svg+xml', function(error, xml) {
 	if (error) throw error;
 	
 	document.getElementById('mapContainer').appendChild(xml.documentElement)
 		.setAttribute('id', 'map');
 
-	d3.select('g').attr('transform','scale(0.8)')
+	d3.select('g').attr('transform','scale(0.6)')
 
 	d3.json('data/dataCrimi.json', function(error, data) {
 		if (error) throw error;
@@ -158,29 +164,29 @@ d3.xml('nederland.svg', 'image/svg+xml', function(error, xml) {
 				year = '0'
 				fillMap(data, curCrime, year)
 				choosePie
-				d3.select('#pietitle')
-					.text(curProvince+', '+curCrime+', 201'+year)
+				d3.select('#slidertitle')
+					.text('201'+year)
 			}
 			else if (x <= pointValue*2) {
 				year = '1'
 				fillMap(data, curCrime, year)
 				choosePie
-				d3.select('#pietitle')
-					.text(curProvince+', '+curCrime+', 201'+year)
+				d3.select('#slidertitle')
+					.text('201'+year)
 			}
 			else if (x <= pointValue*3) {
 				year = '2'
 				fillMap(data, curCrime, year)
 				choosePie
-				d3.select('#pietitle')
-					.text(curProvince+', '+curCrime+', 201'+year)
+				d3.select('#slidertitle')
+					.text('201'+year)
 			}
 			else if (x <= pointValue*4) {
 				year = '3'
 				fillMap(data, curCrime, year)
 				choosePie
-				d3.select('#pietitle')
-					.text(curProvince+', '+curCrime+', 201'+year)
+				d3.select('#slidertitle')
+					.text('201'+year)
 			}
 			// Constrain x to be between x1 and x2 (the ends of the line).
 			x = x < sliderx1 ? sliderx1 : x > sliderx2 ? sliderx2 : x;
@@ -211,7 +217,7 @@ d3.xml('nederland.svg', 'image/svg+xml', function(error, xml) {
 		    nedTotaal2 += +data[provinces[j]].totaal['2']
 		    nedTotaal3 += +data[provinces[j]].totaal['3']
 		}
-		var nedTotaalPlot = [
+		nedTotaalPlot = [
 		{'Value': nedTotaal0, 'Year':years[0]},
 		{'Value': nedTotaal1, 'Year':years[1]},
 		{'Value': nedTotaal2, 'Year':years[2]},

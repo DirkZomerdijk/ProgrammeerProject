@@ -20,8 +20,7 @@ function makePie(data) {
 	g.append("path")
 		.attr("class", selPieClass(data))
 		.attr("id", function(d){ return d.data.label})
-		.attr("title", function(d){ console.log(d)})
-	  	.attr("d", arc)
+		  	.attr("d", arc)
 	  	.style("fill", function(d) { return color(d.data.label); });
 
 };
@@ -35,7 +34,7 @@ function selPieClass (data) {
 	}
 }
 function dataPie(data, crime, year) {
-	//http://www.metatopos.eu/provincies.html
+	
 	var pieData = []
 	for (var i = 0; i < provinces.length; i++) {
 
@@ -61,6 +60,7 @@ function provincePie(data, province, year) {
 	return pieData
 }
 function totalPie(data, year) {
+	//http://www.metatopos.eu/provincies.html
 	var nedTotaalPie = []
 	var test = 0
 	for (var i = 0; i < provinces.length; i++) {
@@ -117,9 +117,11 @@ function makePlot(data) {
 		    .attr("transform", "translate(0," + plotHeight + ")")
 		    .call(xAxis);
 
+
 		plot.append("g") // Add the Y Axis
 			.attr("class", "y axis")
-		    .call(yAxis);
+		    .call(yAxis)
+
 		isPlot = true;
 	};
 };
@@ -183,38 +185,12 @@ function fillMap(data, crime, year) {
 function calcTotal(data, crime){
 	var total = 0
 	for (var i = 0; i < provinces.length; i++) {
-		total += +data[String(provinces[i])][curCrime][year]
+		total += +data[String(provinces[i])][crime][year]
 	};
 	return total
 };
 
 function calcFill(data, province, crime, year, total) {
-	// var index
-	// var value = data[province][crime][year]
-	// var perc = value/total*100
-	// var percIndex = [2, 4, 8, 16, 32, 64]
-	// if (value == 0){
-	// 	index = 0
-	// }
-	// else if (perc <= percIndex[0]){
-	// 	index = 0
-	// }
-	// else if (perc <= percIndex[1]){
-	// 	index = 1
-	// }
-	// else if (perc <= percIndex[2]){
-	// 	index = 2
-	// }
-	// else if (perc <= percIndex[3]){
-	// 	index = 3
-	// }
-	// else if (perc <= percIndex[4]){
-	// 	index = 4
-	// }
-	// else if (perc >= percIndex[5]){
-	// 	index = 5
-	// }
-	// return String(colors[index]) 
 	var index
 	var value = data[province][crime][year]
 	var perc = value/total*100
@@ -268,57 +244,29 @@ function crimeFunction() {
     // document.getElementById("yearDrop").classList.remove('show');
 }
 
-		function dragmove(d) {
-		  
-			// Get the updated X location computed by the drag behavior.
-			var x = d3.event.x;
-			var pointValue = sliderx2 / 4
-			
-			if (curProvince == 'Nederland')
-				var choosePie = makePie(dataPie(dataset, curCrime, year))
-			else {
-				var choosePie = makePie(provincePie(dataset, curProvince, year))
-			}
-			
-			if (x <= pointValue) {
-				year = '0'
-				fillMap(data, curCrime, year)
-				choosePie
-				d3.select('#pietitle')
-					.text(curProvince+', '+curCrime+', 201'+year)
-			}
-			else if (x <= pointValue*2) {
-				year = '1'
-				fillMap(data, curCrime, year)
-				choosePie
-				d3.select('#pietitle')
-					.text(curProvince+', '+curCrime+', 201'+year)
-			}
-			else if (x <= pointValue*3) {
-				year = '2'
-				fillMap(data, curCrime, year)
-				choosePie
-				d3.select('#pietitle')
-					.text(curProvince+', '+curCrime+', 201'+year)
-			}
-			else if (x <= pointValue*4) {
-				year = '3'
-				fillMap(data, curCrime, year)
-				choosePie
-				d3.select('#pietitle')
-					.text(curProvince+', '+curCrime+', 201'+year)
-			}
-			// Constrain x to be between x1 and x2 (the ends of the line).
-			x = x < sliderx1 ? sliderx1 : x > sliderx2 ? sliderx2 : x;
 
-			// This assignment is necessary for multiple drag gestures.
-			// It makes the drag.origin function yield the correct value.
-			d.x = x;
+function calcPerc(data, province, crime, year) {
+	var result
+	var totalNed = nedTotaalPlot[year].Value
+	var totalProvince = data[province]['totaal'][year]
+	var crimeProvince = data[province][crime][year]
+	var crimeTotal = calcTotal(data, crime)
 
-			// Update the circle location.
-			circle.attr("cx", x);
-		}
+	var percProvince = totalProvince / totalNed * 100
+	var percCrime = crimeProvince / totalProvince * 100
+	var percCrimeProvince = crimeProvince / crimeTotal * 100
 
+	if (curCrime == 'totaal' && curProvince == 'Nederland') {
+		result = Math.round(percProvince)
+	}
+	else if (curCrime != 'totaal' && curProvince == 'Nederland') {
+		result = Math.round(percCrimeProvince)
+	}
+	else {
+		result = Math.round(percCrime)
+	}
+	return result
+}
 function callListeners(data) {
 
 	d3.selectAll('.land')
@@ -327,20 +275,30 @@ function callListeners(data) {
 			d3.select('#'+pointProvince)
 				.style('opacity', 0.5)
 				.style('stroke', 'grey')
-				.style('stroke-width', 2)				
+				.style('stroke-width', 2)		
+			if (curProvince == 'Nederland'){
+			d3.select('#percentage')
+				.text(calcPerc(data, pointProvince, curCrime, year)+'%')
+			};		
+			d3.select("#plottitle")
+				.text(d3.select('[title="'+pointProvince+'"]').attr('id').substring(3))		
 		})
 		.on('mouseout', function(){
 			d3.select('#'+pointProvince)
 				.style('opacity', null)
 				.style('stroke', null)
 				.style('stroke-width', null)
+			d3.select('#percentage')
+				.text('%')		
+			d3.select("#plottitle")
+				.text(d3.select('[title="'+curProvince+'"]').attr('id').substring(3))		
 		})
 		.on('click', function(){
 			preProvince = curProvince
 			curProvince = pointProvince
 			d3.select('#map [title="'+curProvince+'"]')
 				.style('opacity', 0.5)
-				.style('stroke', 'grey')
+				.style('stroke', 'steelblue')
 				.style('stroke-width', 2)
 			d3.select('#map [title="'+preProvince+'"]')
 				.style('opacity', null)
@@ -363,11 +321,16 @@ function callListeners(data) {
 			pointProvince = this.id
 			d3.select(this)
 				.attr('d', arcHover)
-
 			d3.select('#map [title="'+pointProvince+'"]')
 				.style('opacity', 0.5)
 				.style('stroke', 'grey')
 				.style('stroke-width', 2)
+			if (curProvince == 'Nederland'){
+			d3.select('#percentage')
+				.text(calcPerc(data, pointProvince, curCrime, year)+'%')
+			};	
+			d3.select("#plottitle")
+				.text(d3.select('[title="'+pointProvince+'"]').attr('id').substring(3))
 		})
 		.on('mouseout', function(){
 			d3.select('#'+pointProvince)
@@ -377,6 +340,10 @@ function callListeners(data) {
 				.style('opacity', null)
 				.style('stroke', null)
 				.style('stroke-width', null)
+			d3.select('#percentage')
+				.text('%')	
+			d3.select("#plottitle")
+				.text(d3.select('[title="'+curProvince+'"]').attr('id').substring(3))			
 		})
 		.on('click', function(){
 			curProvince = pointProvince
@@ -398,7 +365,11 @@ function callListeners(data) {
 				.style('opacity', 0.5)
 				.style('stroke', 'grey')
 				.style('stroke-width', 3)
-				.attr('d', arcHover)			
+				.attr('d', arcHover)	
+			d3.select('#percentage')
+				.text(calcPerc(data, curProvince, pointCrime, year)+'%')
+			d3.select('#plotsubtitle')
+				.text(pointCrime)
 		})
 		.on('mouseout', function(){
 			d3.select(this)
@@ -407,7 +378,10 @@ function callListeners(data) {
 				.style('opacity', null)
 				.style('stroke', null)
 				.style('stroke-width', null)
-
+			d3.select('#percentage')
+				.text(calcPerc(data, curProvince, curCrime, year)+'%')
+			d3.select('#plotsubtitle')
+				.text(curCrime)
 
 		})
 		.on('click', function() {
@@ -450,6 +424,7 @@ function callListeners(data) {
 	d3.select('#home')
 		.on('click', function(){
 			curProvince = 'Nederland'
+			curCrime ='totaal'
 			makePie(dataPie(data, curCrime, year))
 			makePlot(plotData(data, curCrime))
 
