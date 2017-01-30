@@ -4,10 +4,10 @@ function makePie(data) {
 	pieChart = d3.select('#pieContainer')
 	  	.append("svg")
 			.attr("id", "pie")
-		    .attr("width", pieWidth)
-		    .attr("height", pieHeight)
+		    .attr("width", 600)
+		    .attr("height", 600)
 	  	  .append("g")
-	    		.attr("transform", "translate(" + pieWidth /2 + "," + pieHeight/2 + ")");
+	    		.attr("transform", "translate(" + pieWidth  + "," + pieHeight*1.3 + ")");
 
 	var pie = d3.layout.pie()
 	    .value(function(d) { return d.count})
@@ -20,12 +20,14 @@ function makePie(data) {
 	g.append("path")
 		.attr("class", selPieClass(data))
 		.attr("id", function(d){ return d.data.label})
+		.attr("title", function(d){ console.log(d)})
 	  	.attr("d", arc)
 	  	.style("fill", function(d) { return color(d.data.label); });
+
 };
 
 function selPieClass (data) {
-	if (data.length == crimes.length) {
+	if (data.length == crimes.length-1 ) {
 		return 'crime-label'
 	}
 	else {
@@ -33,11 +35,13 @@ function selPieClass (data) {
 	}
 }
 function dataPie(data, crime, year) {
+	//http://www.metatopos.eu/provincies.html
 	var pieData = []
 	for (var i = 0; i < provinces.length; i++) {
 
 		var curLabel = provinces[i]
 		var curCount = data[provinces[i]][crime][year]
+
 		var obj = {'label': curLabel, 'count': curCount}
 		pieData.push(obj)
 
@@ -47,13 +51,28 @@ function dataPie(data, crime, year) {
 };
 function provincePie(data, province, year) {
 	var pieData = []
-	for (var i = 0; i < crimes.length; i++) {
+	for (var i = 0; i < crimes.length-1; i++) {
 		var curLabel = crimes[i]
 		var curCount = data[province][curLabel][year]
 		var obj = {'label': curLabel, 'count': curCount}
 		pieData.push(obj)
+
 	};
 	return pieData
+}
+function totalPie(data, year) {
+	var nedTotaalPie = []
+	var test = 0
+	for (var i = 0; i < provinces.length; i++) {
+
+		var curLabel = provinces[i]
+		var curCount = data[provinces[i]].totaal[year]
+		var people = inwoners[provinces[i]]
+		var multyplier = 100 - (people / inwoners['Nederland'] * 100)
+		var obj = {'label': curLabel, 'count': curCount*multyplier}
+		nedTotaalPie.push(obj)
+	};
+	return nedTotaalPie	
 }
 
 
@@ -134,6 +153,24 @@ function plotData(data, crime) {
 	return dataset
 };
 
+function plotTotal(data, province){
+	var check = 0, data0 = 0, data1 = 0, data2 = 0, data3 = 0;
+    for (var i = 0; i < crimes.length-1; i++) {
+    	data0 += +data[province][crimes[i]]['0']
+    	data1 += +data[province][crimes[i]]['1']
+    	data2 += +data[province][crimes[i]]['2']
+    	data3 += +data[province][crimes[i]]['3']
+    };
+    var totProvince = [
+    	{'Value': data0, 'Year': years[0]},
+    	{'Value': data1, 'Year': years[1]},
+    	{'Value': data2, 'Year': years[2]},
+    	{'Value': data3, 'Year': years[3]}
+    ]    
+    data[province].totaal = totProvince
+	return totProvince
+}
+
 function fillMap(data, crime, year) {
 	// total = calcTotal(data, crime)
 	for (var i = 0; i < provinces.length; i++) {
@@ -152,10 +189,36 @@ function calcTotal(data, crime){
 };
 
 function calcFill(data, province, crime, year, total) {
+	// var index
+	// var value = data[province][crime][year]
+	// var perc = value/total*100
+	// var percIndex = [2, 4, 8, 16, 32, 64]
+	// if (value == 0){
+	// 	index = 0
+	// }
+	// else if (perc <= percIndex[0]){
+	// 	index = 0
+	// }
+	// else if (perc <= percIndex[1]){
+	// 	index = 1
+	// }
+	// else if (perc <= percIndex[2]){
+	// 	index = 2
+	// }
+	// else if (perc <= percIndex[3]){
+	// 	index = 3
+	// }
+	// else if (perc <= percIndex[4]){
+	// 	index = 4
+	// }
+	// else if (perc >= percIndex[5]){
+	// 	index = 5
+	// }
+	// return String(colors[index]) 
 	var index
 	var value = data[province][crime][year]
 	var perc = value/total*100
-	var percIndex = [2, 4, 8, 16, 32, 64]
+	var percIndex = [5, 10, 15, 20, 25, 30, 35, 40, 45]
 	if (value == 0){
 		index = 0
 	}
@@ -174,8 +237,20 @@ function calcFill(data, province, crime, year, total) {
 	else if (perc <= percIndex[4]){
 		index = 4
 	}
-	else if (perc >= percIndex[5]){
+	else if (perc <= percIndex[5]){
 		index = 5
+	}
+	else if (perc <= percIndex[6]){
+		index = 6
+	}
+	else if (perc <= percIndex[7]){
+		index = 7
+	}
+	else if (perc <= percIndex[8]){
+		index = 8
+	}
+	else if (perc >= percIndex[9]){
+		index = 9
 	}
 	return String(colors[index]) 
 };
@@ -193,25 +268,68 @@ function crimeFunction() {
     // document.getElementById("yearDrop").classList.remove('show');
 }
 
+		function dragmove(d) {
+		  
+			// Get the updated X location computed by the drag behavior.
+			var x = d3.event.x;
+			var pointValue = sliderx2 / 4
+			
+			if (curProvince == 'Nederland')
+				var choosePie = makePie(dataPie(dataset, curCrime, year))
+			else {
+				var choosePie = makePie(provincePie(dataset, curProvince, year))
+			}
+			
+			if (x <= pointValue) {
+				year = '0'
+				fillMap(data, curCrime, year)
+				choosePie
+				d3.select('#pietitle')
+					.text(curProvince+', '+curCrime+', 201'+year)
+			}
+			else if (x <= pointValue*2) {
+				year = '1'
+				fillMap(data, curCrime, year)
+				choosePie
+				d3.select('#pietitle')
+					.text(curProvince+', '+curCrime+', 201'+year)
+			}
+			else if (x <= pointValue*3) {
+				year = '2'
+				fillMap(data, curCrime, year)
+				choosePie
+				d3.select('#pietitle')
+					.text(curProvince+', '+curCrime+', 201'+year)
+			}
+			else if (x <= pointValue*4) {
+				year = '3'
+				fillMap(data, curCrime, year)
+				choosePie
+				d3.select('#pietitle')
+					.text(curProvince+', '+curCrime+', 201'+year)
+			}
+			// Constrain x to be between x1 and x2 (the ends of the line).
+			x = x < sliderx1 ? sliderx1 : x > sliderx2 ? sliderx2 : x;
+
+			// This assignment is necessary for multiple drag gestures.
+			// It makes the drag.origin function yield the correct value.
+			d.x = x;
+
+			// Update the circle location.
+			circle.attr("cx", x);
+		}
+
 function callListeners(data) {
 
 	d3.selectAll('.land')
 		.on('mouseover', function(){
 			pointProvince = d3.select(this).attr('title')
-			// d3.select(this)
-			// 	.style('opacity', 0.5)
-			// 	.style('stroke', 'grey')
-			// 	.style('stroke-width', 3)
 			d3.select('#'+pointProvince)
 				.style('opacity', 0.5)
 				.style('stroke', 'grey')
-				.style('stroke-width', 3)				
+				.style('stroke-width', 2)				
 		})
 		.on('mouseout', function(){
-			// d3.select('#map [title="'+pointProvince+'"]')
-			// 	.style('opacity', null)
-			// 	.style('stroke', null)
-			// 	.style('stroke-width', null)
 			d3.select('#'+pointProvince)
 				.style('opacity', null)
 				.style('stroke', null)
@@ -223,14 +341,16 @@ function callListeners(data) {
 			d3.select('#map [title="'+curProvince+'"]')
 				.style('opacity', 0.5)
 				.style('stroke', 'grey')
-				.style('stroke-width', 3)
+				.style('stroke-width', 2)
 			d3.select('#map [title="'+preProvince+'"]')
 				.style('opacity', null)
 				.style('stroke', null)
 				.style('stroke-width', null)			
-			
+
 			d3.select('#plottitle')
-				.text(curProvince+', '+curCrime)
+				.html(d3.select('[title="'+curProvince+'"]').attr('id').substring(3))
+			
+
 			d3.select('#pietitle')
 				.text(curProvince+', '+curCrime+', 201'+year)
 
@@ -242,20 +362,16 @@ function callListeners(data) {
 		.on('mouseover', function(){
 			pointProvince = this.id
 			d3.select(this)
-				.style('opacity', 0.5)
-				.style('stroke', 'grey')
-				.style('stroke-width', 3)
+				.attr('d', arcHover)
 
 			d3.select('#map [title="'+pointProvince+'"]')
 				.style('opacity', 0.5)
 				.style('stroke', 'grey')
-				.style('stroke-width', 3)
+				.style('stroke-width', 2)
 		})
 		.on('mouseout', function(){
 			d3.select('#'+pointProvince)
-				.style('opacity', null)
-				.style('stroke', null)
-				.style('stroke-width', null)
+				.attr('d', arc)
 
 			d3.select('#map [title="'+pointProvince+'"]')
 				.style('opacity', null)
@@ -269,7 +385,9 @@ function callListeners(data) {
 			d3.select('#pietitle')
 				.text(curProvince+', '+curCrime+', 201'+year)
 			d3.select('#plottitle')
-				.text(curProvince+', '+curCrime)
+				.html(d3.select('[title="'+curProvince+'"]').attr('id').substring(3))
+			d3.select('#plotsubtitle')
+				.text(curCrime)
 		})
 
 
@@ -279,20 +397,27 @@ function callListeners(data) {
 			d3.select(this)
 				.style('opacity', 0.5)
 				.style('stroke', 'grey')
-				.style('stroke-width', 3)			
+				.style('stroke-width', 3)
+				.attr('d', arcHover)			
 		})
 		.on('mouseout', function(){
 			d3.select(this)
+				.attr('d', arc)			
+			d3.select(this)
 				.style('opacity', null)
 				.style('stroke', null)
-				.style('stroke-width', null)			
+				.style('stroke-width', null)
+
+
 		})
 		.on('click', function() {
 			curCrime = this.id
 			makePlot(plotProvince(data, curProvince, curCrime))
 			fillMap(data, curCrime, year)
 			d3.select('#plottitle')
-				.text(curProvince+', '+curCrime)
+				.html(d3.select('[title="'+curProvince+'"]').attr('id').substring(3))
+			d3.select('#plotsubtitle')
+				.text(curCrime)
 			d3.select('#maptitle')
 				.text(curCrime+', 201'+year)
 			d3.select('#pietitle')
@@ -314,7 +439,10 @@ function callListeners(data) {
 			d3.select('#pietitle')
 				.text(curProvince+', '+curCrime+', 201'+year)
 			d3.select('#plottitle')
-				.text(curProvince+', '+curCrime)
+				.html(d3.select('[title="'+curProvince+'"]').attr('id').substring(3))
+			d3.select('#plotsubtitle')
+				.text(curCrime)
+			
 			d3.select('#maptitle')
 				.text(curCrime+', 201'+year)
 		})
@@ -333,7 +461,9 @@ function callListeners(data) {
 			d3.select('#maptitle')
 				.text(curCrime+', 201'+year)
 			d3.select('#plottitle')
-				.text(curProvince+', '+curCrime)
+				.html(d3.select('[title="'+curProvince+'"]').attr('id').substring(3))
+			d3.select('#plotsubtitle')
+				.text(curCrime)
 			d3.select('#pietitle')
 				.text(curProvince+', '+curCrime+', 201'+year)
 		})

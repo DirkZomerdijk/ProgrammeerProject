@@ -1,90 +1,150 @@
 body {
-    background: beige;
+    background: grey;
+    font-family: calibri;
 }
 
 #mainContainer {
-    border: 2px solid grey;
+    /*border: 2px solid white;*/
     border-radius: 12px
+}
+#maintitle{
+    z-index: -5;
 }
 
 #mapContainer {
-    border: 2px solid grey;
+    position: absolute;
+    /*border: 2px solid white;*/
     border-radius: 12px}
 
 #mapTitle {
+    position: absolute;
 }
 
-#pieTitle {
+#pietitle {
     position: absolute;
-    bottom: 20px;
-    width: 400px
+    bottom: 280px;
+    width: 400px;
+    z-index: -3;
 }
 
 svg#map {
 	width: 500px;
 	height: 630px;
-    border: 2px solid grey;
+    position: absolute;
+    top: 0px;
+    /*border: 2px solid white;*/
     border-radius: 12px;
     z-index: -1;
 }
 #map .land:hover {
+    /*fill: yellow;*/
     opacity: 0.5;
+    /*z-index: +2;*/
+}
+#map .land {
+    stroke: grey;
+    /*stroke-width: 3;*/
 }
 
 
 #pieContainer {
 	width: 500px;
 	height: 250px;
-	border: 2px solid grey;
+	/*border: 2px solid white;*/
     border-radius: 12px;
     position: absolute;
     bottom: 300px;
     left: 550px;
+    z-index: -3;
 }
 svg#pie {
+    /*border: 2px solid white;*/
+    border-radius: 12px;
     position: absolute;
-    left: 100px;
-    bottom: 10px;
+    right: 50px;
+    bottom: -70px;
+    z-index: -2;
+}
+
+.crime-label:hover {
+    opacity: 0.5;
+}
+.province-label:hover{
+    opacity: 0.5;
+    stroke: grey;
+    strok-width: 5;
 }
 
 
 #plotContainer {
 	width: 500px;
 	height: 300px;
-	border: 2px solid grey;
+	/*border: 2px solid white;*/
     border-radius: 12px;
     position: absolute;
     bottom: -83px;
     left: 550px;
 }
-svg#plot {
+#plottitle {
     position: absolute;
-    top:30px;
+    left: 365px;
+    top: 60px;
+    font-size: 50px;
+    color: white;
+    opacity: 0.3;
+    text-align: right;
+    /*text-shadow: 3px 10px red;*/
+}
+#plotsubtitle{
+    position: absolute;
+    width: 500px;
+    right: 80px;
+    top: 140px;
+    font-size: 20px;
+    color: white;
+    opacity: 0.3;
+    text-align: right;   
+}
+svg#plot {
+    /*border: 2px solid white;*/
+    background: grey;
+    border-radius: 25px;
+    position: absolute;
+    top:-60px;
+    right: 50px;
 }
 #plot path { 
-    stroke: steelblue;
-    stroke-width: 2;
+    stroke: lightblue;
+    stroke-width: 4;
     fill: none;
 }
 
 #plot .axis path,
 #plot .axis line {
     fill: none;
-    stroke: grey;
-    stroke-width: 1;
+    stroke: black;
+    stroke-width: 3;
     shape-rendering: crispEdges;
 }
 .axis text {
     font-family: sans-serif;
-    font-size: 11px;
+    font-size: 14px;
 }
 .dropbtn {
-    background-color: #000;
+    background-color: black;
     color: white;
     padding: 16px;
     font-size: 16px;
     border: none;
     cursor: pointer;
+}
+#home .dropbtn {
+    position: absolute;
+}
+#crimebtn {
+    position: absolute;
+    left: 106px;
+    bottom: 0px
 }
 
 /* Dropdown button on hover & focus */
@@ -117,7 +177,7 @@ svg#plot {
 }
 
 /* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: grey}
+.dropdown-content a:hover {background-color: lightgrey}
 
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 .show {display:block;}
@@ -131,6 +191,6 @@ svg#plot {
 #slidercontainer {
     position: absolute;
     z-index: +3;
-    bottom: 560px;
+    bottom: 580px;
     left: 130px;
 }
