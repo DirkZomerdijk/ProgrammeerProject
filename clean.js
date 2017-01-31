@@ -13,12 +13,13 @@ var inwoners= {'Groningen': 583942,'Friesland': 646257,'Gelderland': 2026578,'Dr
 var years = ['2010','2011','2012','2013']
 var colors = ['#fff7fb','#ece2f0','#d0d1e6','#a6bddb','#67a9cf','#3690c0','#02818a','#016c59','#014636']
 var crimes = []
-
+var percIndex = [5, 10, 15, 20, 25, 30, 35, 40, 45]
+var legendIndex = ['< 5%', '5-10%', '10-15%', '15-20%', '20-25%', '25-30%', '30-35%', '35-40%', '40% >']
 var selProvince = false
 
 // lineplot variables
-var plotMargin = { top: 20, right: 80, bottom: 20, left: 25 };
-var plotWidth = 500 - plotMargin.left - plotMargin.right;
+var plotMargin = { top: 20, right: 0, bottom: 20, left: 25 };
+var plotWidth = 350 - plotMargin.left - plotMargin.right;
 var plotHeight = 200 - plotMargin.top - plotMargin.bottom;
 
 var parseDate = d3.time.format("%Y").parse;
@@ -42,6 +43,10 @@ var plot = d3.select("#plotContainer")
     .attr("height", plotHeight + plotMargin.top + plotMargin.bottom)
   .append("g")
     .attr("transform", "translate(" + (plotMargin.left + 50) +"," + plotMargin.top + ")");
+var yLabel = d3.select('#plotContainer').append('div')
+	.attr('id', 'ylabel')
+	.style('transform', 'rotate(-90deg)')
+	.text('Aantal misdrijven')
 var isPlot = false
 
 // pie chart variables
@@ -90,16 +95,6 @@ var line = slider.append("line")
 	.style("stroke", "black")
 	.style("stroke-linecap", "round")
 	.style("stroke-width", 5);
-  
-
-
-// var mapTitle = d3.select('#mapContainer').append('div').append('h3')
-// 	.attr('id', 'mapTitletitle')
-// 	.text('mapTitle')
-
-// var pieTitle = d3.select('#pieContainer').append('div').append('h3')
-// 	.attr('id', 'pietitle')
-// 	.text('pieTitle')
 
 var piePercentage = d3.select('#pieContainer').append('div')
 	.attr('id', 'percentage')
@@ -136,7 +131,41 @@ d3.xml('nederland.svg', 'image/svg+xml', function(error, xml) {
 			document.getElementById('crimeDrop').innerHTML += "<a href='#' class='crimeDrop' id=" + crimes[i].replace(/\s+/g, '') + ">" + String(crimes[i]) + "</a>"
 		} 
 
-	        
+		var legend = d3.select('#mapContainer').append('div')
+			.attr('id', 'legend')
+		for (var i = 0; i < colors.length; i++) {
+			d3.select('#map').append('rect')
+				.attr('width', 20)
+				.attr('height', 10)
+				.attr('id', 'rect'+i)
+				.attr('y', 70 +i*14.3)
+				.attr('x', 0)
+				.style('fill', colors[i]);
+
+			legend.append('div')
+				.html(legendIndex[i])
+				.attr('class', 'recttxt')
+		};
+
+		// Get the modal
+		var modal = document.getElementById('myModal');
+
+		// Get the button that opens the modal
+		var btn = document.getElementById("infoBtn");
+
+		// Get the <span> element that closes the modal
+		var span = document.getElementsByClassName("close")[0];
+
+		// When the user clicks the button, open the modal 
+		btn.onclick = function() {
+		    modal.style.display = "block";
+		}
+
+		// When the user clicks on <span> (x), close the modal
+		span.onclick = function() {
+		    modal.style.display = "none";
+		}
+
 	    var drag = d3.behavior.drag()
 	      .origin(function(d) { return d; })
 	      .on("drag", dragmove);
@@ -166,6 +195,12 @@ d3.xml('nederland.svg', 'image/svg+xml', function(error, xml) {
 				choosePie
 				d3.select('#slidertitle')
 					.text('201'+year)
+				d3.select('#percentage')
+					.text(function() {
+						if (curCrime != 'totaal') {
+							return calcPerc(data, curProvince, curCrime, year)+'%'
+						}
+					})		
 			}
 			else if (x <= pointValue*2) {
 				year = '1'
@@ -173,6 +208,12 @@ d3.xml('nederland.svg', 'image/svg+xml', function(error, xml) {
 				choosePie
 				d3.select('#slidertitle')
 					.text('201'+year)
+				d3.select('#percentage')
+					.text(function() {
+						if (curCrime != 'totaal') {
+							return calcPerc(data, curProvince, curCrime, year)+'%'
+						}
+					})	
 			}
 			else if (x <= pointValue*3) {
 				year = '2'
@@ -180,6 +221,12 @@ d3.xml('nederland.svg', 'image/svg+xml', function(error, xml) {
 				choosePie
 				d3.select('#slidertitle')
 					.text('201'+year)
+				d3.select('#percentage')
+					.text(function() {
+						if (curCrime != 'totaal') {
+							return calcPerc(data, curProvince, curCrime, year)+'%'
+						}
+					})	
 			}
 			else if (x <= pointValue*4) {
 				year = '3'
@@ -187,7 +234,15 @@ d3.xml('nederland.svg', 'image/svg+xml', function(error, xml) {
 				choosePie
 				d3.select('#slidertitle')
 					.text('201'+year)
+				d3.select('#percentage')
+					.text(function() {
+						if (curCrime != 'totaal') {
+							return calcPerc(data, curProvince, curCrime, year)+'%'
+						}
+					})		
 			}
+
+
 			// Constrain x to be between x1 and x2 (the ends of the line).
 			x = x < sliderx1 ? sliderx1 : x > sliderx2 ? sliderx2 : x;
 
@@ -231,6 +286,9 @@ d3.xml('nederland.svg', 'image/svg+xml', function(error, xml) {
 		callListeners(data)
 		window.onclick = function(event) {
 			callListeners(data)
+		    if (event.target == modal) {
+		        modal.style.display = "none";
+		    }
 			if (!event.target.matches('.dropbtn')) {
 			    var dropdowns = document.getElementsByClassName("dropdown-content");
 			    for (var i = 0; i < dropdowns.length; i++) {
@@ -243,3 +301,18 @@ d3.xml('nederland.svg', 'image/svg+xml', function(error, xml) {
 		}
 	})
 });
+$(document).ready(function () {
+      $(document).keydown(function (event) {
+          if (event.ctrlKey == true && (event.which == '107' || event.which == '109' || event.which == '187' || event.which == '189'))
+           {
+               event.preventDefault();
+           }
+       });
+
+           $(window).bind('mousewheel DOMMouseScroll', function (event) {
+               if (event.ctrlKey == true) {
+                   event.preventDefault();
+               }
+
+      });
+  })

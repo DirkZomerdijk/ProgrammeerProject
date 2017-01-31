@@ -60,7 +60,6 @@ function provincePie(data, province, year) {
 	return pieData
 }
 function totalPie(data, year) {
-	//http://www.metatopos.eu/provincies.html
 	var nedTotaalPie = []
 	var test = 0
 	for (var i = 0; i < provinces.length; i++) {
@@ -174,7 +173,6 @@ function plotTotal(data, province){
 }
 
 function fillMap(data, crime, year) {
-	// total = calcTotal(data, crime)
 	for (var i = 0; i < provinces.length; i++) {
 		d3.select("[title=" + String(provinces[i]) + "]")
 			.style('fill', calcFill(data, provinces[i],crime,year,calcTotal(data, curCrime)))
@@ -194,7 +192,7 @@ function calcFill(data, province, crime, year, total) {
 	var index
 	var value = data[province][crime][year]
 	var perc = value/total*100
-	var percIndex = [5, 10, 15, 20, 25, 30, 35, 40, 45]
+
 	if (value == 0){
 		index = 0
 	}
@@ -265,7 +263,13 @@ function calcPerc(data, province, crime, year) {
 	else {
 		result = Math.round(percCrime)
 	}
-	return result
+
+	if (result == 0){
+		return '>1'
+	}
+	else {
+		return result
+	}
 }
 function callListeners(data) {
 
@@ -276,7 +280,7 @@ function callListeners(data) {
 				.style('opacity', 0.5)
 				.style('stroke', 'grey')
 				.style('stroke-width', 2)		
-			if (curProvince == 'Nederland'){
+			if (curProvince == 'Nederland' || curCrime != 'totaal'){
 			d3.select('#percentage')
 				.text(calcPerc(data, pointProvince, curCrime, year)+'%')
 			};		
@@ -289,7 +293,14 @@ function callListeners(data) {
 				.style('stroke', null)
 				.style('stroke-width', null)
 			d3.select('#percentage')
-				.text('%')		
+				.text(function(){
+					if (curCrime != 'totaal'){
+						return calcPerc(data, curProvince, curCrime, year)+'%'
+					}
+					else{
+						return '%'
+					}
+				})		
 			d3.select("#plottitle")
 				.text(d3.select('[title="'+curProvince+'"]').attr('id').substring(3))		
 		})
@@ -307,7 +318,10 @@ function callListeners(data) {
 
 			d3.select('#plottitle')
 				.html(d3.select('[title="'+curProvince+'"]').attr('id').substring(3))
-			
+			if (curProvince != 'Nederland'){
+			d3.select('#percentage')
+				.text(calcPerc(data, curProvince, curCrime, year)+'%')
+			};					
 
 			d3.select('#pietitle')
 				.text(curProvince+', '+curCrime+', 201'+year)
@@ -355,6 +369,12 @@ function callListeners(data) {
 				.html(d3.select('[title="'+curProvince+'"]').attr('id').substring(3))
 			d3.select('#plotsubtitle')
 				.text(curCrime)
+			d3.select('#percentage')
+				.text(function() {
+					if (curCrime != 'totaal') {
+						return calcPerc(data, curProvince, curCrime, year)+'%'
+					}
+				})	
 		})
 
 
@@ -379,7 +399,11 @@ function callListeners(data) {
 				.style('stroke', null)
 				.style('stroke-width', null)
 			d3.select('#percentage')
-				.text(calcPerc(data, curProvince, curCrime, year)+'%')
+				.text(function() {
+					if (curCrime != 'totaal') {
+						return calcPerc(data, curProvince, curCrime, year)+'%'
+					}
+				})	
 			d3.select('#plotsubtitle')
 				.text(curCrime)
 
@@ -425,8 +449,10 @@ function callListeners(data) {
 		.on('click', function(){
 			curProvince = 'Nederland'
 			curCrime ='totaal'
+
 			makePie(dataPie(data, curCrime, year))
 			makePlot(plotData(data, curCrime))
+			fillMap(data, 'totaal', year)
 
 			d3.selectAll('.land')
 				.style('opacity', null)

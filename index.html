@@ -12,7 +12,7 @@ d3map html file
     <script src="http://d3js.org/queue.v1.min.js"></script>	
     <script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.5.3/d3.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/topojson/1.6.9/topojson.min.js"></script>
-    <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
     <script src="functions.js"></script>
   </head>
   <body>
@@ -21,6 +21,27 @@ d3map html file
         <button id="home" class="dropbtn">Nederland</button>
         <button id="crimebtn" onclick="crimeFunction()" class="dropbtn">Misdrijf</button>
           <div id="crimeDrop" class="dropdown-content"></div>
+      </div>
+      <!-- Trigger/Open The Modal -->
+      <input id="infoBtn" type="image" src="information btn.png" />
+      <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+          <div class="modal-header">
+            <span class="close">&times;</span>
+            <img id="infobtnheader" src="white information btn.png">
+          </div>
+          <div class="modal-body">
+            <h2><p align="center">This webpage gives information about crime in the Netherlands. With this page you can explore the quantity and relative occurance of certain crimes, either for the entier Netherlands or for each province individually.</p></h2>
+            <p align="left"><img class="infoimg" src="datamap.png" width="60" height="utf-80" align="left" hspace="5"><b>The datamap</b> provides information about the accurance of a crime per province in percentage. When you hover your mouse over a province the piechart will show the percentage of the total amount of a selected crime occured in that province. When you click on the province more specific data about crimes in that province will show in the piechart</p>
+            <p align="left"><img class="infoimg" src="piechart.png" width="60" height="60" align="left"><b>The piechart</b> provides more specific information about the distribution of a crime per province corrected for the amount of inhabitans of each province. When you click on either a province on the map or a province in the piechart, the piechart will provide more information about the percentage of a specific crime compared with the total amount of crimes in that specific province.</p>
+            <p align="left"><img class="infoimg" src="lineplot.png" width="60" height="40" align="left"><b>The lineplot</b> provides information about the occurance of a specific crime over the years 2010 to 2013. When you select a specific province and/or crime the data in the plot will show you the specific information of that province and or crime</p>
+            <p align="left"><img class="infoimg" src="slider.png" width="60" height="10" align="left"><b>The slider</b> can be used to select a year.</p>
+            <p align="left"><img class="infoimg" src="nederlandbtn.png" width="60" heigth="20" align="left"><b>The Nederland button</b> can be used to restore all settings to default. This means you get the data total crime in the Netherlands.</p>
+            <p align="left"><img class="infoimg" src="misdrijfbtn.png" width="60" heigth="20" align="left"><b>The Misdrijf button</b> can be used to select a specific crime.</p>
+            <p id="sources"><i>Sources: Crime data of each province over the years 2010-2013: https://opendatanederland.org. Population data of each province: http://www.metatopos.eu/provincies.html</i></p>
+          </div>
+        </div>
       </div>
       <div id="mapContainer" class="container"></div>
       <div id="pieContainer" class="container"></div>
