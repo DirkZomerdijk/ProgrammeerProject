@@ -246,16 +246,9 @@ function crimeFunction() {
 function calcPerc(data, province, crime, year) {
 	var result
 	var totalNed = nedTotaalPlot[year].Value
+	var totalProvince = data[province]['totaal'][year]
 	var crimeProvince = data[province][crime][year]
 	var crimeTotal = calcTotal(data, crime)
-	
-	console.log(province)
-	if (province == 'Netherlands') {
-		var totalProvince = nedTotaalPlot[year].Value
-	}
-	else {
-		var totalProvince = data[province]['totaal'][year]
-	};
 
 	var percProvince = totalProvince / totalNed * 100
 	var percCrime = crimeProvince / totalProvince * 100
