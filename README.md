@@ -1,4 +1,4 @@
-# Proposing EEG Dashboard
+# Proposing Crime Scene Investigation for the Netherlands
 - Name:			Dirk Zomerdijk
 - Studentnumber: 	10530274
 - Education: 		Bcs. Beta-Gamma, Neurobiologie
