@@ -4,7 +4,7 @@ The crime data is obtained from https://opendatanederland.org
 The population data is obtained from  http://www.metatopos.eu/provincies.html.
 The crime data needs to be nested in the following way:
 
-* {'Province':{'crime':[2010,2011,2012,2013]}, etc.}
+* {'Province': {'crime': [2010, 2011, 2012, 2013]}, etc. }
 
 Province for each province in the netherlands and all crimes in each province and all years for each crime.
 
