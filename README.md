@@ -16,59 +16,52 @@
 
 
 ## Introduction
-This projects goal is to create a dashboard on which various data is displayed for
-the sake of conspectus and analysis. 
+This webpage and its visualizations give information about crime in the Netherlands. With this page you can explore the quantity and relative occurance of certain crimes, either for the entier Netherlands or for each province individually.
 
 The displayed visualizations will be:
-- EEG data 
-- The video shown while collecting data
-- The behavioral data
-- The average of the behavioral data over all subjects. 
-
-All of this is displayed synchronous. This way the user has a consolidated view of the data obtained during the experiment and a way to analyse it.
+- Datamap of the Netherlands
+- A piechart that show relative occurance of total crime per province or when a crime is selected the relative occurance of that crime compared to total crime numbers of that province. 
+- A lineplot that shows the amount of (a) crime in the Netherlands or in a province over the course of four years (2010-2014).
 
 ## The Proposal Process
 
 ### Goals
+* Create a webpage in which you can explore crime in the Netherlands.
+* All visualisations should be connected in some way, which should favor the user in exploring the data.
+* Make the design neat, it should be easy to look at.
+* 
 
-* Make a clear overview for the user of the data obtained during an EEG experiment for conspectus and analysis.
-* Make the overview dynamic. Control the time of all visualizations using a slider.
-* Make a dropdown menu to switch between subjects/ movies.
 
 ### Visual Sketch
-![](doc/dashboard.jpeg)
+![](doc/sketch.jpeg)
 
 ### Datasets Used
+The datasets used are data from https://opendatanederland.org. Which contains the data about 75 crimessorts for every province in the netherlands over the course of four years (2010-2014)
+And a data from http://www.metatopos.eu/provincies.html which contains the number of inhabitans for each province.
 The datasets used for this project are EEG and te behavioral data that comes with it.
 - The EEG data will be plotted in a linegraph. The y-axis will show the EEG value and x-axis the time of the video
 - The behavioral data will be plotted as a word and the choice of the subject (yes or no). 
 
 
 ### Decomposing the problem
-The problem can be decomposed into six smaller problems.
+The problem can be decomposed into seven smaller problems.
 <ol>
-<li>The visualization of the EEG data.</li>
-<li>Displaying the stimulus video.</li> 
-<li>Displaying the behavioral data.</li>
-<li>Displaying a frequencytable (or piechart) with a average of all subjects to analyse the choice.</li>
-<li>Synchronize all four visualisations dynamically.</li> 
-<li>Displaying a slider which controls all visualisations timelines.</li>
+<li>The datamap visualization.</li>
+<li>The piechart visualization</li> 
+<li>The linechart visualization</li>
+<li>A button to select a specific crime, all visualizations should show</li>
+<li>A button/slider to select a specific year, all visualizations should show</li> 
+<li>Interactivity between each visualization, click on visualization to control anotherone</li>
+<li>Make a neat design</li>
 </ol>
 
 ### APIs
-Youtube API will be used for displaying the video.
-Perhaps Dimple API will be used for fast easy design of graph.
-Sigma.js library can be used for creating a more interactive linegraph
-AnyChart API fast and for creating dashboard.
-HighCharts API for creating charts.
-
-### Technical Problems
-A problem that can emerge is that the slider may not proparly work for the Youtube component.
+D3, ofcourse, to construct the different visualizations.
+Maybe Topojson, for the Datamap.
+Maybe Bootstrap, for styling the page.
 
 
 ## MVP
-The minimum viable product is considered reached if all visualizations are correct and start synchronically.
-This means that the EEG data will run parallel with the video, and that the behavioral data obtained during the experiment
-will be displayed on the right moment in time of the video.
+The minimum viable product is considered reached if all visualizations and buttons are on the page and are linked whith eachother. Also the correct data should be shown for each visualization.
 
 

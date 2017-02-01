@@ -301,6 +301,7 @@ d3.xml('maps/nederland.svg', 'image/svg+xml', function(error, xml) {
 		}
 	})
 });
+
 $(document).ready(function () {
       $(document).keydown(function (event) {
           if (event.ctrlKey == true && (event.which == '107' || event.which == '109' || event.which == '187' || event.which == '189'))
