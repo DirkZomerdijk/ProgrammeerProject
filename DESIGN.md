@@ -3,14 +3,17 @@
 ## Interactivity
 ### Nederland button
 * On click:	Set province to 'Netherlands', set crime to 'Total'(default).
+
 ### Misdrijf button ~ Map/Pie/Line
 * On click: 	Show all crimes which can be selected.
 		When clicked on crime: 	Map fills again for corresponding crime.
 					Pie updates for selected crime.
 					Line updates for selected crime.
+
 ### Slider
 * On slide:	When slider changes year: Map fills again for corresponding year.
 					Pie adjusts to selected year.
+
 ### Map ~ Pie/Line
 * On hover: 	When the users mouse is on a province that province should light up.
 		The part of the pie corresponding to this province should light up.
