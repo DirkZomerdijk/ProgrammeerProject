@@ -1,12 +1,26 @@
 #Design Document
+## Data
+The crime data is obtained from https://opendatanederland.org
+The population data is obtained from  http://www.metatopos.eu/provincies.html.
+The crime data needs to be nested in the following way:
+
+* {'Province':{'crime':[2010,2011,2012,2013]}, etc.}
+
+Province for each province in the netherlands and all crimes in each province and all years for each crime.
 
 ## Interactivity
+* Nederland button
+* Misdrijf button
+* Slider
+* Map ~ Pie/Line
+* Pie ~ Map/Line
+
 ### Nederland button
-* On click:	Set province to 'Netherlands', set crime to 'Total'(default).
+* On click:	Set province to 'Netherlands', set crime to 'Total' (default).
 
 ### Misdrijf button ~ Map/Pie/Line
 * On click: 	Show all crimes which can be selected.
-		When clicked on crime: 	Map fills again for corresponding crime.
+		When clicked on crime: 	map fills again for corresponding crime.
 					Pie updates for selected crime.
 					Line updates for selected crime.
 
@@ -29,3 +43,13 @@
 		The corresponding province in the map should light up.
 		The data of the province and selected crime (default=Total) should be displayed.
 		Piechart shows relative occurence of chosen crime per province.
+* On click: 	The province is selected, the piechart updates and shows the relative occurance of all crimes in database for the selected province.
+		The selected province lights up in the map and stays highlighted untill another province is selected.
+		The lineplot shows the data for the selected crime and province.
+
+
+
+
+
+
+
