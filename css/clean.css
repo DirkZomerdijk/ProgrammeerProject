@@ -336,3 +336,20 @@ svg#slider {
 .infoimg {
     margin: 0px 10px;
 }
+#plotvalues {
+    width: 120px;
+    height: 165px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    line-height: 2.5;
+    visibility: hidden;
+    position: absolute;
+    top: 90px;
+    right: 60px;
+    color: rgba(37, 37, 37, .8);
+    font-weight: bold;
+}
+#plotvalues text {
+    color: white;
+}

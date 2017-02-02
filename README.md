@@ -29,8 +29,6 @@ The displayed visualizations will be:
 * Create a webpage in which you can explore crime in the Netherlands.
 * All visualisations should be connected in some way, which should favor the user in exploring the data.
 * Make the design neat, it should be easy to look at.
-* 
-
 
 ### Visual Sketch
 ![](doc/sketch.jpeg)
@@ -41,7 +39,6 @@ And a data from http://www.metatopos.eu/provincies.html which contains the numbe
 The datasets used for this project are EEG and te behavioral data that comes with it.
 - The EEG data will be plotted in a linegraph. The y-axis will show the EEG value and x-axis the time of the video
 - The behavioral data will be plotted as a word and the choice of the subject (yes or no). 
-
 
 ### Decomposing the problem
 The problem can be decomposed into seven smaller problems.

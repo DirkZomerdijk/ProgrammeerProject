@@ -95,7 +95,7 @@ function makePlot(data) {
 
 		change.select(".x.axis").call(xAxis)
 		change.select(".y.axis").call(yAxis)
-		change.select(".diddle").attr('d', valueline(data))
+		change.select(".plotline").attr('d', valueline(data))
 	}
 	else {
 		var valueline = d3.svg.line()
@@ -109,7 +109,7 @@ function makePlot(data) {
 
 		plot.append("path") // Add the valueline path.
 		.attr("d", valueline(data))
-		.attr('class', 'diddle')
+		.attr('class', 'plotline')
 
 		plot.append("g") // Add the X Axis
 			.attr("class", "x axis")
@@ -467,5 +467,34 @@ function callListeners(data) {
 				.text(curCrime)
 			d3.select('#pietitle')
 				.text(curProvince+', '+curCrime+', 201'+year)
+		})
+	d3.select('#plot')
+		.on('mouseover', function(){
+			d3.select('.plotline')
+				.style('stroke','steelblue')
+			d3.select('#plotvalues')
+				.style('visibility', 'visible')
+				.html(function(){
+					var string = ''
+					if (curProvince == 'Nederland') {
+						string = 	'2010: '+nedTotaalPlot[0].Value+'<br>'+
+									'2011: '+nedTotaalPlot[1].Value+'<br>'+
+									'2012: '+nedTotaalPlot[2].Value+'<br>'+
+									'2013: '+nedTotaalPlot[3].Value
+					}
+					else {
+						string = 	'2010: '+data[curProvince][curCrime][0]+'<br>'+
+									'2011: '+data[curProvince][curCrime][1]+'<br>'+
+									'2012: '+data[curProvince][curCrime][2]+'<br>'+
+									'2013: '+data[curProvince][curCrime][3]
+					}
+					return string
+				})
+		})
+		.on('mouseout', function(){
+			d3.select('.plotline')
+				.style('stroke','lightblue')
+			d3.select('#plotvalues')
+				.style('visibility', 'hidden')
 		})
 	}

@@ -47,7 +47,8 @@ Province for each province in the netherlands and all crimes in each province an
 		The selected province lights up in the map and stays highlighted untill another province is selected.
 		The lineplot shows the data for the selected crime and province.
 
-
+### Lineplot
+* On hover: 	When the users mouse is over the plot, the line lights up (changes color) and the values of each year for a selected crime and a selected province will be displayed.
 
 
 

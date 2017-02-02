@@ -23,6 +23,7 @@ var plotWidth = 350 - plotMargin.left - plotMargin.right;
 var plotHeight = 200 - plotMargin.top - plotMargin.bottom;
 
 var parseDate = d3.time.format("%Y").parse;
+var bisectDate = d3.bisector(function(d) { return d.Year; }).left;
 
 var x = d3.time.scale().range([0, plotWidth]);
 var y = d3.scale.linear().range([plotHeight, 0]);
@@ -107,6 +108,10 @@ var plotTitle = d3.select('#plotContainer').append('div').append('h3')
 var plotSubtitle = d3.select('#plotContainer').append('div').append('h3')
   	.attr('id', 'plotsubtitle')
   	.html('Totaal')
+
+var plotInfo = d3.select('#plotContainer').append('div')
+	.attr('id', 'plotvalues')
+	.html('value1<br><br>value2<br><br>value3<br><br>value4')
 
 var sliderTitle = d3.select("#slidercontainer").append('div')
 	.attr('id', 'slidertitle')
