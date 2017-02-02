@@ -1,8 +1,18 @@
+/**
+ * Dirk Zomerdijk
+ * 10530274
+ * Bèta-gamma
+ * Crime explorer
+ * css
+ */
+
+/* Set background and main font */
 body {
     background: grey;
     font-family: calibri;
 }
 
+/* Position legend and style text*/
 #legend {
     width: 60px;
     position: absolute;
@@ -15,29 +25,14 @@ body {
 
 }
 
-#mainContainer {
-    border-radius: 12px;
-}
-#maintitle{
-    z-index: -5;
-}
-
+/* Position map */
 #mapContainer {
     position: absolute;
     top: 50px;
     left: 50px;
-    border-radius: 12px}
-
-#mapTitle {
-    position: absolute;
 }
 
-#pietitle {
-    position: absolute;
-    bottom: 280px;
-    width: 400px;
-    z-index: -3;
-}
+/* position percentage */
 #percentage {
     width: 90px;
     position: absolute;
@@ -50,54 +45,37 @@ body {
     font-weight: bold;
 }
 
+/* Position datamap, style paths and add hover effect*/
 svg#map {
 	width: 400px;
 	height: 630px;
     position: absolute;
     top: 0px;
-    /*border: 2px solid white;*/
-    border-radius: 12px;
     z-index: 0;
 }
 #map .land:hover {
-    /*fill: yellow;*/
     opacity: 0.5;
-    /*z-index: +2;*/
-}
-#map .land {
-    stroke: grey;
-    /*stroke-width: 3;*/
-}
-#map .land:hover{
     stroke: steelblue;
     stroke-width: 3;
 }
+#map .land {
+    stroke: grey;
+}
 
-
+/* Position pie, set hover effects*/
 #pieContainer {
 	width: 500px;
 	height: 250px;
-	/*border: 2px solid white;*/
-    border-radius: 12px;
     position: absolute;
     bottom: 300px;
     left: 700px;
     z-index: -3;
 }
 svg#pie {
-    /*border: 2px solid white;*/
-    border-radius: 12px;
     position: absolute;
     right: 50px;
     bottom: -70px;
     z-index: +1;
-}
-#pie path{
-    z-index: +5;
-}
-
-.crime-label:hover {
-    opacity: 0.5;
 }
 .province-label:hover{
     opacity: 0.5;
@@ -105,12 +83,10 @@ svg#pie {
     strok-width: 5;
 }
 
-
+/* Position plot, style axis, line and text. Style Titles*/
 #plotContainer {
 	width: 500px;
 	height: 300px;
-	/*border: 2px solid white;*/
-    border-radius: 12px;
     position: absolute;
     bottom: 0px;
     left: 420px;
@@ -123,7 +99,6 @@ svg#pie {
     color: white;
     opacity: 0.3;
     text-align: justify;
-    /*text-shadow: 3px 10px red;*/
 }
 #plotsubtitle{
     width: 380px;
@@ -136,11 +111,9 @@ svg#pie {
     text-align: center;   
 }
 svg#plot {
-    /*border: 2px solid white;*/
     height: 200px;
     width: 500px;
     background: grey;
-    border-radius: 25px;
     position: absolute;
     top:80px;
     right: 100px;
@@ -156,7 +129,6 @@ svg#plot {
     stroke-width: 4;
     fill: none;
 }
-
 #plot .axis path,
 #plot .axis line {
     fill: none;
@@ -165,9 +137,11 @@ svg#plot {
     shape-rendering: crispEdges;
 }
 .axis text {
-    font-family: sans-serif;
     font-size: 14px;
+    font-family: calibri;
 }
+
+/* Style, position and add hover effect on dropbuttons*/
 .dropbtn {
     background-color: black;
     color: white;
@@ -175,6 +149,7 @@ svg#plot {
     font-size: 16px;
     border: none;
     cursor: pointer;
+    border-radius: 2px;
 }
 #home .dropbtn {
     position: absolute;
@@ -185,21 +160,16 @@ svg#plot {
     left: 110px;
     bottom: 0px
 }
-
-/* Dropdown button on hover & focus */
 .dropbtn:hover, .dropbtn:focus {
     background-color: grey;
 }
-
-/* The container <div> - needed to position the dropdown content */
 .dropdown {
     position: absolute;
     left: 450px;
     display: inline-block;
     z-index: +5;
 }
-
-/* Dropdown Content (Hidden by Default) */
+/* style, position and add hover effects of dropdown content*/
 .dropdown-content {
     display: none;
     position: absolute;
@@ -207,27 +177,22 @@ svg#plot {
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.8);
 }
-
-/* Links inside the dropdown */
 .dropdown-content a {
     color: white;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
 }
-
-/* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: lightgrey}
-
-/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.dropdown-content a:hover {background-color: grey}
 .show {display:block;}
 
-
+/* Add scrollbar to dropdown content*/
 #crimeDrop { 
     max-height:180px; 
     overflow-y:scroll; 
 }
 
+/* Position, style slider*/
 #slidercontainer {
     position: absolute;
     z-index: -1;
@@ -249,10 +214,8 @@ svg#slider {
     color: white;
     opacity: 0.3;
 }
-.dropbtn {
-    border-radius: 2px;
-}
 
+/* Position and style infobutton and content*/
 #infoBtn {
     background: grey;
     position: absolute;
@@ -265,7 +228,6 @@ svg#slider {
     width: 35px;
     height: 35px;
 }
-/* The Modal (background) */
 .modal {
     display: none; /* Hidden by default */
     position: absolute; /* Stay in place */
@@ -279,8 +241,6 @@ svg#slider {
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
-
-/* Modal Content */
 .modal-content {
     position: relative;
     background-color: #fefefe;
@@ -294,18 +254,15 @@ svg#slider {
     animation-name: animatetop;
     animation-duration: 0.4s
 }
-
 /* Add Animation */
 @-webkit-keyframes animatetop {
     from {top:-300px; opacity:0} 
     to {top:0; opacity:1}
 }
-
 @keyframes animatetop {
     from {top:-300px; opacity:0}
     to {top:0; opacity:1}
 }
-
 /* The Close Button */
 .close {
     color: white;
@@ -313,28 +270,29 @@ svg#slider {
     font-size: 28px;
     font-weight: bold;
 }
-
 .close:hover,
 .close:focus {
     color: #000;
     text-decoration: none;
     cursor: pointer;
 }
-
 .modal-header {
     padding: 10px 16px;
     background-color: steelblue;
     color: white;
 }
-
 .modal-body {padding: 2px 16px;}
 
+/* Style sources in info-content*/
 #sources {
     font-size: 12px;
 }
+/* Set margins of images in info-content*/
 .infoimg {
     margin: 0px 10px;
 }
+
+/* Position and style plot values which appear on hover */
 #plotvalues {
     width: 120px;
     height: 165px;
