@@ -1,4 +1,3 @@
-var test
 // datamap variables
 var nedTotaalPlot
 var preProvince 
@@ -7,12 +6,13 @@ var pointProvince
 var pointCrime
 var curCrime = 'totaal'
 var year = '3'
+var years = ['2010','2011','2012','2013']
 var total
+var crimes = []
+
 var provinces = ['Groningen','Friesland','Gelderland','Drenthe','Overijssel','Flevoland','Utrecht','Noord-Holland','Zuid-Holland','Zeeland','Noord-Brabant','Limburg']
 var inwoners= {'Groningen': 583942,'Friesland': 646257,'Gelderland': 2026578,'Drenthe': 488576,'Overijssel': 1140652,'Flevoland': 401791,'Utrecht': 1263572,'Noord-Holland': 2761929,'Zuid-Holland': 3600011,'Zeeland': 380726,'Noord-Brabant': 2488751,'Limburg': 1117941,'Nederland': 16900726}
-var years = ['2010','2011','2012','2013']
 var colors = ['#fff7fb','#ece2f0','#d0d1e6','#a6bddb','#67a9cf','#3690c0','#02818a','#016c59','#014636']
-var crimes = []
 var percIndex = [5, 10, 15, 20, 25, 30, 35, 40, 45]
 var legendIndex = ['< 5%', '5-10%', '10-15%', '15-20%', '20-25%', '25-30%', '30-35%', '35-40%', '40% >']
 var selProvince = false
@@ -23,7 +23,6 @@ var plotWidth = 350 - plotMargin.left - plotMargin.right;
 var plotHeight = 200 - plotMargin.top - plotMargin.bottom;
 
 var parseDate = d3.time.format("%Y").parse;
-var bisectDate = d3.bisector(function(d) { return d.Year; }).left;
 
 var x = d3.time.scale().range([0, plotWidth]);
 var y = d3.scale.linear().range([plotHeight, 0]);
@@ -67,6 +66,7 @@ var arcHover = d3.svg.arc()
 	.outerRadius(radiusHover)
 	.innerRadius(radiusHover - donutWidth)
 
+// slider variables
 var sliderWidth = 200;
 var sliderHeight = 100;
 var sliderRadius = 10;
@@ -97,6 +97,7 @@ var line = slider.append("line")
 	.style("stroke-linecap", "round")
 	.style("stroke-width", 5);
 
+// initiate add titles
 var piePercentage = d3.select('#pieContainer').append('div')
 	.attr('id', 'percentage')
 	.text('%')
@@ -152,16 +153,16 @@ d3.xml('maps/nederland.svg', 'image/svg+xml', function(error, xml) {
 				.attr('class', 'recttxt')
 		};
 
-		// Get the modal
+		// get the modal
 		var modal = document.getElementById('myModal');
 
-		// Get the button that opens the modal
+		// get the button that opens the modal
 		var btn = document.getElementById("infoBtn");
 
-		// Get the <span> element that closes the modal
+		// get the <span> element that closes the modal
 		var span = document.getElementsByClassName("close")[0];
 
-		// When the user clicks the button, open the modal 
+		// when the user clicks the button, open the modal 
 		btn.onclick = function() {
 		    modal.style.display = "block";
 		}
